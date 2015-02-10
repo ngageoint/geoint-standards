@@ -3,6 +3,6 @@ The Overhead Persistent Infrared (OPIR) Focus Group works issues across function
 
 For additional information regarding this GWG Focus Group, see their [Intelipedia site](https://www.intelink.gov/wiki/ONIR_Focus_Group).
  
-The following tables identify standards citations in the Joint Enterprise Standards Committee (JESC) that are managed by this GWG Focus Group, as well as non-cited standards-related documents that have been determined by this Focus Group to be important to the successful creation, discovery, exchange, and/or use of GEOINT data, information, services, and applications in the NSG.
+The following tables identify standards citations in the Joint Enterprise Standards Committee ([JESC](https://nsgreg.nga.mil/JESC-approved.jsp)) that are managed by this GWG Focus Group, as well as non-cited standards-related documents that have been determined by this Focus Group to be important to the successful creation, discovery, exchange, and/or use of GEOINT data, information, services, and applications in the NSG.
 
  
