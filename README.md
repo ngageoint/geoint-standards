@@ -11,6 +11,17 @@ In the IC, the GWG provides the same GEOINT standards lifecycle management recom
 
 The GWG consists of nine chartered focus groups made up of subject matter experts that address topical issues related to GEOINT standards.
 
+  * NITFS Technical Board (NTB) 
+  * Motion Imagery Standard Board (MISB) 
+  * Community Sensor Model Working Group (CSMWG) 
+  * Geographic Portrayal (PFG) 
+  * Application Schemas for Feature Encoding (ASFE) 
+  * Metadata (MFG) 
+  * Geospatial Web Services (GWS) 
+  * Overhead Persistent Infrared (OFG) 
+  * World Geodetic System and Geomatics (WGSG) 
+
+
 ###Pull Requests
 Please make a pull request and we'll discuss the changes.  All pull request content received will be distributed as public domain within the United States and [CC0 1.0 Universal public domain](https://creativecommons.org/publicdomain/zero/1.0/legalcode) outside the US.   
 
