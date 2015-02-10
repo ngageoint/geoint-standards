@@ -1,3 +1,4 @@
+# MFG
 The Metadata Focus Group (MFG) deals with those aspects of the standardization of GEOINT relating to imagery, sensor and geospatial metadata. Metadata is used by a large population of users other than the producer of the metadata. Usually, it is created by someone and used by someone else. Standardizing the structure and use of metadata will provide creators with appropriate information to characterize the data. Furthermore, standardizing the use of metadata will enable users to effectively implement the metadata to facilitate the most efficient method to discover and retrieve the associated data. 
 
 The MFG coordinates activities between the various recognized organizations and assumes a leading role in the development of standardized metadata in their respective communities. The organizations currently taking an active role in these activities include but are not limited to: 
