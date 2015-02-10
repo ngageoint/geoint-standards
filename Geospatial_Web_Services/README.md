@@ -5,4 +5,5 @@ The standards forwarded by this FG are of interest to developers of services and
 
 The GEOINT service architecture standards are technologies that enable service chaining interoperable service components. Agreements made here enable automata to mingle services from multiple sources, and thus create and employ one-of-a-kind service chains, and yet have assurance that the result will be the accurate operational picture intended.
 
- 
+For additional information regarding this GWG Focus Group, see their [Home Page](http://www.gwg.nga.mil/GWS.php).
+
