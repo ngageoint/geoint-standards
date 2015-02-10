@@ -62,7 +62,7 @@ learn it, then just create an issue and someone will certainly be able to assist
 There are countless tutorials on using Git and Github, but we will give a quick overview here and point to
 more resources.
 
-After creating your fork of the geopackage repository you will need to copy it to your computer (clone). 
+For instance, after creating your fork of the geopackage repository you will need to copy it to your computer (clone). 
 The URL of your fork will be https://github.com/username/geopackage.git where username should be replaced by 
 your github username. Cloning the repository can be done using the git command-line client 
 (git clone https://github.com/username/geopackage.git) or using a git GUI like the GitHub 
