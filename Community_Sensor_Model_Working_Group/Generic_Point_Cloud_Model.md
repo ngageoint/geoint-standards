@@ -1,7 +1,7 @@
 
 
-	NGA.STND.0046_1.0
-	2015-XX-XX
+	                                                                                     NGA.STND.0046_1.0
+	                                                                                            2015-XX-XX
 
 
 
@@ -10,19 +10,19 @@
 
 
 
-NGA STANDARDIZATION DOCUMENT
+                                          #NGA STANDARDIZATION DOCUMENT
 
 
 
-The Generic Point-cloud Model (GPM):
-Implementation and Exploitation
-(2015-XX-XX)
+                                       The Generic Point-cloud Model (GPM):
+                                         Implementation and Exploitation
+                                                 (2015-XX-XX)
 
 
 
 
 
-Version 1.0
+                                                 Version 1.0
 
 
 
