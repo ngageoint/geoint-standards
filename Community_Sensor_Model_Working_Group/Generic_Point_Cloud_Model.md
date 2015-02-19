@@ -10,19 +10,19 @@
 
 
 
-                                          #NGA STANDARDIZATION DOCUMENT
+                                  NGA STANDARDIZATION DOCUMENT
 
 
 
-                                       The Generic Point-cloud Model (GPM):
-                                         Implementation and Exploitation
+                                  The Generic Point-cloud Model (GPM):
+                                      Implementation and Exploitation
                                                  (2015-XX-XX)
 
 
 
 
 
-                                                 Version 1.0
+                                                   Version 1.0
 
 
 
@@ -40,44 +40,44 @@ NATIONAL CENTER FOR GEOSPATIAL INTELLIGENCE STANDARDS
  
 
 TABLE OF CONTENTS
-1	Overview	1
-1.1	Need for Error Modeling	1
-1.2	Potential Strategies	1
-1.3	Recommended Strategy: GPM	4
-2	Purpose of Document	10
-2.1	Proposed Users	10
-2.2	Document Structure	11
-3	Definitions	14
-3.1	Terms Used in the Document	14
-3.2	Error Contributors and Parameters	20
-3.3	Coordinate Systems	25
-4	CSM and GPM Overview	30
-4.1	Overview of the Community Sensor Model (CSM)	30
-4.2	Implementing GPM within CSM	33
-4.3	Overview of Using GPM CSM For Lidar	35
-5	Use of CSM / GPM Function Calls during Exploitation	37
-5.1	Absolute Error at a Point	37
-5.2	Relative error between points	37
-5.3	Multi-Image Geopositioning (MIG)	40
-5.4	General Data Adjustment	43
-6	GPM for Sensor Model Plug-In Builders	47
-6.1	SENSOR-SPACE GPM	47
-6.2	GROUND-SPACE GPM	68
+1	Overview	                                                         1
+1.1	Need for Error Modeling	                                                 1
+1.2	Potential Strategies	                                                 1
+1.3	Recommended Strategy: GPM	                                         4
+2	Purpose of Document	                                                10
+2.1	Proposed Users	                                                        10
+2.2	Document Structure	                                                11
+3	Definitions	                                                        14
+3.1	Terms Used in the Document	                                        14
+3.2	Error Contributors and Parameters	                                20
+3.3	Coordinate Systems	                                                25
+4	CSM and GPM Overview	                                                30
+4.1	Overview of the Community Sensor Model (CSM)	                        30
+4.2	Implementing GPM within CSM	                                        33
+4.3	Overview of Using GPM CSM For Lidar	                                35
+5	Use of CSM / GPM Function Calls during Exploitation	                37
+5.1	Absolute Error at a Point	                                        37
+5.2	Relative error between points	                                        37
+5.3	Multi-Image Geopositioning (MIG)	                                40
+5.4	General Data Adjustment	                                                43
+6	GPM for Sensor Model Plug-In Builders	                                47
+6.1	SENSOR-SPACE GPM	                                                47
+6.2	GROUND-SPACE GPM	                                                68
 7	Populating / Generating GPM for Sensor Builders and Data Providers	80
-8	References	94
-9	GPM Storage Roadmap	96
-9.1	GPM Implementation Storage Options	96
-9.2	Sensor-Space GPM Storage	97
-9.3	Ground-Space GPM Storage	99
-Appendix A : Additional Sources of Mensuration Error	100
-Appendix B Interpolation of Adjustable Parameters	102
-Appendix C : Square Root of a Matrix	104
-Appendix D : Sensor-Space GPM Storage Format	106
-Appendix E : Ground-Space GPM Storage Format	143
-Appendix F : Unmodeled Error Storage Format	161
-Appendix G: GPM Master VLR	168
-Appendix H: Storage and Retrieval of 3D Per-Point Error  	177
-Appendix I: Use of EXTRA_BYTES VLR for PPE Pointer Per Point Record	181
+8	References	                                                        94
+9	GPM Storage Roadmap	                                                96
+9.1	GPM Implementation Storage Options	                                96
+9.2	Sensor-Space GPM Storage	                                        97
+9.3	Ground-Space GPM Storage	                                        99
+Appendix A : Additional Sources of Mensuration Error	                       100
+Appendix B Interpolation of Adjustable Parameters	                       102
+Appendix C : Square Root of a Matrix	                                       104
+Appendix D : Sensor-Space GPM Storage Format	                               106
+Appendix E : Ground-Space GPM Storage Format	                               143
+Appendix F : Unmodeled Error Storage Format	                               161
+Appendix G: GPM Master VLR	                                               168
+Appendix H: Storage and Retrieval of 3D Per-Point Error  	               177
+Appendix I: Use of EXTRA_BYTES VLR for PPE Pointer Per Point Record	       181
 Appendix J: Use of ULEM Files within the GPM Construct.	185
 
  
