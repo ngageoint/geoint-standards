@@ -80,7 +80,7 @@ Table of Contents
 		5.4.8	TSPI Simple Rectangle	65
 		5.4.9	TSPI Envelope	68
 		5.4.10	TSPI Circular Surface	70
-		5.4.11	TSPI Elliptical Surface	72
+5.4.11	TSPI Elliptical Surface	72
 5.5	Spatial Relations	74
 5.5.1	Measured Direction	74
 5.5.2	Cardinal Direction	74
@@ -90,38 +90,38 @@ Table of Contents
 5.8	Spatial Position Extension	76
 5.8.1	Introduction	76
 5.8.2	CRS-restricted Point (WGS84E_3D)	77
-6	Where – Geographic Location	79
-6.1	Introduction	79
-6.2	Abstract Geographically-identified Location	79
-6.3	Geographic Identifiers	80
-6.4	Geographic Location Extension	81
-6.4.1	Geographic Location (GEOLOC) Identifiers	81
-7	Where – Physical Address	81
-7.1	Introduction	81
-7.2	Abstract Address	82
-7.3	Thoroughfare, Landmark, and Postal Addressing	82
-7.3.1	Address Components	82
-7.3.2	Address Types	83
-7.4	Physical Address Extension	84
-8	When – Temporal Position	85
-8.1	Overview	85
-8.2	Temporal Reference Systems	85
-8.3	Time Zones	86
-8.3.1	Introduction	86
-8.3.2	Local Time	87
-8.3.3	Local Time and UTC of Day	88
-8.3.4	Daylight Savings Time	88
-8.4	Time-related GML Restrictions	88
-8.5	Temporal Position	89
-8.5.1	Position Encoding	89
-8.5.2	Exact Temporal Position	92
-8.5.3	Inexact Temporal Position	93
-8.6	Temporal Extent	93
-8.6.1	Exact Temporal Extent	93
-8.6.2	Inexact Temporal Extent	94
-8.6.3	Reduced Temporal Resolution	94
-8.7	Temporal Duration and Interval	95
-8.7.1	Introduction	95
+6	 Where – Geographic Location	79
+ 6.1	 Introduction	79
+ 6.2	 Abstract Geographically-identified Location	79
+ 6.3	 Geographic Identifiers	80
+ 6.4	 Geographic Location Extension	81
+   6.4.1 Geographic Location (GEOLOC) Identifiers	81
+7	 Where – Physical Address	81
+ 7.1	 Introduction	81
+ 7.2	 Abstract Address	82
+ 7.3	 Thoroughfare, Landmark, and Postal Addressing	82
+   7.3.1 Address Components	82
+   7.3.2 Address Types	83
+ 7.4	 Physical Address Extension	84
+8	 When – Temporal Position	85
+ 8.1	 Overview	85
+ 8.2	 Temporal Reference Systems	85
+ 8.3	 Time Zones	86
+  8.3.1	 Introduction	86
+  8.3.2	 Local Time	87
+  8.3.3	 Local Time and UTC of Day	88
+  8.3.4	 Daylight Savings Time	88
+ 8.4	 Time-related GML Restrictions	88
+ 8.5	 Temporal Position	89
+  8.5.1	 Position Encoding	89
+  8.5.2	 Exact Temporal Position	92
+  8.5.3	 Inexact Temporal Position	93
+ 8.6	 Temporal Extent	93
+  8.6.1	 Exact Temporal Extent	93
+  8.6.2	 Inexact Temporal Extent	94
+  8.6.3	 Reduced Temporal Resolution	94
+ 8.7	Temporal Duration and Interval	95
+  8.7.1	Introduction	95
 8.7.2	Temporal Duration	95
 8.7.3	Temporal Interval	96
 8.7.4	Encoding	96
