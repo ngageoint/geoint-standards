@@ -54,25 +54,25 @@ Version 2.0
   1.10.	Specification Overview					7
 2.	Conformance								8  
 3.	References								8  
-  3.1	Normative						8  
-  3.2	Informative						9  
-4	Terms, Definitions and Acronyms				10
-  4.1	Terms and Definitions					10
-  4.2	Acronyms						13  
-5	Where – Spatial Position				15
-	5.1	Introduction						15
-	5.2	Abstract Position					15
-	5.3	Position Infrastructure					16
-		5.3.1	Coordinate Reference Systems				16
-		5.3.2	Earth-referenced Coordinate Reference Systems		20
-		5.3.3	Earth-referenced Position Presentation			30
-		5.3.4	Earth-referenced Elevation, Height, Altitude and Depth	42
-		5.3.5	Coordinate Resolution					43
-		5.3.6	Positional Uncertainty					47
-	5.4	Spatial Extent						48
-		5.4.1	Introduction						48
-		5.4.2	TSPI Point Position					49
-		5.4.3	TSPI Line String					52
+  3.1.	Normative						8  
+  3.2.	Informative						9  
+4.	Terms, Definitions and Acronyms				10
+  4.1.	Terms and Definitions					10
+  4.2.	Acronyms						13    
+5.	Where – Spatial Position				15  
+	5.1.	Introduction						15  
+	5.2.	Abstract Position					15  
+	5.3.	Position Infrastructure					16  
+		5.3.1.	Coordinate Reference Systems				16  
+		5.3.2.	Earth-referenced Coordinate Reference Systems		20  
+		5.3.3.	Earth-referenced Position Presentation			30  
+		5.3.4.	Earth-referenced Elevation, Height, Altitude and Depth	42  
+		5.3.5.	Coordinate Resolution					43  
+		5.3.6.	Positional Uncertainty					47  
+	5.4.	Spatial Extent						48  
+		5.4.1.	Introduction						48  
+		5.4.2.	TSPI Point Position					49  
+		5.4.3.	TSPI Line String					52  
 		5.4.4	TSPI Circle	54
 		5.4.5	TSPI Ellipse	57
 		5.4.6	TSPI Polygon	59
