@@ -42,16 +42,16 @@ Version 2.0
  
 #####Table of Contents
 1.	Introduction						1
-  1.1	Spatiotemporal Data					1
-  1.2	TSPI Terminology					1
-  1.3	TSPI Exchange						2
-	1.4	TSPI-related XML-based Standards			2
-	1.5	SCOTS Software						4
-	1.6	Data Mediation						4
-	1.7	Space and Place						4
-	1.8	TSPI Capabilities					5
-	1.9	TSPI Schema Components					6
-	1.10	Specification Overview					7
+  1.1.	Spatiotemporal Data					1
+  1.2.	TSPI Terminology					1
+  1.3.	TSPI Exchange						2
+	1.4.	TSPI-related XML-based Standards			2
+	1.5.	SCOTS Software						4
+	1.6.	Data Mediation						4
+	1.7.	Space and Place						4
+	1.8.	TSPI Capabilities					5
+	1.9.	TSPI Schema Components					6
+	1.10.	Specification Overview					7
 2	Conformance								8
 3	References								8
 	3.1	Normative						8
