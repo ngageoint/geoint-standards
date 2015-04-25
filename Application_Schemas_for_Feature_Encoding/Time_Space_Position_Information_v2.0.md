@@ -49,9 +49,9 @@ Version 2.0
   1.5.	SCOTS Software						4  
   1.6.	Data Mediation						4  
   1.7.	Space and Place						4  
-  1.8.	TSPI Capabilities					5
-  1.9.	TSPI Schema Components					6
-  1.10.	Specification Overview					7
+  1.8.	TSPI Capabilities					5  
+  1.9.	TSPI Schema Components					6  
+  1.10.	Specification Overview					7  
 2.	Conformance								8  
 3.	References								8  
   3.1.	Normative						8  
