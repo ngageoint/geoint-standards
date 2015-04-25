@@ -56,10 +56,10 @@ Version 2.0
 3.	References								8  
   3.1.	Normative						8  
   3.2.	Informative						9  
-4.	Terms, Definitions and Acronyms				10
-  4.1.	Terms and Definitions					10
-  4.2.	Acronyms						13    
-5.	Where – Spatial Position				15  
+4.	Terms, Definitions and Acronyms				10  
+  4.1.	Terms and Definitions					10  
+  4.2.	Acronyms						13      
+5.	Where – Spatial Position				15    
 	5.1.	Introduction						15  
 	5.2.	Abstract Position					15  
 	5.3.	Position Infrastructure					16  
