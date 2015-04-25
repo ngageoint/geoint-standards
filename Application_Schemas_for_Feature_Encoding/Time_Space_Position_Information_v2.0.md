@@ -42,9 +42,9 @@ Version 2.0
  
 ###Table of Contents
 1	Introduction						1
-	1.1	Spatiotemporal Data					1
-	1.2	TSPI Terminology					1
-	1.3	TSPI Exchange						2
+  1.1	Spatiotemporal Data					1
+  1.2	TSPI Terminology					1
+  1.3	TSPI Exchange						2
 	1.4	TSPI-related XML-based Standards			2
 	1.5	SCOTS Software						4
 	1.6	Data Mediation						4
