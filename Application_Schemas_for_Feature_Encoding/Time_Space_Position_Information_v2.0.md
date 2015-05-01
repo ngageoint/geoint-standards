@@ -1,4 +1,4 @@
-<pre>
+
 
 	NGA.STND.0019_2.0
 	2012-04-05
@@ -30,11 +30,10 @@ Version 2.0
 
 
 
- 
-<table>
-<td></td>
-<td>#####DISTRIBUTION STATEMENT A:   Approved for public release; distribution is unlimited.>/td>
-<td></td>
+
+<table border="3">
+<td><h5>DISTRIBUTION STATEMENT A:   Approved for public release; distribution is unlimited.</h5></td>
+</table>
  
 
 
