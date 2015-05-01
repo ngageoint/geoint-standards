@@ -1,4 +1,4 @@
-<pre>
+
 
 	NGA.STND.0019_2.0
 	2012-04-05
@@ -11,7 +11,7 @@
 
 
 
-<b><i><h1 style="font-family:verdana">NGA STANDARDIZATION DOCUMENT</h1></i></b>
+<b><i><h1 style="text-align:center" style="font-family:verdana" >NGA STANDARDIZATION DOCUMENT</h1></i></b>
 
 
 Time-Space-Position Information
