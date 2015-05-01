@@ -1,4 +1,4 @@
-
+<pre>
 
 	NGA.STND.0019_2.0
 	2012-04-05
@@ -42,225 +42,227 @@ Version 2.0
 ---
  
 #####Table of Contents
-1.	Introduction..........................................................1  
-  1.1.	Spatiotemporal Data.....................................1  
-  1.2.	TSPI Terminology.........................................1  
-  1.3.	TSPI Exchange...........................................2  
-  1.4.	TSPI-related XML-based Standards........................2  
-  1.5.	SCOTS Software..........................................4  
-  1.6.	Data Mediation						4  
-  1.7.	Space and Place						4  
-  1.8.	TSPI Capabilities					5  
-  1.9.	TSPI Schema Components					6  
-  1.10.	Specification Overview					7  
-2.	Conformance								8  
-3.	References								8  
-  3.1.	Normative						8  
-  3.2.	Informative						9  
-4.	Terms, Definitions and Acronyms				10  
-  4.1.	Terms and Definitions					10  
-  4.2.	Acronyms						13      
-5.	Where – Spatial Position				15    
-	5.1.	Introduction						15  
-	5.2.	Abstract Position					15  
-	5.3.	Position Infrastructure					16  
-		5.3.1.	Coordinate Reference Systems				16  
-		5.3.2.	Earth-referenced Coordinate Reference Systems		20  
-		5.3.3.	Earth-referenced Position Presentation			30  
-		5.3.4.	Earth-referenced Elevation, Height, Altitude and Depth	42  
-		5.3.5.	Coordinate Resolution					43  
-		5.3.6.	Positional Uncertainty					47  
-	5.4.	Spatial Extent						48  
-		5.4.1.	Introduction						48  
-		5.4.2.	TSPI Point Position					49  
-		5.4.3.	TSPI Line String					52  
-		5.4.4	TSPI Circle	54
-		5.4.5	TSPI Ellipse	57
-		5.4.6	TSPI Polygon	59
-		5.4.7	TSPI Simple Polygon	63
-		5.4.8	TSPI Simple Rectangle	65
-		5.4.9	TSPI Envelope	68
-		5.4.10	TSPI Circular Surface	70
-5.4.11	TSPI Elliptical Surface	72
-5.5	Spatial Relations	74
-5.5.1	Measured Direction	74
-5.5.2	Cardinal Direction	74
-5.5.3	Topology	75
-5.6	Spatial Measures	75
-5.7	Spatial Change	76
-5.8	Spatial Position Extension	76
-5.8.1	Introduction	76
-5.8.2	CRS-restricted Point (WGS84E_3D)	77
-6	 Where – Geographic Location	79
- 6.1	 Introduction	79
- 6.2	 Abstract Geographically-identified Location	79
- 6.3	 Geographic Identifiers	80
- 6.4	 Geographic Location Extension	81
-   6.4.1 Geographic Location (GEOLOC) Identifiers	81
-7	 Where – Physical Address	81
- 7.1	 Introduction	81
- 7.2	 Abstract Address	82
- 7.3	 Thoroughfare, Landmark, and Postal Addressing	82
-   7.3.1 Address Components	82
-   7.3.2 Address Types	83
- 7.4	 Physical Address Extension	84
-8	 When – Temporal Position	85
- 8.1	 Overview	85
- 8.2	 Temporal Reference Systems	85
- 8.3	 Time Zones	86
-  8.3.1	 Introduction	86
-  8.3.2	 Local Time	87
-  8.3.3	 Local Time and UTC of Day	88
-  8.3.4	 Daylight Savings Time	88
- 8.4	 Time-related GML Restrictions	88
- 8.5	 Temporal Position	89
-  8.5.1	 Position Encoding	89
-  8.5.2	 Exact Temporal Position	92
-  8.5.3	 Inexact Temporal Position	93
- 8.6	 Temporal Extent	93
-  8.6.1	 Exact Temporal Extent	93
-  8.6.2	 Inexact Temporal Extent	94
-  8.6.3	 Reduced Temporal Resolution	94
- 8.7	Temporal Duration and Interval	95
-  8.7.1	Introduction	95
-8.7.2	Temporal Duration	95
-8.7.3	Temporal Interval	96
-8.7.4	Encoding	96
-8.8	Temporal Uncertainty	96
-Annex A – Conventions (Normative)	98
-A.1	Introduction	98
+1.	Introduction ..............................................................1  
+  1.1.	Spatiotemporal ............................................................1  
+  1.2.	TSPI Terminology...........................................................1  
+  1.3.	TSPI Exchange..............................................................2  
+  1.4.	TSPI-related XML-based Standards...........................................2  
+  1.5.	SCOTS Software.............................................................4  
+  1.6.	Data Mediation.............................................................4  
+  1.7.	Space and Place............................................................4  
+  1.8.	TSPI Capabilities..........................................................5  
+  1.9.	TSPI Schema Components.....................................................6  
+  1.10.	Specification Overview.....................................................7  
+2.	Conformance................................................................8  
+3.	References.................................................................8  
+  3.1.	Normative..................................................................8  
+  3.2.	Informative................................................................9  
+4.	Terms, Definitions and Acronyms...........................................10  
+  4.1.	Terms and Definitions.....................................................10  
+  4.2.	Acronyms..................................................................13      
+5.	Where – Spatial Position..................................................15    
+	5.1.	Introduction......................................................15  
+	5.2.	Abstract Position.................................................15  
+	5.3.	Position Infrastructure...........................................16  
+		5.3.1.	Coordinate Reference Systems..............................16  
+		5.3.2.	Earth-referenced Coordinate Reference Systems.............20  
+		5.3.3.	Earth-referenced Position Presentation....................30  
+		5.3.4.	Earth-referenced Elevation, Height, Altitude and Depth....42  
+		5.3.5.	Coordinate Resolution.....................................43  
+		5.3.6.	Positional Uncertainty....................................47  
+	5.4.	Spatial Extent....................................................48  
+		5.4.1.	Introduction..............................................48  
+		5.4.2.	TSPI Point Position.......................................49  
+		5.4.3.	TSPI Line String..........................................52  
+		5.4.4	TSPI Circle...............................................54  
+		5.4.5	TSPI Ellipse57  
+		5.4.6	TSPI Polygon	59    
+		5.4.7	TSPI Simple Polygon	63  
+		5.4.8	TSPI Simple Rectangle	65  
+		5.4.9	TSPI Envelope	68  
+		5.4.10	TSPI Circular Surface	70  
+5.4.11	TSPI Elliptical Surface	72  
+5.5	Spatial Relations	74  
+5.5.1	Measured Direction	74  
+5.5.2	Cardinal Direction	74  
+5.5.3	Topology	75  
+5.6	Spatial Measures	75  
+5.7	Spatial Change	76  
+5.8	Spatial Position Extension	76  
+5.8.1	Introduction	76  
+5.8.2	CRS-restricted Point (WGS84E_3D)	77  
+6	 Where – Geographic Location	79  
+ 6.1	 Introduction	79  
+ 6.2	 Abstract Geographically-identified Location	79  
+ 6.3	 Geographic Identifiers	80  
+ 6.4	 Geographic Location Extension	81  
+   6.4.1 Geographic Location (GEOLOC) Identifiers	81  
+7	 Where – Physical Address	81  
+ 7.1	 Introduction	81  
+ 7.2	 Abstract Address	82  
+ 7.3	 Thoroughfare, Landmark, and Postal Addressing	82  
+   7.3.1 Address Components	82  
+   7.3.2 Address Types	83  
+ 7.4	 Physical Address Extension	84  
+8	 When – Temporal Position	85  
+ 8.1	 Overview	85  
+ 8.2	 Temporal Reference Systems	85  
+ 8.3	 Time Zones	86  
+  8.3.1	 Introduction	86  
+  8.3.2	 Local Time	87  
+  8.3.3	 Local Time and UTC of Day	88  
+  8.3.4	 Daylight Savings Time	88  
+ 8.4	 Time-related GML Restrictions	88  
+ 8.5	 Temporal Position	89  
+  8.5.1	 Position Encoding	89  
+  8.5.2	 Exact Temporal Position	92  
+  8.5.3	 Inexact Temporal Position	93  
+ 8.6	 Temporal Extent	93  
+  8.6.1	 Exact Temporal Extent	93  
+  8.6.2	 Inexact Temporal Extent	94  
+  8.6.3	 Reduced Temporal Resolution	94  
+ 8.7	Temporal Duration and Interval	95  
+  8.7.1	Introduction	95  
+8.7.2	Temporal Duration	95  
+8.7.3	Temporal Interval	96  
+8.7.4	Encoding	96  
+8.8	Temporal Uncertainty	96    
+
+Annex A – Conventions (Normative)	98  
+A.1	Introduction	98  
 A.2	Naming and Design Rules from GML	98
 A.2.1	Introduction	98
-A.2.2	Lexical Conventions	98
-A.2.3	XML Schema Conventions	98
-A.3	Referencing GML	99
-A.3.1	GPAS Governance Namespace	99
-A.3.2	Referencing GPAS Schemas	99
-A.3.3	Modifications to Publicly Available Schemas	100
-A.3.4	XML Schema Namespace Identifiers	101
-A.4	Referencing TSPI	102
-A.4.1	GSIP Governance Namespace	102
-A.4.2	TSPI XML Namespace	102
-A.5	Information Resources	103
-A.5.1	Introduction	103
-A.5.2	Coordinate Reference System Resources	103
-A.5.3	Code List Resources	103
-A.5.3.1	Fixed Enumerations	103
-A.5.3.2	Flexible Enumerations	104
-A.5.3.3	Managed Code Lists	106
-A.5.3.4	Code List Item References	106
-A.5.4	Physical Quantity and Unit of Measure Resources	106
-A.5.4.1	Introduction	106
-A.5.4.2	Radix Point Presentation	107
-A.5.4.3	SI Prefixes	107
-A.5.4.4	Measures and Units of Measure	107
-A.5.4.5	Unit of Measure Dictionaries	108
-A.5.4.6	Unit of Measure References	110
-A.5.5	Data Quality Measure Resources	110
-A.5.6	Void Values	111
-A.6	Data Validation	112
-Annex B – Test Suite (Normative)	114
-B.1	Introduction	114
-B.2	Validating XML Processor	114
-B.3	Schematron Validator	114
-B.4	Conformance	115
-B.4.1	Introduction	115
-B.4.2	Schema Subsetting	116
-B.4.3	Instance Document	117
-B.4.4	Document Generation	117
-B.4.5	Document Consumption	118
-Annex C – Geodetic Datums (Informative)	119
-C.1	Coordinate Reference System Ambiguity	119
-C.2	CRS Referencing	119
-C.3	Registered CRS	119
-C.4	Alternate and Legacy Datums	119
-Annex D – GML Profiles and Application Schemas (Informative)	127
-D.1	Geography Markup Language	127
-D.2	GML Data Instances	127
-D.3	GML Profiles	127
-Annex E – Extension Procedure (Informative)	129
-E.1	Introduction	129
-E.2	Substitution Group Extension	129
-E.3	Code List Extension	130
+A.2.2	Lexical Conventions	98  
+A.2.3	XML Schema Conventions	98  
+A.3	Referencing GML	99  
+A.3.1	GPAS Governance Namespace	99  
+A.3.2	Referencing GPAS Schemas	99  
+A.3.3	Modifications to Publicly Available Schemas	100  
+A.3.4	XML Schema Namespace Identifiers	101  
+A.4	Referencing TSPI	102  
+A.4.1	GSIP Governance Namespace	102  
+A.4.2	TSPI XML Namespace	102  
+A.5	Information Resources	103  
+A.5.1	Introduction	103  
+A.5.2	Coordinate Reference System Resources	103  
+A.5.3	Code List Resources	103  
+A.5.3.1	Fixed Enumerations	103  
+A.5.3.2	Flexible Enumerations	104  
+A.5.3.3	Managed Code Lists	106  
+A.5.3.4	Code List Item References	106  
+A.5.4	Physical Quantity and Unit of Measure Resources	106  
+A.5.4.1	Introduction	106  
+A.5.4.2	Radix Point Presentation	107  
+A.5.4.3	SI Prefixes	107  
+A.5.4.4	Measures and Units of Measure	107  
+A.5.4.5	Unit of Measure Dictionaries	108  
+A.5.4.6	Unit of Measure References	110  
+A.5.5	Data Quality Measure Resources	110  
+A.5.6	Void Values	111  
+A.6	Data Validation	112  
+Annex B – Test Suite (Normative)	114  
+B.1	Introduction	114  
+B.2	Validating XML Processor	114  
+B.3	Schematron Validator	114  
+B.4	Conformance	115  
+B.4.1	Introduction	115  
+B.4.2	Schema Subsetting	116  
+B.4.3	Instance Document	117  
+B.4.4	Document Generation	117  
+B.4.5	Document Consumption	118  
+Annex C – Geodetic Datums (Informative)	119  
+C.1	Coordinate Reference System Ambiguity	119  
+C.2	CRS Referencing	119  
+C.3	Registered CRS	119  
+C.4	Alternate and Legacy Datums	119  
+Annex D – GML Profiles and Application Schemas (Informative)	127  
+D.1	Geography Markup Language	127  
+D.2	GML Data Instances	127  
+D.3	GML Profiles	127  
+Annex E – Extension Procedure (Informative)	129  
+E.1	Introduction	129  
+E.2	Substitution Group Extension	129  
+E.3	Code List Extension	130  
 
-Table of Figures
-Figure 1 – WGS84E_2D CRS Specification	20
-Figure 2 – TSPI Horizontal Presentation Type	32
-Figure 3 – tspi-core:SexagesimalPresentationType	36
-Figure 4 – tspi-core:GridMetrePresentationType	37
-Figure 5 – tspi-core:ZoneMetrePresentationType	38
-Figure 6 – tspi-core:QuadranglePresentationType	39
-Figure 7 – tspi-core:NumericBitPresentationType	41
-Figure 8 – TSPI Vertical Presentation Type	42
-Figure 9 – TSPI Position Presentation Model Group	42
-Figure 10 – Extending the GML Measure Type with Vertical Reference Information	43
-Figure 11 – TSPI Position Resolution Model Group	47
-Figure 12 – Examples of Point Positions Specified using GML	50
-Figure 13 – Extending the GML Point to include Resolution and Presentation Information	50
-Figure 14 – Example of a Point Position with Sexagesimal Presentation	52
-Figure 15 – Example of a Line String Specified using GML	52
-Figure 16 – Extending the gml:LineString to include Resolution and Presentation Information	53
-Figure 17 – Example of a LineString Position with Grid-Metre Presentation	54
-Figure 18 – Example of a Simple Circle by Center Point Position Specified using GML	56
-Figure 19 – Extending the gml:Circle to include Resolution and Presentation Information	56
-Figure 20 – Example of a Circle Position with Numeric-Bit Presentation	57
-Figure 21 – The tspi:Ellipse (including Resolution and Presentation Information)	57
-Figure 22 – Example of a Ellipse Position with Numeric-Bit Presentation	59
-Figure 23 – Example of a Polygon Specified using GML	60
-Figure 24 – Extending the gml:Polygon to include Resolution and Presentation Information	61
-Figure 25 – Example of a Polygon Position with Zone-Metre Presentation	62
-Figure 26 – Examples of a Simple Polygon Specified using GML 3.3	63
-Figure 27 – Extending the gmlce:SimplePolygon to include Resolution and Presentation Information	64
-Figure 28 – Example of a Simple Polygon Position with Zone-Metre Presentation	65
-Figure 29 – Examples of a Simple Rectangle Specified using GML 3.3	66
-Figure 30 – Extending the gmlce:SimpleRectangle to include Resolution and Presentation Information	66
-Figure 31 – Example of a Simple Rectangle Position with Zone-Metre Presentation	68
-Figure 32 – Replacing the gml:Envelope (to include Resolution and Presentation Information)	69
-Figure 33 – Example of an Envelope Position with Quadrangle Presentation	70
-Figure 34 – The tspi:CircularSurface (including Resolution and Presentation Information)	71
-Figure 35 – Example of a CircularSurface Position with Numeric-Bit Presentation	72
-Figure 36 – The tspi:EllipticalSurface (including Resolution and Presentation Information)	72
-Figure 37 – Example of a Elliptical Surface Position with Numeric-Bit Presentation	74
-Figure 38 – Extending the GML Measure Type with an Angle Reference Datum	74
-Figure 39 – Cardinal Directions with an Angle Reference Datum	75
-Figure 40 – Example Length Type Schema Fragment	75
-Figure 41 – Specification of tspi-ext:Point_WGS84E_3D and its supporting types	79
-Figure 42 – Specification of si:SI_LocationInstanceType and supporting types	80
-Figure 43 – Specification of si:SI_LocationType	81
-Figure 44 – Example Temporal Extent as a Closed Period	94
-Figure 45 – Example Temporal Extent as an Open Period	94
-Figure 46 – Example Import of the GPAS-registered GML Schema	100
-Figure 47 – Example schemaLocation Usage of the GPAS-registered GML Schema	100
-Figure 48 – Example Change of Absolute to Relative URL for an Imported Schema	101
-Figure 49 – Example Change of URL Reference to a Local Relative URL	101
-Figure 50 – Example Codelist Instance Document Fragment	104
-Figure 51 – Example Enumeration Instance Document Fragment	105
-Figure 52 – Example Flexible Enumeration Schema Fragment	105
-Figure 53 – Example GML Units of Measure Dictionary	110
-Figure 54 – Example Inclusion of a Schematron Pattern Element in an XSD	113
-Figure 55 – Relating the GML Standard to a GML-based Application Schema and a Data Instance	127
-Figure 56 – Relating the GML Standard to a GML Profile and a GML-based Application Schema	128
+Table of Figures  
+Figure 1 – WGS84E_2D CRS Specification	20  
+Figure 2 – TSPI Horizontal Presentation Type	32  
+Figure 3 – tspi-core:SexagesimalPresentationType	36  
+Figure 4 – tspi-core:GridMetrePresentationType	37  
+Figure 5 – tspi-core:ZoneMetrePresentationType	38  
+Figure 6 – tspi-core:QuadranglePresentationType	39  
+Figure 7 – tspi-core:NumericBitPresentationType	41  
+Figure 8 – TSPI Vertical Presentation Type	42  
+Figure 9 – TSPI Position Presentation Model Group	42  
+Figure 10 – Extending the GML Measure Type with Vertical Reference Information	43  
+Figure 11 – TSPI Position Resolution Model Group	47  
+Figure 12 – Examples of Point Positions Specified using GML	50  
+Figure 13 – Extending the GML Point to include Resolution and Presentation Information..................50  
+Figure 14 – Example of a Point Position with Sexagesimal Presentation...................................52  
+Figure 15 – Example of a Line String Specified using GML................................................52  
+Figure 16 – Extending the gml:LineString to include Resolution and Presentation Information.............53  
+Figure 17 – Example of a LineString Position with Grid-Metre Presentation...............................54  
+Figure 18 – Example of a Simple Circle by Center Point Position Specified using GML.....................56  
+Figure 19 – Extending the gml:Circle to include Resolution and Presentation Information.................56  
+Figure 20 – Example of a Circle Position with Numeric-Bit Presentation..................................57  
+Figure 21 – The tspi:Ellipse (including Resolution and Presentation Information)........................57  
+Figure 22 – Example of a Ellipse Position with Numeric-Bit Presentation.................................59  
+Figure 23 – Example of a Polygon Specified using GML....................................................60  
+Figure 24 – Extending the gml:Polygon to include Resolution and Presentation Information................61  
+Figure 25 – Example of a Polygon Position with Zone-Metre Presentation..................................62  
+Figure 26 – Examples of a Simple Polygon Specified using GML 3.3........................................63  
+Figure 27 – Extending the gmlce:SimplePolygon to include Resolution and Presentation Information........64  
+Figure 28 – Example of a Simple Polygon Position with Zone-Metre Presentation...........................65  
+Figure 29 – Examples of a Simple Rectangle Specified using GML 3.3......................................66  
+Figure 30 – Extending the gmlce:SimpleRectangle to include Resolution and Presentation Information......66  
+Figure 31 – Example of a Simple Rectangle Position with Zone-Metre Presentation.........................68  
+Figure 32 – Replacing the gml:Envelope (to include Resolution and Presentation Information).............69  
+Figure 33 – Example of an Envelope Position with Quadrangle Presentation................................70  
+Figure 34 – The tspi:CircularSurface (including Resolution and Presentation Information)................71  
+Figure 35 – Example of a CircularSurface Position with Numeric-Bit Presentation.........................72  
+Figure 36 – The tspi:EllipticalSurface (including Resolution and Presentation Information)..............72  
+Figure 37 – Example of a Elliptical Surface Position with Numeric-Bit Presentation......................74  
+Figure 38 – Extending the GML Measure Type with an Angle Reference Datum................................74  
+Figure 39 – Cardinal Directions with an Angle Reference Datum...........................................75  
+Figure 40 – Example Length Type Schema Fragment	75  
+Figure 41 – Specification of tspi-ext:Point_WGS84E_3D and its supporting types	79  
+Figure 42 – Specification of si:SI_LocationInstanceType and supporting types	80  
+Figure 43 – Specification of si:SI_LocationType	81  
+Figure 44 – Example Temporal Extent as a Closed Period	94  
+Figure 45 – Example Temporal Extent as an Open Period	94  
+Figure 46 – Example Import of the GPAS-registered GML Schema	100  
+Figure 47 – Example schemaLocation Usage of the GPAS-registered GML Schema	100  
+Figure 48 – Example Change of Absolute to Relative URL for an Imported Schema	101  
+Figure 49 – Example Change of URL Reference to a Local Relative URL	101  
+Figure 50 – Example Codelist Instance Document Fragment	104  
+Figure 51 – Example Enumeration Instance Document Fragment	105  
+Figure 52 – Example Flexible Enumeration Schema Fragment	105  
+Figure 53 – Example GML Units of Measure Dictionary	110  
+Figure 54 – Example Inclusion of a Schematron Pattern Element in an XSD	113  
+Figure 55 – Relating the GML Standard to a GML-based Application Schema and a Data Instance	127  
+Figure 56 – Relating the GML Standard to a GML Profile and a GML-based Application Schema	128  
 
-Table of Tables
-Table 1 – Normative References	8
-Table 2 – Informative References	9
-Table 3 – Definitions Applicable to this Specification	10
-Table 4 – Legal Single Coordinate Sexagesimal Encodings	33
-Table 5 – Legal Grid-Metre Encodings	36
-Table 6 – Legal Zone-Metre Encodings	38
-Table 7 – Legal Quadrangle Encodings	39
-Table 8 – Ellipsoidal Distance	44
-Table 9 – Local Time and Standard Winter Time Zones	87
-Table 10 – Supported Date/Time Representations	91
-Table 11 – GPAS Document Organization	99
-Table 12 – Example GPAS Schema Locations	100
-Table 13 – Unit of Measure Prefixes	107
-Table 14 – USMTF GEODETIC DATUM Domain Values	120
+Table of Tables  
+Table 1 – Normative References	8  
+Table 2 – Informative References	9  
+Table 3 – Definitions Applicable to this Specification	10  
+Table 4 – Legal Single Coordinate Sexagesimal Encodings	33  
+Table 5 – Legal Grid-Metre Encodings	36  
+Table 6 – Legal Zone-Metre Encodings	38  
+Table 7 – Legal Quadrangle Encodings	39  
+Table 8 – Ellipsoidal Distance	44  
+Table 9 – Local Time and Standard Winter Time Zones	87  
+Table 10 – Supported Date/Time Representations	91  
+Table 11 – GPAS Document Organization	99  
+Table 12 – Example GPAS Schema Locations	100  
+Table 13 – Unit of Measure Prefixes	107  
+Table 14 – USMTF GEODETIC DATUM Domain Values	120  
  
 
-CHANGE LOG
-Version	Date	Description	Author
-2.0	4/05/2012	Initial version	ASFE Chair
+
+CHANGE LOG  
+Version	Date	Description	Author  
+2.0	4/05/2012	Initial version	ASFE Chair  
 			
 			
 			
@@ -4663,3 +4665,4 @@ The TSPI Schema specifies the following types of information resources (see Anne
 New lists (with code-members) and new codes (for existing lists) may be added to these registered resources through governance processes associated with the GSIP Governance Namespace (see: http://metadata.ces.mil/mdr/ns/GSIP). These processes are managed by the GEOINT Standards Working Group (GWG; see: http://www.gwg.nga.mil/) through the activities of the Metadata Focus Group (MFG; see: http://nsgreg.nga.mil/mfg) in coordination with the Application Schemas for Feature Encoding Focus Group (ASFE FG; see: http://nsgreg.nga.mil/asfe).
 Extension proposals should be directed to mfgchair@nga.mil.
 
+</pre>
