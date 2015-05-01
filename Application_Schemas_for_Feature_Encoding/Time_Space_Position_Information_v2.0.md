@@ -1,5 +1,4 @@
-<html>
-<body>
+<pre>
 
   NGA.STND.0019_2.0  
   2012-04-05  
@@ -71,9 +70,9 @@ Version 2.0
     5.3.3.	Earth-referenced Position Presentation....................30  
     5.3.4.	Earth-referenced Elevation, Height, Altitude and Depth....42  
     5.3.5.	Coordinate Resolution.....................................43  
-		5.3.6.	Positional Uncertainty....................................47  
-	5.4.	Spatial Extent....................................................48  
-		5.4.1.	Introduction..............................................48  
+    5.3.6.	Positional Uncertainty....................................47  
+  5.4.	Spatial Extent....................................................48  
+    5.4.1.	Introduction..............................................48  
 		5.4.2.	TSPI Point Position.......................................49  
 		5.4.3.	TSPI Line String..........................................52  
 		5.4.4	TSPI Circle...............................................54  
@@ -4667,5 +4666,5 @@ The TSPI Schema specifies the following types of information resources (see Anne
 New lists (with code-members) and new codes (for existing lists) may be added to these registered resources through governance processes associated with the GSIP Governance Namespace (see: http://metadata.ces.mil/mdr/ns/GSIP). These processes are managed by the GEOINT Standards Working Group (GWG; see: http://www.gwg.nga.mil/) through the activities of the Metadata Focus Group (MFG; see: http://nsgreg.nga.mil/mfg) in coordination with the Application Schemas for Feature Encoding Focus Group (ASFE FG; see: http://nsgreg.nga.mil/asfe).
 Extension proposals should be directed to mfgchair@nga.mil.
 
-</body>
-</html>
+</pre>
+
