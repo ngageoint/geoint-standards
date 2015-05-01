@@ -1,4 +1,4 @@
-
+<pre>
 
 	NGA.STND.0019_2.0
 	2012-04-05
@@ -75,7 +75,7 @@ Version 2.0
 		5.4.2.	TSPI Point Position.......................................49  
 		5.4.3.	TSPI Line String..........................................52  
 		5.4.4	TSPI Circle...............................................54  
-		5.4.5	TSPI Ellipse&#x00009;&#x00009;&#x00009;&#x00009;&#x00009;.57  
+		5.4.5	TSPI Ellipse..............................................57  
 		5.4.6	TSPI Polygon	59    
 		5.4.7	TSPI Simple Polygon	63  
 		5.4.8	TSPI Simple Rectangle	65  
@@ -192,11 +192,11 @@ Figure 4 – tspi-core:GridMetrePresentationType	37
 Figure 5 – tspi-core:ZoneMetrePresentationType	38  
 Figure 6 – tspi-core:QuadranglePresentationType	39  
 Figure 7 – tspi-core:NumericBitPresentationType	41  
-Figure 8 – TSPI Vertical Presentation Type	42  
-Figure 9 – TSPI Position Presentation Model Group	42  
-Figure 10 – Extending the GML Measure Type with Vertical Reference Information	43  
-Figure 11 – TSPI Position Resolution Model Group	47  
-Figure 12 – Examples of Point Positions Specified using GML	50  
+Figure 8 – TSPI Vertical Presentation Type..............................................................42  
+Figure 9 – TSPI Position Presentation Model Group.......................................................42  
+Figure 10 – Extending the GML Measure Type with Vertical Reference Information..........................43  
+Figure 11 – TSPI Position Resolution Model Group........................................................47  
+Figure 12 – Examples of Point Positions Specified using GML.............................................50  
 Figure 13 – Extending the GML Point to include Resolution and Presentation Information..................50  
 Figure 14 – Example of a Point Position with Sexagesimal Presentation...................................52  
 Figure 15 – Example of a Line String Specified using GML................................................52  
