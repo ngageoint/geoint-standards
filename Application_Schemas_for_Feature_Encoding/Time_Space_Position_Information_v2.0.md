@@ -1,25 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
 
-
-	NGA.STND.0019_2.0
-	2012-04-05
-
-
-
-
-
+  NGA.STND.0019_2.0  
+  2012-04-05  
 
 
 
 
-<b><i><h1 style="text-align:center" style="font-family:verdana" >NGA STANDARDIZATION DOCUMENT</h1></i></b>
 
 
+
+
+
+<p style="text-align:center"><b><i><h1 style="text-align:center" style="font-family:verdana" >NGA STANDARDIZATION DOCUMENT</h1></i></b></p>
+  
 Time-Space-Position Information
 (TSPI)
 (2012-04-05)
-
-
-
+  
+  
+  
 
 
 
@@ -4667,4 +4668,5 @@ The TSPI Schema specifies the following types of information resources (see Anne
 New lists (with code-members) and new codes (for existing lists) may be added to these registered resources through governance processes associated with the GSIP Governance Namespace (see: http://metadata.ces.mil/mdr/ns/GSIP). These processes are managed by the GEOINT Standards Working Group (GWG; see: http://www.gwg.nga.mil/) through the activities of the Metadata Focus Group (MFG; see: http://nsgreg.nga.mil/mfg) in coordination with the Application Schemas for Feature Encoding Focus Group (ASFE FG; see: http://nsgreg.nga.mil/asfe).
 Extension proposals should be directed to mfgchair@nga.mil.
 
-</pre>
+</body>
+</html>
