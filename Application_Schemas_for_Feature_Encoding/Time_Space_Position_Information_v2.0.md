@@ -75,7 +75,7 @@ Version 2.0
 		5.4.2.	TSPI Point Position.......................................49  
 		5.4.3.	TSPI Line String..........................................52  
 		5.4.4	TSPI Circle...............................................54  
-		5.4.5	TSPI Ellipse57  
+		5.4.5	TSPI Ellipse&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;.57  
 		5.4.6	TSPI Polygon	59    
 		5.4.7	TSPI Simple Polygon	63  
 		5.4.8	TSPI Simple Rectangle	65  
