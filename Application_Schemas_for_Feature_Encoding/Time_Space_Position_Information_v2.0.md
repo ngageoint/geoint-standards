@@ -42,7 +42,7 @@ Version 2.0
 #####NATIONAL CENTER FOR GEOSPATIAL INTELLIGENCE STANDARDS
 ---
  
-#####Table of Contents
+#####Table of Contents 
   1.	Introduction ..............................................................1  
     1.1.	Spatiotemporal ............................................................1  
     1.2.	TSPI Terminology...........................................................1  
@@ -53,25 +53,25 @@ Version 2.0
     1.7.	Space and Place............................................................4  
     1.8.	TSPI Capabilities..........................................................5  
     1.9.	TSPI Schema Components.....................................................6  
-    1.10.	Specification Overview.....................................................7  
- 2.	Conformance................................................................8  
- 3.	References.................................................................8  
-  3.1.	Normative..................................................................8  
-  3.2.	Informative................................................................9  
- 4.	Terms, Definitions and Acronyms...........................................10  
-  4.1.	Terms and Definitions.....................................................10  
-  4.2.	Acronyms..................................................................13      
- 5.	Where – Spatial Position..................................................15    
-  5.1.	Introduction......................................................15  
-  5.2.	Abstract Position.................................................15  
-  5.3.	Position Infrastructure...........................................16  
+    1.10	Specification Overview.....................................................7  
+  2.	Conformance................................................................8  
+  3. 	References.................................................................8  
+   3.1.	Normative..................................................................8  
+   3.2.	Informative................................................................9  
+  4.	Terms, Definitions and Acronyms...........................................10  
+   4.1.	Terms and Definitions.....................................................10  
+   4.2.	Acronyms..................................................................13      
+  5.	Where – Spatial Position..................................................15    
+   5.1.	Introduction......................................................15  
+   5.2.	Abstract Position.................................................15  
+   5.3.	Position Infrastructure...........................................16  
     5.3.1.	Coordinate Reference Systems..............................16  
     5.3.2.	Earth-referenced Coordinate Reference Systems.............20  
     5.3.3.	Earth-referenced Position Presentation....................30  
     5.3.4.	Earth-referenced Elevation, Height, Altitude and Depth....42  
     5.3.5.	Coordinate Resolution.....................................43  
     5.3.6.	Positional Uncertainty....................................47  
-  5.4.	Spatial Extent....................................................48  
+   5.4.	Spatial Extent....................................................48  
     5.4.1.	Introduction..............................................48  
     5.4.2.	TSPI Point Position.......................................49  
     5.4.3.	TSPI Line String..........................................52  
@@ -81,23 +81,23 @@ Version 2.0
     5.4.7.	TSPI Simple Polygon	63  
     5.4.8.	TSPI Simple Rectangle	65  
     5.4.9.	TSPI Envelope	68  
-   5.4.10.	TSPI Circular Surface	70  
-   5.4.11.	TSPI Elliptical Surface	72  
- 5.5	Spatial Relations	74  
-   5.5.1	Measured Direction	74  
-   5.5.2	Cardinal Direction	74  
-   5.5.3	Topology	75  
- 5.6	Spatial Measures	75  
- 5.7	Spatial Change	76  
- 5.8	Spatial Position Extension	76  
-   5.8.1	Introduction	76  
-   5.8.2	CRS-restricted Point (WGS84E_3D)	77  
-6	 Where – Geographic Location	79  
- 6.1	 Introduction	79  
- 6.2	 Abstract Geographically-identified Location	79  
- 6.3	 Geographic Identifiers	80  
- 6.4	 Geographic Location Extension	81  
-   6.4.1 Geographic Location (GEOLOC) Identifiers	81  
+    5.4.10.	TSPI Circular Surface	70  
+    5.4.11.	TSPI Elliptical Surface	72  
+   5.5	Spatial Relations	74  
+    5.5.1	Measured Direction	74  
+    5.5.2	Cardinal Direction	74  
+    5.5.3	Topology	75  
+   5.6	Spatial Measures	75  
+   5.7	Spatial Change	76  
+   5.8	Spatial Position Extension	76  
+    5.8.1	Introduction	76  
+    5.8.2	CRS-restricted Point (WGS84E_3D)	77  
+  6	 Where – Geographic Location	79  
+   6.1	 Introduction	79  
+   6.2	 Abstract Geographically-identified Location	79  
+   6.3	 Geographic Identifiers	80  
+   6.4	 Geographic Location Extension	81  
+    6.4.1 Geographic Location (GEOLOC) Identifiers	81  
 7	 Where – Physical Address	81  
  7.1	 Introduction	81  
  7.2	 Abstract Address	82  
