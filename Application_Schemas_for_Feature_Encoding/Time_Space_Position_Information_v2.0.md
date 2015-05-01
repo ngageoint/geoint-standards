@@ -10,8 +10,8 @@
 
 
 
-NGA STANDARDIZATION DOCUMENT
 
+<b><i><h1 style="font-family:verdana">NGA STANDARDIZATION DOCUMENT</h1></i></b>
 
 
 Time-Space-Position Information
