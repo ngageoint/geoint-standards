@@ -1,4 +1,4 @@
-<pre>
+
 
   NGA.STND.0019_2.0  
   2012-04-05  
@@ -11,7 +11,7 @@
   
   
   
-<p style="text-align:center"><b><i><h1 style="text-align:center" style="font-family:verdana" >NGA STANDARDIZATION DOCUMENT</h1></i></b></p>
+<p style="text-align:center"><b><i><h1 style="text-align:center" style="font-family:verdana" >NGA STANDARDIZATION DOCUMENT</h1></i></b>
   
 Time-Space-Position Information  
 (TSPI)  
@@ -31,7 +31,7 @@ Version 2.0
 
 
 <table border="3">
-<td><h5>DISTRIBUTION STATEMENT A:   Approved for public release; distribution is unlimited.</h5></td>
+<td><h5>DISTRIBUTION STATEMENT A:   Approved for public release; distribution is unlimited.</h5>
 </table>
  
 
@@ -43,17 +43,17 @@ Version 2.0
 ---
  
 #####Table of Contents
-1.	Introduction ..............................................................1  
-  1.1.	Spatiotemporal ............................................................1  
-  1.2.	TSPI Terminology...........................................................1  
-  1.3.	TSPI Exchange..............................................................2  
-  1.4.	TSPI-related XML-based Standards...........................................2  
-  1.5.	SCOTS Software.............................................................4  
-  1.6.	Data Mediation.............................................................4  
-  1.7.	Space and Place............................................................4  
-  1.8.	TSPI Capabilities..........................................................5  
-  1.9.	TSPI Schema Components.....................................................6  
-  1.10.	Specification Overview.....................................................7  
+  1.	Introduction ..............................................................1  
+    1.1.	Spatiotemporal ............................................................1  
+    1.2.	TSPI Terminology...........................................................1  
+    1.3.	TSPI Exchange..............................................................2  
+    1.4.	TSPI-related XML-based Standards...........................................2  
+    1.5.	SCOTS Software.............................................................4  
+    1.6.	Data Mediation.............................................................4  
+    1.7.	Space and Place............................................................4  
+    1.8.	TSPI Capabilities..........................................................5  
+    1.9.	TSPI Schema Components.....................................................6  
+    1.10.	Specification Overview.....................................................7  
 2.	Conformance................................................................8  
 3.	References.................................................................8  
   3.1.	Normative..................................................................8  
@@ -73,25 +73,25 @@ Version 2.0
     5.3.6.	Positional Uncertainty....................................47  
   5.4.	Spatial Extent....................................................48  
     5.4.1.	Introduction..............................................48  
-		5.4.2.	TSPI Point Position.......................................49  
-		5.4.3.	TSPI Line String..........................................52  
-		5.4.4	TSPI Circle...............................................54  
-		5.4.5	TSPI Ellipse..............................................57  
-		5.4.6	TSPI Polygon	59    
-		5.4.7	TSPI Simple Polygon	63  
-		5.4.8	TSPI Simple Rectangle	65  
-		5.4.9	TSPI Envelope	68  
-		5.4.10	TSPI Circular Surface	70  
-5.4.11	TSPI Elliptical Surface	72  
-5.5	Spatial Relations	74  
-5.5.1	Measured Direction	74  
-5.5.2	Cardinal Direction	74  
-5.5.3	Topology	75  
-5.6	Spatial Measures	75  
-5.7	Spatial Change	76  
-5.8	Spatial Position Extension	76  
-5.8.1	Introduction	76  
-5.8.2	CRS-restricted Point (WGS84E_3D)	77  
+    5.4.2.	TSPI Point Position.......................................49  
+    5.4.3.	TSPI Line String..........................................52  
+    5.4.4.	TSPI Circle...............................................54  
+    5.4.5.	TSPI Ellipse..............................................57  
+    5.4.6.	TSPI Polygon	59    
+    5.4.7.	TSPI Simple Polygon	63  
+    5.4.8.	TSPI Simple Rectangle	65  
+    5.4.9.	TSPI Envelope	68  
+   5.4.10.	TSPI Circular Surface	70  
+   5.4.11.	TSPI Elliptical Surface	72  
+ 5.5	Spatial Relations	74  
+   5.5.1	Measured Direction	74  
+   5.5.2	Cardinal Direction	74  
+   5.5.3	Topology	75  
+ 5.6	Spatial Measures	75  
+ 5.7	Spatial Change	76  
+ 5.8	Spatial Position Extension	76  
+   5.8.1	Introduction	76  
+   5.8.2	CRS-restricted Point (WGS84E_3D)	77  
 6	 Where – Geographic Location	79  
  6.1	 Introduction	79  
  6.2	 Abstract Geographically-identified Location	79  
@@ -4666,5 +4666,5 @@ The TSPI Schema specifies the following types of information resources (see Anne
 New lists (with code-members) and new codes (for existing lists) may be added to these registered resources through governance processes associated with the GSIP Governance Namespace (see: http://metadata.ces.mil/mdr/ns/GSIP). These processes are managed by the GEOINT Standards Working Group (GWG; see: http://www.gwg.nga.mil/) through the activities of the Metadata Focus Group (MFG; see: http://nsgreg.nga.mil/mfg) in coordination with the Application Schemas for Feature Encoding Focus Group (ASFE FG; see: http://nsgreg.nga.mil/asfe).
 Extension proposals should be directed to mfgchair@nga.mil.
 
-</pre>
+
 
