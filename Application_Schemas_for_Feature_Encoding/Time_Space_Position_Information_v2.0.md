@@ -1,7 +1,7 @@
 
 
-  NGA.STND.0019_2.0  
-  2012-04-05  
+  <p align="right">NGA.STND.0019_2.0  
+  <p align="right">2012-04-05  
   
   
   
@@ -11,18 +11,18 @@
   
   
   
-<p style="text-align:center"><b><i><h1 style="text-align:center" style="font-family:verdana" >NGA STANDARDIZATION DOCUMENT</h1></i></b>
+<p align="center"><h3>NGA STANDARDIZATION DOCUMENT</h3>
   
-Time-Space-Position Information  
-(TSPI)  
-(2012-04-05)  
+<p align="center">Time-Space-Position Information  
+<p align="center">(TSPI)  
+<p align="center">(2012-04-05)  
     
     
     
   
   
 
-Version 2.0
+<p align="center">Version 2.0
 
 
 
@@ -31,7 +31,7 @@ Version 2.0
 
 
 <table border="3">
-<td><h5>DISTRIBUTION STATEMENT A:   Approved for public release; distribution is unlimited.</h5>
+<th><h5>DISTRIBUTION STATEMENT A:   Approved for public release; distribution is unlimited.</h5></th>
 </table>
  
 
@@ -39,7 +39,7 @@ Version 2.0
 
 
 ---
-#####NATIONAL CENTER FOR GEOSPATIAL INTELLIGENCE STANDARDS
+<p align="center">NATIONAL CENTER FOR GEOSPATIAL INTELLIGENCE STANDARDS
 ---
  
 #####Table of Contents 
