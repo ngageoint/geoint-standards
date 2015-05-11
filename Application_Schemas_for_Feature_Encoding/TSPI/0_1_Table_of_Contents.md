@@ -1,19 +1,22 @@
 Table of Contents
-1	Introduction	<p align="right">1
-1.1	Spatiotemporal Data	1
-1.2	TSPI Terminology	1
-1.3	TSPI Exchange	2
-1.4	TSPI-related XML-based Standards	2
-1.5	SCOTS Software	4
-1.6	Data Mediation	4
-1.7	Space and Place	4
-1.8	TSPI Capabilities	5
-1.9	TSPI Schema Components	6
-1.10	Specification Overview	7
-2	Conformance	8
-3	References	8
-3.1	Normative	8
-3.2	Informative	9
+<ol>
+<li>1	Introduction	
+<ol>
+<li>1.1	Spatiotemporal Data	1
+<li>1.2	TSPI Terminology	1
+<li>1.3	TSPI Exchange	2
+<li>1.4	TSPI-related XML-based Standards	2
+<li>1.5	SCOTS Software	4
+<li>1.6	Data Mediation	4
+<li>1.7	Space and Place	4
+<li>1.8	TSPI Capabilities	5
+<li>1.9	TSPI Schema Components	6
+<li>1.10	Specification Overview	7</ol>
+<li>2	Conformance	8
+<li>3	References	8
+<ol>
+<li>3.1	Normative	8
+<li>3.2	Informative	9</ol>
 4	Terms, Definitions and Acronyms	10
 4.1	Terms and Definitions	10
 4.2	Acronyms	13
