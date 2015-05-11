@@ -1,7 +1,7 @@
-
+![alt text](https://cloud.githubusercontent.com/assets/4232463/7570770/af4528ba-f7e0-11e4-9ac6-b50dfbca9d07.jpg "NGA Seal")
 
   <p align="right">NGA.STND.0019_2.0  
-  <p align="right">2012-04-05  
+  <p align="right">2012-04-05
   
   
   
