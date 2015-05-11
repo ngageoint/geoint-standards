@@ -42,7 +42,7 @@ It is the intent of DoD/IC leadership that investments in new information techno
 The DoD data- and net-centric tenets include the concept that data mediation may be employed to bridge between the information exchange schemas of different Communities of Interest (COI). Where both COIs share the same semantics, but differ only in the syntactic structure of their schemas it is possible to dynamically restructure instance data to facilitate cross-community information exchange.<br>
 For XML-based schemas and data instances, the Extensible Stylesheet Language Transformations (XSLT) technology may be used to facilitate this data restructuring once a semantic-preserving structural mapping has been specified. Achieving the necessary semantic pre-requisite is facilitated by sharing common schema data components where those data components “mean the same thing” in both communities.<br><br>
 ISO 19136:2007 (GML) specifies such a set of common data components for use in building community-specific schemas where spatiotemporal information is involved. The adoption of a common Profile of GML by multiple COIs, and then its consistent and correct employment in community-specific schemas, can facilitate TSPI interoperability despite other types of community differences. <br><br>
-<b>1.7	Space and Place</b><br><br>
+<b><i>1.7	Space and Place</i></b><br><br>
 Spatial information includes position, extent (shape), size, orientation, and rates of change in these characteristics. Unambiguous expression of the values of these characteristics requires the identification of a robust coordinate reference system, such as those associated with the World Geodetic System 1984 (WGS 84), and the ability to specify the values of such characteristics with respect to that coordinate reference system.<br><br>
 ISO 19133:2005, <i>Geographic information – Location based services tracking and navigation</i> defines <b>position</b> as “a point or geometry potentially occupied by a (spatial) object.” ISO 19107:2003, Geographic information – Spatial schema elaborates by stating that “A position is described by a single set of coordinates within a coordinate reference system”.<br><br>
 Spatial information also includes identifiers based on geographic place-names, physical addresses, and other systems in which a spatial reference in the form of a label or code is used to identifiy a location that may then be more rigorously tied to a position with respect to a coordinate reference system.<br><br>
@@ -58,7 +58,7 @@ In all three types of “place”, a <b>spatial reference system</b> is establis
 <li>	In the case of locating, a <b>spatial reference system</b> using geographic identifiers is established that relates locations to positions. Gazetteers are then used to establish directories of (geographically) identified locations along with their corresponding positions.
 <li>	In the case of addressing, a systematic mapping is established based on the structure of the addressing scheme that allows for geocoding – the process of converting addresses (e.g., "1600 Amphitheatre Parkway, Mountain View, CA") into positions (e.g., geodetic latitude/ longitude {37.423021 -122.083739} ).</ul><br><br>
 This specification supports all three types of “place”. It does not specify mechanisms for converting among positions, locations, and addresses.<br><br>
-<b>1.8	TSPI Capabilities</b><br><br>
+<b><i>1.8	TSPI Capabilities</i></b><br><br>
 This specification provides a “bridge” from legacy information exchanges (<i>e.g.</i>, USMTF and VMF-XML) to a well-structured, well-documented, robust XML schema for spatiotemporal data which has broad DoD/IC applicability.<br><br>
 The TSPI specification is a common set of XML-based representations, being shared across many communities of interest. It is a robust mechanism for expressing “Where” and “When” in various core and extended XML-based information schemas in the DoD/IC. It addresses the specification and exchange of data regarding:<br>
 <ul><li>	Earth-referenced spatial coordinate systems;
@@ -111,17 +111,17 @@ When any of these three XML namespaces are referenced from other schemas then th
 <li>	‘<b>tspi</b>’: http://metadata.ces.mil/mdr/ns/GSIP/tspi/2.0.0/tspi.xsd </ul><br>
 Schema component files (XSD, SCH, XML) may be copied to other locations for development and/or efficiency purposes, however any alteration or substitution violates TSPI conformance requirements (see Annex B).<br><br>
 <b><i>1.10	Specification Overview</i></b><br><br>
-This specification is organized into seven primary sections followed by a series of Annexes, some of which are informative in nature (and so marked).<br>
-Section 2 specifies conformance requirements.<br>
-Section 3 specifies the normative and informative references used in this specification. Normative references are necessary for the complete understanding of this specification. Informative references are not essential but provide supplementary material from which the user of this specification may benefit.<br>
-Section 4 specifies the terms, definitions and acronyms used in this specification.<br>
-Section 5 specifies the mechanisms established by this specification for representing spatial position. It also specifies mechanisms for extending TSPI (and GML) with additional representations for spatial position and includes initial high-value extensions.<br>
-Section 6 specifies the mechanisms established by this specification for representing spatial location using geographic identifiers (e.g., place names). It also specifies mechanisms for extending TSPI with additional representations for spatial location and includes initial high-value extensions.<br>
-Section 7 specifies the mechanisms established by this specification for representing (physical) address (e.g., postal address).<br>
-Section 8 specifies the mechanisms established by this specification for representing temporal position.<br>
-Annex A (normative) establishes a set of conventions used throughout this specification. These include naming and design rules, the referencing of various schemas, the establishment and use of information resources (e.g., coordinate reference systems, code lists, and units of measure) in support of this specification, the use of ISO/IEC 19757:2006 Schematron in validating XML instance documents, and issues in conformance and reuse of this specification.<br>
-Annex B (normative) establishes a conformance test suite.<br>
-Annex C (informative) identifies a set of Geodetic 2D coordinate reference systems that are registered in the GSIP Governance Namespace of the DoD Data Services Environment (DSE) Metadata Registry (MDR) that may be used with this specification.<br>
-Annex D (informative) explains the principal structuring concepts used by GML: Profiles and Application Schemas.<br>
+This specification is organized into seven primary sections followed by a series of Annexes, some of which are informative in nature (and so marked).<br><br>
+Section 2 specifies conformance requirements.<br><br>
+Section 3 specifies the normative and informative references used in this specification. Normative references are necessary for the complete understanding of this specification. Informative references are not essential but provide supplementary material from which the user of this specification may benefit.<br><br>
+Section 4 specifies the terms, definitions and acronyms used in this specification.<br><br>
+Section 5 specifies the mechanisms established by this specification for representing spatial position. It also specifies mechanisms for extending TSPI (and GML) with additional representations for spatial position and includes initial high-value extensions.<br><br>
+Section 6 specifies the mechanisms established by this specification for representing spatial location using geographic identifiers (e.g., place names). It also specifies mechanisms for extending TSPI with additional representations for spatial location and includes initial high-value extensions.<br><br>
+Section 7 specifies the mechanisms established by this specification for representing (physical) address (e.g., postal address).<br><br>
+Section 8 specifies the mechanisms established by this specification for representing temporal position.<br><br>
+Annex A (normative) establishes a set of conventions used throughout this specification. These include naming and design rules, the referencing of various schemas, the establishment and use of information resources (e.g., coordinate reference systems, code lists, and units of measure) in support of this specification, the use of ISO/IEC 19757:2006 Schematron in validating XML instance documents, and issues in conformance and reuse of this specification.<br><br>
+Annex B (normative) establishes a conformance test suite.<br><br>
+Annex C (informative) identifies a set of Geodetic 2D coordinate reference systems that are registered in the GSIP Governance Namespace of the DoD Data Services Environment (DSE) Metadata Registry (MDR) that may be used with this specification.<br><br>
+Annex D (informative) explains the principal structuring concepts used by GML: Profiles and Application Schemas.<br><br>
 Annex E (informative) describes the procedures to be followed when extending the TSPI through a process of registering new XML components, code lists, and codes, to include Coordinate Reference Systems, Physical Quantities, Units of Measure, and Data Quality Measures.<br><br>
 
