@@ -56,7 +56,7 @@ In this specification, a “place” is referred to as a:<br>
 In all three types of “place”, a <b>spatial reference system</b> is established that (eventually) allows identification of a position in the real world.<br><br>
 <ul><li>	In the case of positioning, a coordinate reference system relates the position to an established datum (e.g., one based on an ellipsoid of revolution describing the shape of the Earth).
 <li>	In the case of locating, a <b>spatial reference system</b> using geographic identifiers is established that relates locations to positions. Gazetteers are then used to establish directories of (geographically) identified locations along with their corresponding positions.
-<li>	In the case of addressing, a systematic mapping is established based on the structure of the addressing scheme that allows for geocoding – the process of converting addresses (e.g., "1600 Amphitheatre Parkway, Mountain View, CA") into positions (e.g., geodetic latitude/ longitude {37.423021 -122.083739} ).</ul><br><br>
+<li>	In the case of addressing, a systematic mapping is established based on the structure of the addressing scheme that allows for geocoding – the process of converting addresses (e.g., "1600 Amphitheatre Parkway, Mountain View, CA") into positions (e.g., geodetic latitude/ longitude {37.423021 -122.083739} ).</ul>
 This specification supports all three types of “place”. It does not specify mechanisms for converting among positions, locations, and addresses.<br><br>
 <b><i>1.8	TSPI Capabilities</i></b><br><br>
 This specification provides a “bridge” from legacy information exchanges (<i>e.g.</i>, USMTF and VMF-XML) to a well-structured, well-documented, robust XML schema for spatiotemporal data which has broad DoD/IC applicability.<br><br>
@@ -73,20 +73,20 @@ The TSPI specification is a common set of XML-based representations, being share
 <li>	Position (instant) in an Earth-referenced temporal coordinate system;
 <li>	Extent (duration) in an Earth-referenced temporal coordinate system;
 <li>	Spatiotemporal quality assessment information to include the precision of data values as well as quantitative and qualitative estimates of the accuracy and/or uncertainty of spatial and temporal characteristics; and
-<li>	“Presentation-oriented” data representations intended principally or exclusively for human-to-human communication (e.g., “DDDMMSSH” type encodings). Such data representations constitute “presentations” only in the sense that they encode a spatial position specification in a manner amenable to direct use in generating text-strings for use in human-computer interfaces.</ul><br>
+<li>	“Presentation-oriented” data representations intended principally or exclusively for human-to-human communication (e.g., “DDDMMSSH” type encodings). Such data representations constitute “presentations” only in the sense that they encode a spatial position specification in a manner amenable to direct use in generating text-strings for use in human-computer interfaces.</ul>
 The following topics fall outside the scope of this specification:
 <ul><li>	Spatial coordinate systems that are time-varying; 
 <li>	Topologic relations  between/among spatial extents (shapes);
 <li>	Geocoding, coordinate conversion, datum transformation, and associated algorithms for relating spatiotemporal data specified in different spatiotemporal reference systems;
 <li>	Methods for determining the precision, accuracy and/or uncertainty of spatiotemporal data;
 <li>	Encodings for bit-oriented communications environments;  and
-<li>	Means for asserting domain-specific semantics of entities with spatiotemporal characteristics (e.g., equipment, feature, or target types).</ul><br>
+<li>	Means for asserting domain-specific semantics of entities with spatiotemporal characteristics (e.g., equipment, feature, or target types).</ul>
 This specification is:
 <ol><li>	An ISO 19106-conformant Class 2 Profile of ISO 19136:2007 (GML).
 <li>	An ISO 19106-conformant Class 2 Profile of ISO 6709:2008.
 <li>	Maximally consistent with IETF RFC 5870 – A Uniform Resource Identifier for Geographic Locations (’geo’ URI).
 <li>	Designed so as to enable the use of applicable OGC Open Web Service standards with TSPI-conformant instance documents. This may, in some cases, require data mediation through the use of XSLT technology.
-<li>	Designed so as to maximally enable data mediation to/with other XML-based schemas in common use in the DoD/IC that include time-space-position information, e.g., XML-MTF, VMF-XML, and XML-based encodings of the NSG Application Schema (NAS).</ol><br>
+<li>	Designed so as to maximally enable data mediation to/with other XML-based schemas in common use in the DoD/IC that include time-space-position information, e.g., XML-MTF, VMF-XML, and XML-based encodings of the NSG Application Schema (NAS).</ol>
 This specification utilizes the terminology of ISO 80000:2009 Quantities and units (multi-part).  This means that throughout this specification the standard unit of measure for length (dimension) is named “<b>metre</b>”.<br><br>
 <b><i>1.9	TSPI Schema Components</i></b><br><br>
 The TSPI Schema is implemented in terms of a set of data-file components that collectively are referred to throughout this specification simply as “the TSPI Schema” when greater specificity is unnecessary. These data-file components are of one of the following three types:<br>
