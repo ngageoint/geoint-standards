@@ -13,14 +13,12 @@
   
   
   
-<h2><p align="center">NGA STANDARDIZATION DOCUMENT</h2><br><br><br>
+<p align="center">NGA STANDARDIZATION DOCUMENT<br><br>
 
 <p align="center">Time-Space-Position Information
 <p align="center">(TSPI)  
 <p align="center">(2012-04-05)  
-</h2> 
-<br>
-<br>    
+<br><br>    
 <br>    
 
     
@@ -34,11 +32,11 @@
 
 
 
-<table border="3">
-<tr><td>DISTRIBUTION STATEMENT A:   Approved for public release; distribution is unlimited.</td></tr>
-</table>
- 
-<br><br>
+
+|              DISTRIBUTION STATEMENT A:   Approved for public release; distribution is unlimited.|
+|:----------------------------------------------------------------------------------:|
+
+
 
 
 
