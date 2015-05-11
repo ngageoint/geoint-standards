@@ -52,7 +52,7 @@ In this specification, a “place” is referred to as a:<br>
 <ul>
 <li>	<b><i>position</b></i> when that place is identified using spatial coordinates (e.g., geodetic latitude and longitude);
 <li>	<b><i>location</b></i> when that place is identified using geographic identifiers (e.g., place name); or
-<li>	<b><i>address</b></i> when that place is identified using (physical ) addresses (e.g., postal address).</ul><br><br>
+<li>	<b><i>address</b></i> when that place is identified using (physical ) addresses (e.g., postal address).</ul><br>
 In all three types of “place”, a <b>spatial reference system</b> is established that (eventually) allows identification of a position in the real world.<br><br>
 <ul><li>	In the case of positioning, a coordinate reference system relates the position to an established datum (e.g., one based on an ellipsoid of revolution describing the shape of the Earth).
 <li>	In the case of locating, a <b>spatial reference system</b> using geographic identifiers is established that relates locations to positions. Gazetteers are then used to establish directories of (geographically) identified locations along with their corresponding positions.
