@@ -1,4 +1,4 @@
-![alt text](https://cloud.githubusercontent.com/assets/4232463/7570770/af4528ba-f7e0-11e4-9ac6-b50dfbca9d07.jpg "NGA Seal")
+![alt text](https://cloud.githubusercontent.com/assets/4232463/7571060/e68c2042-f7e2-11e4-9cca-13ab92fcb5eb.jpg "NGA Seal")
 
   <p align="right">NGA.STND.0019_2.0  
   <p align="right">2012-04-05
