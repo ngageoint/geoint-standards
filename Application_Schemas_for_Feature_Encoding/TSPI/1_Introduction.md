@@ -98,30 +98,30 @@ The TSPI Schema is implemented in terms of a set of data-file components that co
 <li>	define the TSPI XML namespaces (‘tspi-core’, ‘tspi-ext’, and ‘tspi’).</ul>
 <li>	XML instance documents: These either specify:
 <ul><li>	authoritative GML-based CodeList Dictionaries that are used by various XML Schema components and associated Schematron assertions, or
-<li>	informative examples of the use of TSPI Schema components in XML-based information exchange.</ul></ul>
-Almost all of these data-files depend on the the TSPI XML Namespace(s); Annex A.4 specifies how those namespaces relate to the DoD Data Services Environment (DSE) Metadata Registry (MDR) and the information resources that are published there.
-The three TSPI-associated XML namespaces are as follows:
-•	‘tspi-core’: Specifies core XML type components that shall always be used as specified without further restriction unless documented by, and accomplished using, Schematron assertions.
-•	‘tspi-ext’: TSPI-conformant registered extensions that specify additional representations for spatial position, geographic location, and/or physical address. It is populated with initial high-value extensions, but is dynamically maintained on the MDR. Its use is conditional on the requirements of a given system/application and its accompanying business requirements.
-•	‘tspi’: XML elements and non-core types with less strict reuse rules than ‘tspi-core’; it imports the schemas of the ‘tspi-core’and ‘tspi-ext’ namespaces.
-This TSPI specification defines XML Schema components in all three of these XML namespaces, as well as related Schematron assertions and GML dictionaries upon which those components depend.
-When any of these three XML namespaces are referenced from other schemas then the single valid schemaLocation for the <import> is that established in the MDR. For the current TSPI release these are, respectively:
-•	‘tspi-core’: http://metadata.ces.mil/mdr/ns/GSIP/tspi/2.0.0/tspi-core.xsd
-•	‘tspi-ext’: http://metadata.ces.mil/mdr/ns/GSIP/tspi/2.0.0/tspi-ext.xsd
-•	‘tspi’: http://metadata.ces.mil/mdr/ns/GSIP/tspi/2.0.0/tspi.xsd 
-Schema component files (XSD, SCH, XML) may be copied to other locations for development and/or efficiency purposes, however any alteration or substitution violates TSPI conformance requirements (see Annex B).
-1.10	Specification Overview
-This specification is organized into seven primary sections followed by a series of Annexes, some of which are informative in nature (and so marked).
-Section 2 specifies conformance requirements.
-Section 3 specifies the normative and informative references used in this specification. Normative references are necessary for the complete understanding of this specification. Informative references are not essential but provide supplementary material from which the user of this specification may benefit.
-Section 4 specifies the terms, definitions and acronyms used in this specification.
-Section 5 specifies the mechanisms established by this specification for representing spatial position. It also specifies mechanisms for extending TSPI (and GML) with additional representations for spatial position and includes initial high-value extensions.
-Section 6 specifies the mechanisms established by this specification for representing spatial location using geographic identifiers (e.g., place names). It also specifies mechanisms for extending TSPI with additional representations for spatial location and includes initial high-value extensions.
-Section 7 specifies the mechanisms established by this specification for representing (physical) address (e.g., postal address).
-Section 8 specifies the mechanisms established by this specification for representing temporal position.
-Annex A (normative) establishes a set of conventions used throughout this specification. These include naming and design rules, the referencing of various schemas, the establishment and use of information resources (e.g., coordinate reference systems, code lists, and units of measure) in support of this specification, the use of ISO/IEC 19757:2006 Schematron in validating XML instance documents, and issues in conformance and reuse of this specification.
-Annex B (normative) establishes a conformance test suite.
-Annex C (informative) identifies a set of Geodetic 2D coordinate reference systems that are registered in the GSIP Governance Namespace of the DoD Data Services Environment (DSE) Metadata Registry (MDR) that may be used with this specification.
-Annex D (informative) explains the principal structuring concepts used by GML: Profiles and Application Schemas.
-Annex E (informative) describes the procedures to be followed when extending the TSPI through a process of registering new XML components, code lists, and codes, to include Coordinate Reference Systems, Physical Quantities, Units of Measure, and Data Quality Measures.
+<li>	informative examples of the use of TSPI Schema components in XML-based information exchange.</ul></ul><br><br>
+Almost all of these data-files depend on the the TSPI XML Namespace(s); Annex A.4 specifies how those namespaces relate to the DoD Data Services Environment (DSE) Metadata Registry (MDR) and the information resources that are published there.<br><br>
+The three TSPI-associated XML namespaces are as follows:<br>
+<ul><li>	‘<b>tspi-core</b>’: Specifies core XML type components that shall always be used as specified without further restriction unless documented by, and accomplished using, Schematron assertions.
+<li>	‘<b>tspi-ext</b>’: TSPI-conformant registered extensions that specify additional representations for spatial position, geographic location, and/or physical address. It is populated with initial high-value extensions, but is dynamically maintained on the MDR. Its use is conditional on the requirements of a given system/application and its accompanying business requirements.
+<li>	‘<b>tspi</b>’: XML elements and non-core types with less strict reuse rules than ‘<b>tspi-core</b>’; it imports the schemas of the ‘<b>tspi-core</b>’and ‘<b>tspi-ext</b>’ namespaces.<br>
+This TSPI specification defines XML Schema components in all three of these XML namespaces, as well as related Schematron assertions and GML dictionaries upon which those components depend.</ul><br>
+When any of these three XML namespaces are referenced from other schemas then the single valid schemaLocation for the <import> is that established in the MDR. For the current TSPI release these are, respectively:<br>
+<ul><li>	‘<b>tspi-core</b>’: http://metadata.ces.mil/mdr/ns/GSIP/tspi/2.0.0/tspi-core.xsd
+<li>	‘<b>tspi-ext</b>’: http://metadata.ces.mil/mdr/ns/GSIP/tspi/2.0.0/tspi-ext.xsd
+<li>	‘<b>tspi</b>’: http://metadata.ces.mil/mdr/ns/GSIP/tspi/2.0.0/tspi.xsd </ul><br>
+Schema component files (XSD, SCH, XML) may be copied to other locations for development and/or efficiency purposes, however any alteration or substitution violates TSPI conformance requirements (see Annex B).<br><br>
+<b><i>1.10	Specification Overview</i></b><br><br>
+This specification is organized into seven primary sections followed by a series of Annexes, some of which are informative in nature (and so marked).<br>
+Section 2 specifies conformance requirements.<br>
+Section 3 specifies the normative and informative references used in this specification. Normative references are necessary for the complete understanding of this specification. Informative references are not essential but provide supplementary material from which the user of this specification may benefit.<br>
+Section 4 specifies the terms, definitions and acronyms used in this specification.<br>
+Section 5 specifies the mechanisms established by this specification for representing spatial position. It also specifies mechanisms for extending TSPI (and GML) with additional representations for spatial position and includes initial high-value extensions.<br>
+Section 6 specifies the mechanisms established by this specification for representing spatial location using geographic identifiers (e.g., place names). It also specifies mechanisms for extending TSPI with additional representations for spatial location and includes initial high-value extensions.<br>
+Section 7 specifies the mechanisms established by this specification for representing (physical) address (e.g., postal address).<br>
+Section 8 specifies the mechanisms established by this specification for representing temporal position.<br>
+Annex A (normative) establishes a set of conventions used throughout this specification. These include naming and design rules, the referencing of various schemas, the establishment and use of information resources (e.g., coordinate reference systems, code lists, and units of measure) in support of this specification, the use of ISO/IEC 19757:2006 Schematron in validating XML instance documents, and issues in conformance and reuse of this specification.<br>
+Annex B (normative) establishes a conformance test suite.<br>
+Annex C (informative) identifies a set of Geodetic 2D coordinate reference systems that are registered in the GSIP Governance Namespace of the DoD Data Services Environment (DSE) Metadata Registry (MDR) that may be used with this specification.<br>
+Annex D (informative) explains the principal structuring concepts used by GML: Profiles and Application Schemas.<br>
+Annex E (informative) describes the procedures to be followed when extending the TSPI through a process of registering new XML components, code lists, and codes, to include Coordinate Reference Systems, Physical Quantities, Units of Measure, and Data Quality Measures.<br><br>
 
