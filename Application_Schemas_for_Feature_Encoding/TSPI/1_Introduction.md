@@ -48,7 +48,7 @@ ISO 19133:2005, <i>Geographic information – Location based services tracking a
 Spatial information also includes identifiers based on geographic place-names, physical addresses, and other systems in which a spatial reference in the form of a label or code is used to identifiy a location that may then be more rigorously tied to a position with respect to a coordinate reference system.<br><br>
 ISO 19112:2003, <i>Geographic information – Spatial referencing by geographic identifiers</i> defines <b>location</b> as “an identifiable geographic place.” ISO/WD 19160-1, <i>Geographic information – Addressing – Part 1: Conceptual model</i> defines a (physical) <b>address</b> as “structured information that uniquely references a (physical) object for the purpose of identification and (spatial) location.”<br><br>
 ISO/CD 19155, <i>Geographic information – Place Identifier (PI) architecture</i> defines <b>place</b> as “an identifiable part of any space”, where a “place” may be located in either the real or virtual world.
-In this specification, a “place” is referred to as a:<br>
+In this specification, a “place” is referred to as a:
 <ul>
 <li>	<b><i>position</b></i> when that place is identified using spatial coordinates (e.g., geodetic latitude and longitude);
 <li>	<b><i>location</b></i> when that place is identified using geographic identifiers (e.g., place name); or
