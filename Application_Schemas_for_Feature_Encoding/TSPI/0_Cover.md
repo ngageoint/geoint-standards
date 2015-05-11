@@ -13,7 +13,7 @@
   
   
   
-<p align="center">NGA STANDARDIZATION DOCUMENT<br><br>
+<p align="center"><b>NGA STANDARDIZATION DOCUMENT</b><br><br>
 
 <p align="center">Time-Space-Position Information
 <p align="center">(TSPI)  
@@ -33,8 +33,7 @@
 
 
 
-|              DISTRIBUTION STATEMENT A:   Approved for public release; distribution is unlimited.|
-|:----------------------------------------------------------------------------------:|
+<p align="center"><b>DISTRIBUTION STATEMENT A:   Approved for public release; distribution is unlimited.</b>
 
 
 
