@@ -1,39 +1,33 @@
+<pre>
 Table of Contents
-<ol type="1">
-<li>1	Introduction	
-<ol type="1">
-<li>1.1	Spatiotemporal Data	1
-<li>1.2	TSPI Terminology	1
-<li>1.3	TSPI Exchange	2
-<li>1.4	TSPI-related XML-based Standards	2
-<li>1.5	SCOTS Software	4
-<li>1.6	Data Mediation	4
-<li>1.7	Space and Place	4
-<li>1.8	TSPI Capabilities	5
-<li>1.9	TSPI Schema Components	6
-<li>1.10	Specification Overview	7
-</ol>
-<li>2	Conformance	8
-<li>3	References	8
-<ol>
-<li>3.1	Normative	8
-<li>3.2	Informative	9</ol>
-<li>4	Terms, Definitions and Acronyms	10
-<ol>
-<li>4.1	Terms and Definitions	10
-<li>4.2	Acronyms	13
-</ol>
-<li> 5	Where – Spatial Position	15
-<ol><li>5.1	Introduction	15
-<li>5.2	Abstract Position	15
-<li>5.3	Position Infrastructure	16
-<ol><li>5.3.1	Coordinate Reference Systems	16
-<li>5.3.2	Earth-referenced Coordinate Reference Systems	20
-<li>5.3.3	Earth-referenced Position Presentation	30
-<li>5.3.4	Earth-referenced Elevation, Height, Altitude and Depth	42
-<li>5.3.5	Coordinate Resolution	43
-<li>5.3.6	Positional Uncertainty	47
-</ol></ol>
+1	Introduction	1
+1.1	Spatiotemporal Data	1
+1.2	TSPI Terminology	1
+1.3	TSPI Exchange	2
+1.4	TSPI-related XML-based Standards	2
+1.5	SCOTS Software	4
+1.6	Data Mediation	4
+1.7	Space and Place	4
+1.8	TSPI Capabilities	5
+1.9	TSPI Schema Components	6
+1.10	Specification Overview	7
+2	Conformance	8
+3	References	8
+3.1	Normative	8
+3.2	Informative	9
+4	Terms, Definitions and Acronyms	10
+4.1	Terms and Definitions	10
+4.2	Acronyms	13
+5	Where – Spatial Position	15
+5.1	Introduction	15
+5.2	Abstract Position	15
+5.3	Position Infrastructure	16
+5.3.1	Coordinate Reference Systems	16
+5.3.2	Earth-referenced Coordinate Reference Systems	20
+5.3.3	Earth-referenced Position Presentation	30
+5.3.4	Earth-referenced Elevation, Height, Altitude and Depth	42
+5.3.5	Coordinate Resolution	43
+5.3.6	Positional Uncertainty	47
 5.4	Spatial Extent	48
 5.4.1	Introduction	48
 5.4.2	TSPI Point Position	49
@@ -91,7 +85,6 @@ Table of Contents
 8.7.3	Temporal Interval	96
 8.7.4	Encoding	96
 8.8	Temporal Uncertainty	96
-</ol>
 Annex A – Conventions (Normative)	98
 A.1	Introduction	98
 A.2	Naming and Design Rules from GML	98
@@ -147,4 +140,5 @@ Annex E – Extension Procedure (Informative)	129
 E.1	Introduction	129
 E.2	Substitution Group Extension	129
 E.3	Code List Extension	130
+</pre>
 
