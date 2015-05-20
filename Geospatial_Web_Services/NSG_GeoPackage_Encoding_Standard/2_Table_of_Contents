@@ -1,0 +1,33 @@
+Table of Contents
+1.	Introduction	4
+2.	Scope	4
+3.	References	6
+4.	Context of the Profile	9
+5.	Compliance	9
+6.	GeoPackages	11
+6.1.	File Names	11
+6.2.	Extensions	12
+7.	Tiles and Features	14
+7.1.	Spatial Reference Systems	14
+7.2.	Metadata	38
+7.3.	Data Validity Constraints	43
+8.	Tiles	46
+8.1.	Tile Size	46
+8.2.	Zoom Levels	48
+8.3.	Tile Pyramid Design	49
+8.4.	Tile Alignment	55
+8.5.	Tile Matrix Extent	57
+9.	Features	62
+9.1.	Required GeoPackage Extensions	62
+9.2.	Coordinate Conversion Functions SQLite Extension	63
+9.3.	Geometry Functions SQLite Extension	65
+Annex A	GeoPackage to DoD DSE MDR CRS Dictionary Crosswalk	74
+Annex B	Future OGC 12-063 / ISO 19162 CRS WKT Definitions	76
+Annex C	Metadata Reference Example	94
+Annex D	Zoom Level Scale Sets	95
+D.1	NGA CRSs for Tile Pyramids	95
+D.1.1	Common Zoom Level Scale Set	95
+D.1.2	WGS 84 / Tiled Mercator	96
+D.1.3	WGS 84 / Tiled Transverse Mercator	97
+D.1.4	WGS 84 / Tiled Polar Stereographic	98
+
