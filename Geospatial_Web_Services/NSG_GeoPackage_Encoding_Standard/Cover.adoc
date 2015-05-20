@@ -1,0 +1,22 @@
+                                                                       NGA.IP.xxxx_x.x
+                                                                       2015-xx-xx
+					NGA.IP.xxxx_x.2013-xx-xx
+
+
+
+NGA STANDARDIZATION DOCUMENT
+
+
+National System for Geospatial-Intelligence (NSG) GeoPackage Encoding Standard 1.0
+Implementation Interoperability Standard
+(2015-04-03)
+
+
+
+Version 0.95
+
+
+
+
+
+NATIONAL CENTER FOR GEOSPATIAL INTELLIGENCE STANDARDS
