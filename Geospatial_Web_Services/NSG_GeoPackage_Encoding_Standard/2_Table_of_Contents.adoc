@@ -1,7 +1,7 @@
 *Table of Contents*
 |====
-|1. Introduction |4    
-|2. Scope |4   
+|[red]#1. Introduction# |4    
+|[yellow]#2. Scope# |4   
 |3. References	|6    
 |4. Context of the Profile	|9  
 |5. Compliance	|9  
