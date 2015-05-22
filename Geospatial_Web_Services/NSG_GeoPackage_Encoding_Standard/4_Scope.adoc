@@ -1,8 +1,11 @@
 = 2.	Scope
-This interoperability standard defines NSG implementable provisions that profile the  OGC GeoPackage standard to ensure that NSG GeoPackages,GeoPackage SQLite Extensions, and supporting utilities and services fulfill their intended purposes and are fit for use.    
+
+This interoperability standard defines NSG implementable provisions that profile the  OGC GeoPackage standard to ensure that NSG GeoPackages,GeoPackage SQLite Extensions, and supporting utilities and services fulfill their intended purposes and are fit for use.
+
 This interoperability standard will be used by government, commercial, open source other NGO:
-*     Data Providers to deliver NSG GeoPackage data files, not software.  They may employ software provided by both Infrastructure Providers and Application Software Providers.  Infrastructure Providers.
-*	Infrastructure Software Providers to deliver software that implements the SQLite engine, GeoPackage SQLite Extensions,  GeoPackage libraries  and/or stand alone GeoPackage utilities or web services to encode/decode, validate, and manage GeoPackage files.
+
+* Data Providers to deliver NSG GeoPackage data files, not software.  They may employ software provided by both Infrastructure Providers and Application Software Providers.  Infrastructure Providers.
+* Infrastructure Software Providers to deliver software that implements the SQLite engine, GeoPackage SQLite Extensions,  GeoPackage libraries  and/or stand alone GeoPackage utilities or web services to encode/decode, validate, and manage GeoPackage files.
 *	Application Software Providers to deliver GeoPackage “Apps” that provide users with the capabilities they require in general or mission-specific environments .  They may employ software provided by Infrastructure Providers and bundle their Apps with GeoPackages from Data Providers.
 *	DoD/IC Procurement Organizations to acquire conformant GeoPackages, infrastructure, and applications.
 
