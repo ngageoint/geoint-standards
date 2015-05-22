@@ -1,6 +1,7 @@
 = 1.	Introduction
+
 This Interoperability Standard identifies and tailors the implementable provisions prescribed for the National System for Geospatial-Intelligence (NSG) for a GeoPackage based on the Open Geospatial Consortium (OGC®) GeoPackage Encoding Standard, Reference Number OGC 12-128r10, version 1.0 dated 2014-02-12, in accordance with the provisions of Clause 2.5, Requirement 78-84 and Annex I for registered extensions of that Standard.
 
 This Interoperability Standard is a Class 2 conformance profile as defined by ISO 19106, Geographic Information – Profiles date 2004-07-01 that includes a single standard with permitted NSG extensions and restrictions to the standard. An Interoperability Standard provides detailed direction on how to use the clauses, options, and parameters of the base standard(s).  This guidance is designed to be specific enough for any two independent and compliant software implementations to ‘plug and play’ with each other.
 
-, Clause (8.5) below requires registration as a GeoPackage extension.  So it is structured in accordance with  the extension mechanism requirements specified in GeoPackage Encoding Standard Clause 2.5 and Annex I
+Clause (8.5) below requires registration as a GeoPackage extension.  So it is structured in accordance with  the extension mechanism requirements specified in GeoPackage Encoding Standard Clause 2.5 and Annex I
