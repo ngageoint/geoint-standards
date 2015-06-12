@@ -1,11 +1,4 @@
 <html>
-<head>
-<style type="text/css">
-<!--
-.tab { margin-left: 40px; }
--->
-</style>
-</head>
 <body>
 
 <h2> 6.	GeoPackages </h2><br>
