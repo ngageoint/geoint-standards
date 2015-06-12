@@ -12,13 +12,13 @@ Applications that can read standard GeoPackages can read the specified SRS defin
 <p align="middle"><b>Table 5 Allowed Coordinate Reference Systems</b><table>
   <tr>
     <th>CRS Name</th>
-    <th>CRS AUTH ID</th>
-    <th>Expl or Templ</th>
-    <th>Templ XX Values</th>
-    <th>CRS Type</th>
-    <th>CRS Dim</th>
-    <th>CRS Use</th>
-    <th>CRS Def</th>
+    <th>CRS<br> AUTH<br> ID</th>
+    <th>Expl<br> or<br> Templ</th>
+    <th>Templ<br> XX<br> Values</th>
+    <th>CRS<br> Type</th>
+    <th>CRS<br> Dim</th>
+    <th>CRS<br> Use</th>
+    <th>CRS<br> Def</th>
   </tr>
   <tr>
     <td>WGS 84 Geographic 3D lat/lon/hae</td>
