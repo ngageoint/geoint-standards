@@ -279,8 +279,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>WGS84 / World Mercator Height (EGM96)</td>	
+    <td>NGA 8113</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -289,8 +289,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>WGS84 / World Mercator Depth (EGM96)</td>	
+    <td>NGA 8114</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -299,8 +299,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>WGS84 / World Mercator Height (MSL)</td>	
+    <td>NGA 8115</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -309,8 +309,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>WGS84 / World Mercator Depth (MSL)</td>	
+    <td>NGA 8116</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -319,8 +319,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>UPS North Pole (WGS84) Height (EGM08)</td>	
+    <td>NGA 8121</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -329,8 +329,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>UPS North Pole (WGS84) Depth (EGM08)</td>	
+    <td>NGA 8122</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -339,8 +339,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>UPS North Pole (WGS84) Height (EGM96)</td>	
+    <td>NGA 8123</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -349,8 +349,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>UPS North Pole (WGS84) Depth (EGM96)</td>	
+    <td>NGA 8124</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -359,8 +359,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>UPS North Pole (WGS84) Height (MSL) </td>	
+    <td>NGA 8125</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -369,8 +369,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>UPS North Pole (WGS84) Depth (MSL) </td>	
+    <td>NGA 8126</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -379,8 +379,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>UPS South Pole (WGS84) Height (EGM08)</td>	
+    <td>NGA 8131</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -389,8 +389,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>UPS South Pole (WGS84) Depth (EGM96)</td>	
+    <td>NGA 8134</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -399,8 +399,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>UPS South Pole (WGS84) Height (MSL)</td>	
+    <td>NGA 8135</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -409,8 +409,8 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
+    <td>UPS South Pole (WGS84) Depth (MSL)</td>	
+    <td>NGA 8136</td>	
     <td>Expl</td>	
     <td> </td>	
     <td>COMP</td>	
@@ -419,20 +419,120 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
-    <td>Expl</td>	
-    <td> </td>	
+    <td>UTM Zone XX north (WGS84) Depth (EGM08)</td>	
+    <td>NGA 82XX</td>	
+    <td>Templ</td>	
+    <td>01 – 60</td>	
     <td>COMP</td>	
     <td>3</td>	
     <td>Feat</td>	
     <td>Table 24 Table 25</td>
   </tr>
   <tr>
-    <td></td>	
-    <td></td>	
-    <td>Expl</td>	
-    <td> </td>	
+    <td>UTM Zone XX north (WGS84) Depth (EGM08)</td>	
+    <td>NGA 83XX</td>	
+    <td>Templ</td>	
+    <td>01 – 60</td>	
+    <td>COMP</td>	
+    <td>3</td>	
+    <td>Feat</td>	
+    <td>Table 24 Table 25</td>
+  </tr>
+  <tr>
+    <td>UTM Zone XX north (WGS84) Height (EGM96)</td>	
+    <td>NGA 84XX</td>	
+    <td>Templ</td>	
+    <td>01 – 60</td>	
+    <td>COMP</td>	
+    <td>3</td>	
+    <td>Feat</td>	
+    <td>Table 24 Table 25</td>
+  </tr>
+  <tr>
+    <td>UTM Zone XX north (WGS84) Depth (EGM08)</td>	
+    <td>NGA 85XX</td>	
+    <td>Templ</td>	
+    <td>01 – 60</td>	
+    <td>COMP</td>	
+    <td>3</td>	
+    <td>Feat</td>	
+    <td>Table 24 Table 25</td>
+  </tr>
+  <tr>
+    <td>UTM Zone XX north (WGS84) Height (EGM08)</td>	
+    <td>NGA 86XX</td>	
+    <td>Templ</td>	
+    <td>01 – 60</td>	
+    <td>COMP</td>	
+    <td>3</td>	
+    <td>Feat</td>	
+    <td>Table 24 Table 25</td>
+  </tr>
+  <tr>
+    <td>UTM Zone XX north (WGS84) Depth (MSL) </td>	
+    <td>NGA 87XX</td>	
+    <td>Templ</td>	
+    <td>01 – 60</td>	
+    <td>COMP</td>	
+    <td>3</td>	
+    <td>Feat</td>	
+    <td>Table 24 Table 25</td>
+  </tr>
+  <tr>
+    <td>UTM Zone XX south (WGS84) Height (EGM08) </td>	
+    <td>NGA 92XX</td>	
+    <td>Templ</td>	
+    <td>01 – 60</td>	
+    <td>COMP</td>	
+    <td>3</td>	
+    <td>Feat</td>	
+    <td>Table 24 Table 25</td>
+  </tr>
+  <tr>
+    <td>UTM Zone XX south (WGS84) Depth  (EGM08) </td>	
+    <td>NGA 93XX</td>	
+    <td>Templ</td>	
+    <td>01 – 60</td>	
+    <td>COMP</td>	
+    <td>3</td>	
+    <td>Feat</td>	
+    <td>Table 24 Table 25</td>
+  </tr>
+  <tr>
+    <td>UTM Zone XX south (WGS84) Height (EGM96) </td>	
+    <td>NGA 94XX</td>	
+    <td>Templ</td>	
+    <td>01 – 60</td>	
+    <td>COMP</td>	
+    <td>3</td>	
+    <td>Feat</td>	
+    <td>Table 24 Table 25</td>
+  </tr>
+  <tr>
+    <td>UTM Zone XX south (WGS84) Depth (EGM96) </td>	
+    <td>NGA 95XX</td>	
+    <td>Templ</td>	
+    <td>01 – 60</td>	
+    <td>COMP</td>	
+    <td>3</td>	
+    <td>Feat</td>	
+    <td>Table 24 Table 25</td>
+  </tr>
+  <tr>
+    <td>UTM Zone XX south (WGS84) Height (MSL) </td>	
+    <td>NGA 96XX</td>	
+    <td>Templ</td>	
+    <td>01 – 60</td>	
+    <td>COMP</td>	
+    <td>3</td>	
+    <td>Feat</td>	
+    <td>Table 24 Table 25</td>
+  </tr>
+  <tr>
+    <td>UTM Zone XX south (WGS84) Depth (MSL) </td>	
+    <td>NGA 97XX</td>	
+    <td>Templ</td>	
+    <td>01 – 60</td>	
     <td>COMP</td>	
     <td>3</td>	
     <td>Feat</td>	
