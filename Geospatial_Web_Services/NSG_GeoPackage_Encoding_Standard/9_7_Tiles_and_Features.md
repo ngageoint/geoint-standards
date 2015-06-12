@@ -9,9 +9,7 @@ Applications that can read standard GeoPackages can read the specified SRS defin
 </ol>
 -----
 <sup>1</sup>The term spatial reference system (SRS) used by the GeoPackage standard has the following lineage.  ISO 19101 specifies that Spatial Reference Systems include those for coordinates as specified by ISO 19111 and those for geographic identifiers as specified by ISO 19112.  The GeoPackage standard reused the spatial definition schema from ISO/IEC 13249-3 to define the gpkg_spatial_ref_sys SQL table and provided SQL views of it for compatibility with ISO/IEC 13249-3 and with the variant specified by OGC 06-104r4.  SRS definitions in gpkg_spatial_ref_sys only include those for coordinate reference systems (CRS).
-<br><br><br><br>
-<p align="middle"><b>Table 5 Allowed Coordinate Reference Systems</b></p>
- <table>
+<p align="middle"><b>Table 5 Allowed Coordinate Reference Systems</b><table>
   <tr>
     <th>CRS Name</th>
     <th>CRS AUTH ID</th>
@@ -270,5 +268,15 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Feat</td>	
     <td>Table 24 Table 25</td>
   </tr>
-  </table> 
+   <tr>
+    <td>WGS84 / World Mercator Depth (ETM08)</td>	
+    <td>NGA 8112</td>	
+    <td>Expl</td>	
+    <td> </td>	
+    <td>COMP</td>	
+    <td>3</td>	
+    <td>Feat</td>	
+    <td>Table 24 Table 25</td>
+  </tr>
+  </table></p> 
 
