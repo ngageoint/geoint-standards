@@ -278,5 +278,25 @@ Applications that can read standard GeoPackages can read the specified SRS defin
     <td>Feat</td>	
     <td>Table 24 Table 25</td>
   </tr>
+  <tr>
+    <td></td>	
+    <td></td>	
+    <td>Expl</td>	
+    <td> </td>	
+    <td>COMP</td>	
+    <td>3</td>	
+    <td>Feat</td>	
+    <td>Table 24 Table 25</td>
+  </tr>
+  <tr>
+    <td></td>	
+    <td></td>	
+    <td>Expl</td>	
+    <td> </td>	
+    <td>COMP</td>	
+    <td>3</td>	
+    <td>Feat</td>	
+    <td>Table 24 Table 25</td>
+  </tr>
   </table></p> 
 
