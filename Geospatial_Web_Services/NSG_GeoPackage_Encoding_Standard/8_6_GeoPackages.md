@@ -1,5 +1,5 @@
-6.	GeoPackages
-6.1.	File Names
+<h2> 6.	GeoPackages </h2><br>
+<ol start="6"><li>  File Names
 Extension Title
 	File Names
 Introduction
@@ -28,7 +28,7 @@ File Name
 	None
       GeoPackage SQLite Extension
 	None
-
+</ol>
 6.2.	Extensions
 Extension Title
 	Extensions
