@@ -603,9 +603,9 @@ Applications that can read standard GeoPackages can read the specified SRS defin
 
 <p><b><i>NSG Req 7: The WGS 84 Geographic 3D (Lat / Lon / HAE) CRS SHALL be used only for vector features with Z geometry values.  Tiles SHALL be provided in one of the “Tiled” projected 2D SRSs defined by NGA below.</i></b></p>
 
-	<p><i>Geographic (2D) CRS Definition</i></p>
+<p><i>Geographic (2D) CRS Definition</i></p>
 
-<p align="middle"><b>Table 7 WGS 84 Geographic 2D CRS Definition</b></P>
+<p align="middle"><b>Table 7 WGS 84 Geographic 2D CRS Definition</b></p>
 <table>
  <tr>
  <th>gpkg_spatial_ref_sys<br> Column Name</th>
