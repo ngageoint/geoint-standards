@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+ <!ATTLIST g apsname CDATA #IMPLIED>
+]>
+
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:ev="http://www.w3.org/2001/xml-events"
+ version="1.1"
+ width="63.00pt" height="42.00pt"
+ viewBox="0 0 20.22 13.14"
+ stroke-linejoin="round" stroke-linecap="round" fill="none" fill-rule="evenodd"
+ preserveAspectRatio="xMidYMid meet"
+ zoomAndPan="magnify">
+
+<rect fill="#FFFFFF" stroke="none" x="0" y="0" width="20.22" height="13.14"/>
+
+<g id="0013.cgm">
+<g id="IC_ColorNameTable.IC_ColorNameTable">
+</g>
+<g id="IC_ViewportTable.IC_ViewportTable">
+</g>
+<g id="PictureProperties.0013.cgm">
+</g>
+<clipPath id="cp1" clip-rule="evenodd">
+ <path d=" M0 1 L19.22 1 L19.22 13.14 L0 13.14 Z"/>
+</clipPath>
+
+<g clip-path="url(#cp1)" clip-rule="evenodd">
+
+<path class="ls2 fs2" d="M.86 12.3l0 -10.47 17.51 0 0 10.47 Z"/>
+<path class="ls3 fs3" d="M15.42 9.73l-.15 .19 -.47 .41 -.33 .2 -.32 .15 -.56 .15 -.66 .05 -.69 -.07 -.6 -.18 -.58 -.31 -.52 -.44 -.43 -.56 -.32 -.66 -.18 -.7 -.07 -.87 .07 -.88 .18 -.71 .15 -.35 .18 -.33 .2 -.29 .24 -.27 .53 -.44 .6 -.3 .55 -.15 .7 -.08 .67 .02 .55 .1 .53 .19 .44 .27 .36 .32 .3 .39 .2 .39 .12 .4 .05 .29 -.98 0 -.1 -.36 -.15 -.3 -.22 -.27 -.33 -.26 -.41 -.19 -.46 -.1 -.59 -.02 -.61 .09 -.45 .17 -.23 .14 -.21 .18 -.21 .23 -.18 .25 -.23 .45 -.16 .54 -.06 .45 -.01 .58 .05 .57 .09 .42 .19 .49 .27 .42 .35 .36 .4 .26 .5 .18 .58 .07 .58 -.05 .52 -.16 .46 -.26 .35 -.34 .23 -.36 .15 -.43 .07 -.78 -2.31 0 0 -.81 3.24 0 0 3.89 -.66 0 Z"/>
+<path class="ls3 fs3" d="M7.71 8.02l.98 0 -.02 .31 -.07 .38 -.13 .39 -.24 .46 -.31 .39 -.25 .24 -.28 .2 -.31 .18 -.33 .14 -.6 .15 -.72 .04 -.74 -.09 -.59 -.19 -.3 -.16 -.27 -.19 -.27 -.24 -.24 -.27 -.37 -.59 -.28 -.74 -.13 -.67 -.04 -.78 .07 -.81 .16 -.65 .3 -.67 .41 -.56 .51 -.45 .55 -.31 .56 -.17 .74 -.08 .68 .03 .54 .11 .51 .2 .46 .29 .39 .37 .29 .42 .15 .34 .09 .36 .03 .24 -.98 0 -.05 -.22 -.13 -.33 -.17 -.26 -.31 -.28 -.42 -.23 -.49 -.13 -.6 -.03 -.49 .06 -.37 .12 -.39 .23 -.35 .34 -.27 .42 -.21 .54 -.11 .55 -.04 .67 .04 .67 .11 .51 .21 .49 .3 .45 .36 .36 .35 .23 .4 .14 .51 .07 .51 -.03 .42 -.12 .33 -.17 .3 -.23 .23 -.25 .18 -.29 .11 -.28 .07 -.29 Z"/>
+</g>
+<g transform="translate(4.11,13.05)">
+ <g transform="rotate(-45.00)">
+  <g transform="skewX(180.00)">
+  </g>
+ </g>
+</g>
+
+
+<style type="text/css">
+.aps-region:hover{stroke:red;opacity:0.5;}
+.ls1{stroke:none;}
+.ls2{stroke:#EBB7ED;stroke-width:1.711;}
+.ls3{stroke:#EBB7ED;stroke-width:0.479;}
+.fs1{fill:none;}
+.fs2{fill:#EAFFF3;}
+.fs3{fill:#EBB7ED;}
+</style>
+
+</g>
+</svg>
