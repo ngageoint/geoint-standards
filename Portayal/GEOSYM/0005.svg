@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+ <!ATTLIST g apsname CDATA #IMPLIED>
+]>
+
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:ev="http://www.w3.org/2001/xml-events"
+ version="1.1"
+ width="57.00pt" height="54.00pt"
+ viewBox="0 0 18.74 17.62"
+ stroke-linejoin="round" stroke-linecap="round" fill="none" fill-rule="evenodd"
+ preserveAspectRatio="xMidYMid meet"
+ zoomAndPan="magnify">
+
+
+
+<rect fill="#FFFFFF" stroke="none" x="0" y="0" width="18.74" height="17.62"/>
+
+<g id="0005.cgm">
+<g id="IC_ColorNameTable.IC_ColorNameTable">
+</g>
+<g id="IC_ViewportTable.IC_ViewportTable">
+</g>
+<g id="PictureProperties.0005.cgm">
+</g>
+<clipPath id="cp1" clip-rule="evenodd">
+ <path d=" M0 1 L17.74 1 L17.74 17.62 L0 17.62 Z"/>
+</clipPath>
+
+<g clip-path="url(#cp1)" clip-rule="evenodd">
+
+<path class="fs2" d="M7.55 15.72L3.05 15.72L3.05 14.79L7.55 14.79Z
+"/>
+<path class="fs2" d="M10.1 14.79L14.6 14.79L14.6 15.72L10.1 15.72Z
+"/>
+<circle class="ls2 fs1" cx="8.82" cy="15.21" r="1.88"/>
+<path class="ls3 fs2" d="M.02 1.85l0 -.83 17.71 0 0 .83 Z"/>
+<path class="ls3 fs2" d="M11.31 15.6l-.84 0 0 -13.76 .84 0 Z"/>
+<path class="ls3 fs2" d="M7.18 15.6l-.84 0 0 -13.76 .84 0 Z"/>
+<path class="ls3 fs2" d="M.02 1.85l0 4.21 4.88 0 0 -4.21 -.83 0 0 3.36 -3.17 0 0 -3.36 Z"/>
+</g>
+<g transform="translate(3.79,14.97)">
+ <g transform="rotate(-45.00)">
+  <g transform="skewX(180.00)">
+<g font-family="Arial,sans-serif" font-size="1.09" fill="rgb(192,192,192)">
+<text x="0" y="0">Larson CGM to Vector Demo</text>
+</g>
+  </g>
+ </g>
+</g>
+
+
+<style type="text/css">
+.aps-region:hover{stroke:red;opacity:0.5;}
+.ls1{stroke:none;}
+.ls2{stroke:#A37B3A;stroke-width:1.073;}
+.ls3{stroke:#A37B3A;stroke-width:0.034;}
+.fs1{fill:none;}
+.fs2{fill:#A37B3A;}
+</style>
+
+</g>
+</svg>
