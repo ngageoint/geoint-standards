@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+ <!ATTLIST g apsname CDATA #IMPLIED>
+]>
+
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:ev="http://www.w3.org/2001/xml-events"
+ version="1.1"
+ width="33.00pt" height="42.00pt"
+ viewBox="0 0 10.58 13.91"
+ stroke-linejoin="round" stroke-linecap="round" fill="none" fill-rule="evenodd"
+ preserveAspectRatio="xMidYMid meet"
+ zoomAndPan="magnify">
+
+<rect fill="#FFFFFF" stroke="none" x="0" y="0" width="10.58" height="13.91"/>
+
+<g id="0012.cgm">
+<g id="IC_ColorNameTable.IC_ColorNameTable">
+</g>
+<g id="IC_ViewportTable.IC_ViewportTable">
+</g>
+<g id="PictureProperties.0012.cgm">
+</g>
+<clipPath id="cp1" clip-rule="evenodd">
+ <path d=" M0 1 L9.58 1 L9.58 13.91 L0 13.91 Z"/>
+</clipPath>
+
+<g clip-path="url(#cp1)" clip-rule="evenodd">
+
+<circle class="ls2 fs1" cx="4.78" cy="10.88" r="2.57"/>
+<circle class="ls2 fs1" cx="4.78" cy="10.88" r="2.57"/>
+<circle class="fs2" cx="4.78" cy="10.88" r="1.03"/>
+<path class="ls2" d="M4.78 8.25l0 -4.21M4.78 8.25"/>
+<path class="ls2" d="M.38 1.39l.32 .72 .4 .51 .41 .37 .68 .44 .75 .31 .79 .2 .57 .07 .47 .02 1.05 -.09 .82 -.21 .85 -.37 .73 -.51 .52 -.57 .28 -.46 .16 -.44M.38 1.39"/>
+</g>
+<g transform="translate(2.05,10.60)">
+ <g transform="rotate(-45.00)">
+  <g transform="skewX(180.00)">
+  </g>
+ </g>
+</g>
+
+
+<style type="text/css">
+.aps-region:hover{stroke:red;opacity:0.5;}
+.ls1{stroke:none;}
+.ls2{stroke:#000001;stroke-width:0.77;}
+.fs1{fill:none;}
+.fs2{fill:#000001;}
+</style>
+
+</g>
+</svg>
