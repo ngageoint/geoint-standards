@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+ <!ATTLIST g apsname CDATA #IMPLIED>
+]>
+
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:ev="http://www.w3.org/2001/xml-events"
+ version="1.1"
+ width="10.00pt" height="10.00pt"
+ viewBox="0 0 9.62 9.62"
+ stroke-linejoin="round" stroke-linecap="round" fill="none" fill-rule="evenodd"
+ preserveAspectRatio="xMidYMid meet"
+ zoomAndPan="magnify">
+
+<desc>
+DrawSVG v10.0.1 build 9630
+Copyright (c) 2012-2015 Larson Software Technology, Inc.
+Built on Aug 24 2015
+</desc>
+
+<rect fill="#FFFFFF" stroke="none" x="0" y="0" width="9.62" height="9.62"/>
+
+<g id="0002.cgm">
+<g id="IC_ColorNameTable.IC_ColorNameTable">
+</g>
+<g id="IC_ViewportTable.IC_ViewportTable">
+</g>
+<g id="PictureProperties.0002.cgm">
+</g>
+<clipPath id="cp1" clip-rule="evenodd">
+ <path d=" M0 1 L8.62 1 L8.62 9.62 L0 9.62 Z"/>
+</clipPath>
+
+<g clip-path="url(#cp1)" clip-rule="evenodd">
+
+<path class="ls2 fs2" d="M.89 8.73l0 -6.84 6.84 0 0 6.84 Z"/>
+</g>
+<g transform="translate(1.84,8.07)">
+ <g transform="rotate(-45.00)">
+  <g transform="skewX(180.00)">
+<g font-family="Arial,sans-serif" font-size="0.53" fill="rgb(192,192,192)">
+<text x="0" y="0">Larson CGM to Vector Demo</text>
+</g>
+  </g>
+ </g>
+</g>
+
+
+<style type="text/css">
+.aps-region:hover{stroke:red;opacity:0.5;}
+.ls1{stroke:none;}
+.ls2{stroke:#000001;stroke-width:1.778;}
+.fs1{fill:none;}
+.fs2{fill:#A37B3A;}
+</style>
+
+</g>
+</svg>
