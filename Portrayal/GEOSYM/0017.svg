@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+ <!ATTLIST g apsname CDATA #IMPLIED>
+]>
+
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:ev="http://www.w3.org/2001/xml-events"
+ version="1.1"
+ width="48.00pt" height="48.00pt"
+ viewBox="0 0 15.15 15.96"
+ stroke-linejoin="round" stroke-linecap="round" fill="none" fill-rule="evenodd"
+ preserveAspectRatio="xMidYMid meet"
+ zoomAndPan="magnify">
+
+<rect fill="#FFFFFF" stroke="none" x="0" y="0" width="15.15" height="15.96"/>
+
+<g id="0017.cgm">
+<g id="IC_ColorNameTable.IC_ColorNameTable">
+</g>
+<g id="IC_ViewportTable.IC_ViewportTable">
+</g>
+<g id="PictureProperties.0017.cgm">
+</g>
+<clipPath id="cp1" clip-rule="evenodd">
+ <path d=" M0 1 L14.15 1 L14.15 15.96 L0 15.96 Z"/>
+</clipPath>
+
+<g clip-path="url(#cp1)" clip-rule="evenodd">
+
+<path class="fs2" d="M1.03 14.8l0 -1.86 12.18 0 0 1.86 Z"/>
+<path class="ls2" d="M6.2 12.49l.38 -.47 .28 -.54 .17 -.58 .05 -.6 -.07 -.6 -.18 -.58 -.29 -.53 -.39 -.46 -.47 -.38 -.54 -.28 -.58 -.17 -.6 -.05 -.6 .07 -.57 .18 -.53 .29 -.46 .39 -.38 .47 -.28 .54 -.17 .58 -.05 .6 .07 .6 .18 .58 .29 .53 .39 .46 .47 .38 .54 .28 .58 .17 .6 .05 .6 -.07 .57 -.18 .53 -.29 .46 -.39 0 0M6.2 12.49"/>
+<path class="ls2" d="M10.19 7.26l-.6 .05 -.58 .17 -.54 .28 -.47 .38 -.39 .46 -.29 .53 -.18 .58 -.07 .6 .05 .6 .17 .58 .28 .54 .38 .47 .46 .39 .53 .29 .57 .18 .6 .07 .6 -.05 .58 -.17 .54 -.28 .47 -.38 .39 -.46 .29 -.53 .18 -.58 .07 -.6 -.05 -.6 -.17 -.58 -.28 -.54 -.38 -.47 -.46 -.39 -.53 -.29 -.57 -.18 -.6 -.07 0 0M10.19 7.26"/>
+<path class="ls2" d="M7.58 1.96l-.6 -.04 -.6 .08 -.57 .19 -.52 .3 -.45 .4 -.37 .48 -.27 .54 -.16 .58 -.04 .6 .08 .6 .19 .57 .3 .52 .4 .46 .48 .37 .54 .27 .58 .16 .6 .04 .6 -.08 .57 -.19 .52 -.3 .45 -.4 .37 -.48 .27 -.54 .16 -.58 .04 -.6 -.08 -.6 -.19 -.57 -.3 -.52 -.4 -.46 -.48 -.37 -.54 -.27 -.58 -.16 0 0M7.58 1.96"/>
+<circle class="fs2" cx="7.12" cy="13.87" r="1.85"/>
+</g>
+<g transform="translate(3.02,13.03)">
+ <g transform="rotate(-45.00)">
+  <g transform="skewX(180.00)">
+  </g>
+ </g>
+</g>
+
+
+<style type="text/css">
+.aps-region:hover{stroke:red;opacity:0.5;}
+.ls1{stroke:none;}
+.ls2{stroke:#000001;stroke-width:1.853;}
+.fs1{fill:none;}
+.fs2{fill:#000001;}
+</style>
+
+</g>
+</svg>
