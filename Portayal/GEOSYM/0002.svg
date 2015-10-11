@@ -19,16 +19,6 @@
 
 <rect fill="#FFFFFF" stroke="none" x="0" y="0" width="9.62" height="9.62"/>
 
-<g id="0002.cgm">
-<g id="IC_ColorNameTable.IC_ColorNameTable">
-</g>
-<g id="IC_ViewportTable.IC_ViewportTable">
-</g>
-<g id="PictureProperties.0002.cgm">
-</g>
-<clipPath id="cp1" clip-rule="evenodd">
- <path d=" M0 1 L8.62 1 L8.62 9.62 L0 9.62 Z"/>
-</clipPath>
 
 <g clip-path="url(#cp1)" clip-rule="evenodd">
 
