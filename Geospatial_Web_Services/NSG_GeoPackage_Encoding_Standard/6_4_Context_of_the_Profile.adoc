@@ -1,0 +1,5 @@
+= 4.	Context of the Profile  
+
+The Director of NGA, as Functional Manager for Geospatial Intelligence, has directed a transformation of the architecture that supports the NSG.  This transformation is intended to move from a systems-centric to a network-based, data-centric architecture. In support of this direction, this interoperability standard defines the NSG conditionality for each unique provision in the OGC GeoPackage 1.0 Encoding standard.  
+
+NSG conditionality is according to the underlying standard unless otherwise modified herein. The NSG conditionality can be used for compliance tests that are conducted to support consistent and effective development and use of geospatial web-based services in the NSG.  This interoperability standard is designed to provide NSG-wide guidance to developers and other stakeholders such as the NGA Architecture and Engineering Group, the NGA Service Implementation Group, the NSG Systems Engineering and Integration (SEIN) contractor, and the Geospatial Intelligence Standards Center of Excellence (GSCOE).

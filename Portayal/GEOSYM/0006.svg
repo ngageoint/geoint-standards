@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+ <!ATTLIST g apsname CDATA #IMPLIED>
+]>
+
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:ev="http://www.w3.org/2001/xml-events"
+ version="1.1"
+ width="30.00pt" height="60.00pt"
+ viewBox="0 0 9.08 19.71"
+ stroke-linejoin="round" stroke-linecap="round" fill="none" fill-rule="evenodd"
+ preserveAspectRatio="xMidYMid meet"
+ zoomAndPan="magnify">
+
+<rect fill="#FFFFFF" stroke="none" x="0" y="0" width="9.08" height="19.71"/>
+
+<g id="0006.cgm">
+<g id="IC_ColorNameTable.IC_ColorNameTable">
+</g>
+<g id="IC_ViewportTable.IC_ViewportTable">
+</g>
+<g id="PictureProperties.0006.cgm">
+</g>
+<clipPath id="cp1" clip-rule="evenodd">
+ <path d=" M0 1 L8.08 1 L8.08 19.71 L0 19.71 Z"/>
+</clipPath>
+
+<g clip-path="url(#cp1)" clip-rule="evenodd">
+
+<path class="fs2" d="M2.53 16.08L2.53 8.14L5.55 8.14L5.55 15.14L2.53 15.14Z
+"/>
+<path class="fs2" d="M2.53 17.56L0 17.56L0 15.94L2.53 15.94Z
+"/>
+<path class="ls2" d="M2.53 17.56l-2.52 0 0 -1.61 2.52 0M2.53 17.56"/>
+<path class="fs2" d="M5.55 15.94L8.08 15.94L8.08 17.56L5.55 17.56Z
+"/>
+<path class="ls2" d="M5.55 15.94l2.52 0 0 1.61 -2.52 0M5.55 15.94"/>
+<circle class="ls3 fs1" cx="4.04" cy="16.75" r="2.02"/>
+<path class="ls3" d="M2.89 5.27l-.03 .25 .02 .25 .07 .25 .11 .23 .15 .2 .19 .16 .21 .12 .23 .07 .24 .02 .24 -.03 .23 -.08 .21 -.13 .18 -.17 .14 -.2 .1 -.23 .06 -.25 .01 -.26 -.04 -.25M2.89 5.27"/>
+<path class="ls3" d="M4.21 3.36l.62 -.39 .52 -.53 .4 -.63M4.21 3.36"/>
+<path class="ls3" d="M5.74 1.81l-.42 1.15 -.17 1.23 .09 1.23M5.74 1.81"/>
+<path class="ls3" d="M4.21 3.36l-.49 .33 -.4 .45 -.29 .54 -.16 .59M4.21 3.36"/>
+</g>
+<g transform="translate(1.73,13.11)">
+ <g transform="rotate(-45.00)">
+  <g transform="skewX(180.00)">
+  </g>
+ </g>
+</g>
+
+
+<style type="text/css">
+.aps-region:hover{stroke:red;opacity:0.5;}
+.ls1{stroke:none;}
+.ls2{stroke:#000001;stroke-width:0.008;}
+.ls3{stroke:#000001;stroke-width:1.513;}
+.fs1{fill:none;}
+.fs2{fill:#000001;}
+</style>
+
+</g>
+</svg>

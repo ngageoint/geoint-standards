@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+ <!ATTLIST g apsname CDATA #IMPLIED>
+]>
+
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:ev="http://www.w3.org/2001/xml-events"
+ version="1.1"
+ width="11.00pt" height="10.00pt"
+ viewBox="0 0 10.59 9.77"
+ stroke-linejoin="round" stroke-linecap="round" fill="none" fill-rule="evenodd"
+ preserveAspectRatio="xMidYMid meet"
+ zoomAndPan="magnify">
+
+<desc>
+DrawSVG v10.0.1 build 9630
+Copyright (c) 2012-2015 Larson Software Technology, Inc.
+Built on Aug 24 2015
+</desc>
+
+<rect fill="#FFFFFF" stroke="none" x="0" y="0" width="10.59" height="9.77"/>
+
+<g id="0001.cgm">
+<g id="IC_ColorNameTable.IC_ColorNameTable">
+</g>
+<g id="IC_ViewportTable.IC_ViewportTable">
+</g>
+<g id="PictureProperties.0001.cgm">
+</g>
+<clipPath id="cp1" clip-rule="evenodd">
+ <path d=" M0 1 L9.59 1 L9.59 9.77 L0 9.77 Z"/>
+</clipPath>
+
+<g clip-path="url(#cp1)" clip-rule="evenodd">
+
+<path class="fs2" d="M.74 9.32l6.31 -6.26 -.37 -.53 -.44 -.5 -.43 -.39 -.43 -.32 -.34 -.22 -.18 -.1 .57 .07 .43 .09 .37 .11 .73 .32 .43 .26 .33 .24 .27 .23 .2 .19 .25 .28 .33 .44 .24 .4 .17 .34 .13 .32 .12 .37 .09 .38 .05 .3 .03 .33 -.15 -.25 -.15 -.23 -.22 -.3 -.26 -.31 -.2 -.21 -.17 -.16 -.25 -.22 -.32 -.25 -.26 -.17 -.11 -.07 -6.31 6.26 Z"/>
+<path class="fs2" d="M7.89 9.77l-5.89 -5.84 -1.45 1.44 -.54 -.53 0 -.26 .03 -.26 .06 -.3 .09 -.3 .12 -.3 .13 -.25 .17 -.27 .22 -.27 .2 -.21 .3 -.25 .32 -.21 .38 -.19 .31 -.11 .39 -.09 .35 -.04 .29 -.01 .54 .53 -1.45 1.44 5.9 5.84 Z"/>
+</g>
+<g transform="translate(2.05,8.43)">
+ <g transform="rotate(-45.00)">
+  <g transform="skewX(180.00)">
+<g font-family="Arial,sans-serif" font-size="0.59" fill="rgb(192,192,192)">
+<text x="0" y="0">Larson CGM to Vector Demo</text>
+</g>
+  </g>
+ </g>
+</g>
+
+
+<style type="text/css">
+.aps-region:hover{stroke:red;opacity:0.5;}
+.ls1{stroke:none;}
+.fs1{fill:none;}
+.fs2{fill:#A37B3A;}
+</style>
+
+</g>
+</svg>

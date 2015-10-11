@@ -1,0 +1,64 @@
+=== References
+Normative (prescriptive) references in the NSG GeoPackage Interoperability Standard are identified in Table 2.
+
+
+
+.Normative References in NSG GeoPackage Interoperability Standard
+|==============================
+|Standard or Specification	|Description of Standard
+|OpenGIS® GeoPackage Encoding Standard,
+ Version: 1.0, Reference number of this document: OGC 12-128r10, Date: 2014-02-12	|This OGC® Encoding Standard defines GeoPackages for exchange and GeoPackage SQLite Extensions for direct use of vector geospatial features and / or tile matrix sets of earth images and raster maps at various scales.
+
+|OpenGIS® 01-009 Implementation Specification: Coordinate Transformation Services Revision 1.0, Reference number of this document: OGC 01-099, Date 2001-01-12	|This Implementation Specification provides interfaces for general positioning, coordinate systems, and coordinate transformations.
+|NATIONAL GEOSPATIAL-INTELLIGENCE AGENCY (NGA) STANDARDIZATION DOCUMENT Implementation Practice Web Mercator Map Projection Version 1.0.0
+Reference number of this document: NGA.SIG.0011_1.0.0_WEBMERC , Date 2014-02-18 	|This document contains general technical information on the Web Mercator map projection to include its relationship to the World Geodetic System 1984 (WGS 84) and the risks and impacts associated with its usage as a positioning reference tool for the National System for Geospatial-Intelligence (NSG).
+|EPSG Geodetic Parameter Registry Version: 8.6.1 
+	|The EPSG Geodetic Parameter Dataset is a structured dataset of Coordinate Reference Systems and Coordinate Transformations, accessible through this online registry (www.epsg-registry.org) or, as a downloadable zip files, through OGP's EPSG home page at www.epsg.org. The geographic coverage of the data is worldwide, but it is stressed that the dataset does not and cannot record all possible geodetic parameters in use around the world. The EPSG Geodetic Parameter Dataset is maintained by the Geodesy Subcommittee of OGP's Geomatics Committee.
+|DMA Technical Manual: Datums, Ellipsoids, Grids, and Grid Reference Systems
+DMA TM 8358.1  23-Feb-1996	|This manual describes the basic principles of the Military Grid Reference System and the non-standard reference systems.  It describes the method for determining references on maps and charts at scales of 1:1,000,000 and larger.  It contains identifications for the grid zone designations and for the 100,000 meter squares of the Universal Transverse Mercator Grid and the Universal Polar Stereographic Grid.  It also contains the specifications and grid identifications for the various non-standard grids.  It provides diagrams and textual information for delineating geodetic datums and ellipsoids.
+|NATIONAL GEOSPATIAL-INTELLIGENCE AGENCY STANDARDIZATION DOCUMENT Implementation Practice: The Universal Grids and the Transverse Mercator and Polar Stereographic Map Projections
+NGA.SIG.0012_2.0.0_UTMUPS  March 25, 2014	|This document defines the UTM, UPS and MGRS systems of coordinates and provides some information toward their understanding and use in surveying, cartography, and geographic-information analysis. Mainly, though, this document provides guidance to DoD and DoD contractors for the software implementation of algorithms to convert between longitude/latitude, UTM or UPS, and MGRS coordinates
+|DoD/IC Coordinate Reference Systems Dictionary
+in the DoD Data Services Environment (DSE) Metadata Registry (MDR)
+http://metadata.ces.mil/dse/ns/GSIP/crs 
+|A collection of coordinate reference system dictionaries for use in the DoD/IC.
+|NATIONAL GEOSPATIAL-INTELLIGENCE AGENCY STANDARDIZATION DOCUMENT
+Implementation Practice 
+Map Projections for Tiled Raster Graphics
+NGA.SIG.0014_v0.2_PROJRAS  
+|This document specifies the map-projections and tile-pyramids that are authorized for maps and imagery produced as zoom-able tiled raster-graphics. Formerly, the “web-Mercator” and Plate Carrée projections were considered appropriate for this purpose. This document specifies what should be used instead.
+|Information technology – Database languages – SQL Multimedia and application packages – Part 3: Spatial
+ISO/IEC 13249-3 	|The purpose of ISO/IEC 13249 is to define multimedia and application specific types and their associated routines using the user-defined features in ISO/IEC 9075.
+This part of ISO/IEC 13249:
+   a) defines concepts specific to this part of ISO/IEC 13249,
+   b) defines spatial user-defined types and their associated routines.
+|OGC 99-049 OpenGIS® Simple Features Specification for SQL Revision 1.1 May 5, 1999	|Original OGC SF/SQL specification
+|OGC 06-103r4 OpenGIS® Implementation Standard for Geographic information -Simple feature access - Part 1: Common architecture Version: 1.2.1 2011-05-28	|Revised OGC SF specification – common architecture
+|OGC 06-104r4 OpenGIS® Implementation Standard for Geographic information - Simple feature access - Part 2: SQL option Version: 1.2.1 2010-08-04	|Revised OGC SF specification – SQL encoding
+|OGC® 10-100r3 Geography Markup Language (GML) simple features profile (with technical note)	|GML Simple Features Profile that specifies restricted subset of simple geometry types.
+|NGA.STND.0012_2.1 National System for Geospatial Intelligence Metadata Foundation (NMF) – Part 1: Conceptual Schema Profile, Version 2.1, 26 March 2012	|Logical Model that specifies the minimum and recommended core metadata elements required for documentation, discovery and exchange of geospatial datasets and intelligence data in the NSG, across the DoD, IC and potentially coalition partners.
+|NGA.STND.0018_2.1 National System for Geospatial Intelligence Metadata Implementation Specification (NMIS) - Part 2: XML Exchange Schema, Version 2.1, 31 October 2012 	|Specifies an Extensible Markup Language (XML) exchange schema encoding of the NMIS - Part 1: Logical Model
+|==============================
+
+
+The documents listed in Table 3 contain useful information to augment NSG understanding and application of the material in this interoperability standard in conjunction with the actual standard profiled.
+
+.Informative References in NSG GeoPackage Interoperability Standard
+|==============================
+|Reference ID	|Standards and Specifications Title
+|ISO/TS 19101:2002 	|Geographic Information – Reference Model
+|ISO 19106:2004(E)	|Geographic information  –  Profiles
+|ISO 19111:2007	|Geographic information – Spatial referencing by coordinates
+|ISO 19112:2003	|Geographic information  –  Spatial referencing by geographic identifiers
+|OGC 12-063 / ISO 19162  
+|Geographic information — Well-known text representation of coordinate reference systems
+
+|OGC 07-057r7	|OpenGIS® Web Map Tile Service Implementation Standard
+|NGA.STND.0019_2.0  |2012-04-05	NGA Standardization Document
+Time-Space-Position Information (TSPI)
+|webMerc_memo#21_tile_pyramid_design_continued.doc	|Tile pyramid designs for Mercator, continued by Craig Rollins and Mike Paniccia (NGA Office of Geomatics)
+|IETF RFC 2119, S. Bradner, Harvard University, March 1997	|Key Words for use in RFCs to Indicate Requirement Levels
+|EPSG Guidance Note 373-07-1	|Surveying and Positioning 
+Guidance Note Number 7, part 1, 
+clause 5.9 EPSG codes and names
+|==============================

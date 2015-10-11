@@ -1,0 +1,128 @@
+= 2.	Scope
+
+This interoperability standard defines NSG implementable provisions that profile the  OGC GeoPackage standard to ensure that NSG GeoPackages,GeoPackage SQLite Extensions, and supporting utilities and services fulfill their intended purposes and are fit for use.
+
+This interoperability standard will be used by government, commercial, open source other NGO:
+
+* Data Providers to deliver NSG GeoPackage data files, not software.  They may employ software provided by both Infrastructure Providers and Application Software Providers.  Infrastructure Providers.
+* Infrastructure Software Providers to deliver software that implements the SQLite engine, GeoPackage SQLite Extensions,  GeoPackage libraries  and/or stand alone GeoPackage utilities or web services to encode/decode, validate, and manage GeoPackage files.
+*	Application Software Providers to deliver GeoPackage “Apps” that provide users with the capabilities they require in general or mission-specific environments .  They may employ software provided by Infrastructure Providers and bundle their Apps with GeoPackages from Data Providers.
+*	DoD/IC Procurement Organizations to acquire conformant GeoPackages, infrastructure, and applications.
+
+Architects, systems and software engineers, developers, and data modelers of the NSG and its component systems/applications in these roles will promote uniform geospatial data access, GeoPackage and GeoPackage SQLite Extension development and use.  The goal is to increase interoperability, modularity, and agility of applications within the NSG.  This interoperability standard is an adjunct to the base standard profiled – not a stand-alone document.
+
+This document requires adherence to all GeoPackage OGC Specification normative clauses and normative annexes, and to the normative provisions herein that restrict and extend the clauses summarized in Table 1 below and listed in detail in the embedded spreadsheet in Table 4 below.
+
+.Profile / Standard Clause Crosswalk
+|===
+|*NSG GeoPackage Profile Clause* |*GeoPackage Encoding Standard Clause*
+
+|6.1 File Names
+|1.1.1.1.2 File Extension Name
+
+|6.2 Extensions
+|2.5.2 Extensions
+
+|7.1 Spatial Reference Systems
+|1.1.2.1.2 Spatial Reference Systems / Data / Table Data Values
+
+|7.2 Metadata
+|2.4.2.1.2 Metadata Table / Data / Table Data Values
+
+|7.2 Metadata
+|2.4.3.1.2 Metadata Reference Table / Data / Table Data Values
+
+|7.2 Metadata
+|4 Security Considerations
+
+|7.3 Data Validity Constraints
+|1.1.2.1 Spatial Reference Systems / Data
+
+|7.3 Data Validity Constraints
+|1.1.3.1 Contents / Data
+
+|7.3 Data Validity Constraints
+|2.1.5.1 Geometry Columns / Data
+
+|7.3 Data Validity Constraints
+|2.1.6.1 Vector Feature User Data Tables / Data
+
+|7.3 Data Validity Constraints
+|2.2.7.1 Tile Matrix / Data
+
+|7.3 Data Validity Constraints
+|2.2.8.1 Tile Pyramid user Data Tables / Data
+
+|7.3 Data Validity Constraints
+|2.4.2 Metadata Table / Data
+
+|7.3 Data Validity Constraints
+|2.4.3 Metadata Reference Table / Data
+
+|7.3 Data Validity Constraints
+|2.5.2.1 Extension Mechanism / Extensions / Data
+
+|8.1 Tile Size
+|2.2.7.1 Tile Matrix / Data
+
+|8.1 Tile Size
+|2.2.8.1 Tile Pyramid User Data Tables / Data
+
+|8.2 Zoom Levels
+|2.2.3 Tiles / Zoom Levels
+
+|8.2 Zoom Levels
+|2.2.7.1 Tile Matrix / Data
+
+|8.2 Zoom Levels
+|2.2.8.1 Tile Pyramid User Data Tables / Data
+
+|8.2 Zoom Levels
+|3.2.1 Tiles / Zoom Levels
+
+|8.3 Tile Pyramid Design
+|1.1.2 Spatial Reference Systems
+
+|8.3 Tile Pyramid Design
+|2.2.3 Zoom Levels
+
+|8.3 Tile Pyramid Design
+|2.2.8.1 Tile Pyramid User Data Tables / Data
+
+|8.3 Tile Pyramid Design
+|3.2.1 Tiles / Zoom Levels
+
+|8.4 Tile Alignment
+|2.2.6.1 Tile Matrix Set / Data
+
+|8.4 Tile Alignment
+|2.2.8.1 Tile Pyramid User Data Tables / Data
+
+|8.5 Tile Matrix Extent
+|2.2.6 Tile Matrix Set
+
+|9.1 Required GeoPackage Extensions
+|3.1.1 Registered Extensions / Features / Geometry Types Extension
+
+|9.1 Required GeoPackage Extensions
+|3.1.3 Registered Extensions / Features / Rtree Spatial Indexes
+
+|9.1 Required GeoPackage Extensions
+|3.1.4 Registered Extensions / Features / Geometry Type Triggers
+
+|9.1 Required GeoPackage Extensions
+|3.1.5 Registered Extensions / Features / SRS_ID Triggers
+
+|9.2 Coordinate Conversion Functions     
+      SQLite Extension	
+|2.1.3 Geometry Encoding
+
+|9.3 Geometry Functions 
+      SQLite Extension	
+|2.1.3 Geometry Encoding
+|===
+
+Not all clauses of this Interoperability Standard apply to all NSG Geopackages or GeoPackage SQLite Extensions because a particular GeoPackage may contain vector features, tile pyramids, or both.  The “Applicability” sub-clause of each numbered clause below states the applicability of the clause (mandatory, conditional (mandatory if applicable) or optional).
+
+Any comments or questions regarding the interpretation of the provisions of the NSG GeoPackage Profile are to be addressed via the appropriate governance process for NSG interoperability standards.
+
