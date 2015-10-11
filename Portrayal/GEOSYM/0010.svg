@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+ <!ATTLIST g apsname CDATA #IMPLIED>
+]>
+
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:ev="http://www.w3.org/2001/xml-events"
+ version="1.1"
+ width="39.00pt" height="39.00pt"
+ viewBox="0 0 12.58 12.58"
+ stroke-linejoin="round" stroke-linecap="round" fill="none" fill-rule="evenodd"
+ preserveAspectRatio="xMidYMid meet"
+ zoomAndPan="magnify">
+
+<rect fill="#FFFFFF" stroke="none" x="0" y="0" width="12.58" height="12.58"/>
+
+<g id="0010.cgm">
+<g id="IC_ColorNameTable.IC_ColorNameTable">
+</g>
+<g id="IC_ViewportTable.IC_ViewportTable">
+</g>
+<g id="PictureProperties.0010.cgm">
+</g>
+<clipPath id="cp1" clip-rule="evenodd">
+ <path d=" M0 1 L11.58 1 L11.58 12.58 L0 12.58 Z"/>
+</clipPath>
+
+<g clip-path="url(#cp1)" clip-rule="evenodd">
+
+<path class="ls2 fs2" d="M2.86 6.79l-2.6 2.93 0 -5.85 Z"/>
+<path class="ls2 fs2" d="M5.79 3.86l-2.93 -2.6 5.85 0 Z"/>
+<path class="ls2 fs2" d="M5.79 9.71l2.93 2.6 -5.85 0 Z"/>
+<path class="ls2 fs2" d="M8.71 6.79l2.6 -2.93 0 5.85 Z"/>
+<path class="ls3" d="M5.79 3.14l0 7.31M5.79 3.14"/>
+<path class="ls3" d="M2.14 6.79l7.31 0M2.14 6.79"/>
+</g>
+<g transform="translate(2.47,10.49)">
+ <g transform="rotate(-45.00)">
+  <g transform="skewX(180.00)">
+  </g>
+ </g>
+</g>
+
+
+<style type="text/css">
+.aps-region:hover{stroke:red;opacity:0.5;}
+.ls1{stroke:none;}
+.ls2{stroke:#000001;stroke-width:0.521;}
+.ls3{stroke:#000001;stroke-width:0.783;}
+.fs1{fill:none;}
+.fs2{fill:#000001;}
+</style>
+
+</g>
+</svg>
