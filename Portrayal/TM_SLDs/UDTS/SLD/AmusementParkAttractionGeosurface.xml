@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- AmusementParkAttractionGeosurface -->
+			<se:FeatureTypeName>tds:AmusementParkAttractionGeosurface</se:FeatureTypeName>
+
+				<se:Rule>
+				<se:Name>AR_Black_ParkAttraction</se:Name>
+					<se:PolygonSymbolizer>
+						<!--Black_0.1mm-1.0mmLenDash-0.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">5 2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+				</se:Rule>
+
+				<!-- AR_Black_ParkAttraction  / known label-->
+				<se:Rule>
+				<se:Name>AR_Black_ParkAttraction Known</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:amusementAttractionType</ogc:PropertyName>
+								<ogc:Literal>artificialMountain</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:amusementAttractionType</ogc:PropertyName>
+								<ogc:Literal>ferrisWheel</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:amusementAttractionType</ogc:PropertyName>
+								<ogc:Literal>rollerCoaster</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:amusementAttractionType</ogc:PropertyName>
+								<ogc:Literal>waterAttraction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:amusementAttractionType</ogc:PropertyName>
+								<ogc:Literal>verticalRide</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:amusementAttractionType</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!-- AR_Black_ParkAttraction  / spherical label-->
+				<se:Rule>
+				<se:Name>AR_Black_ParkAttraction Spherical</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:amusementAttractionType</ogc:PropertyName>
+								<ogc:Literal>spherical</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:amusementAttractionType</ogc:PropertyName><ogc:Literal> park attraction</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!-- AR_Black_ParkAttraction  / other label-->
+				<se:Rule>
+				<se:Name>AR_Black_ParkAttraction Other</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:amusementAttractionType</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:amusementAttractionType</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>Park attraction</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
