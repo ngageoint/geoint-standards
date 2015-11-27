@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- CausewayStructureGeocurve -->
+			<se:FeatureTypeName>tds:CausewayStructureGeocurve</se:FeatureTypeName>
+
+				<se:Rule>
+				<se:Name>LN_Causeway</se:Name>
+					<!--Causeway Structure / all (curve) LABEL-->
+					<se:TextSymbolizer>
+					<!--[ZI005_FNA] "CAUSEWAY"-->
+					<se:Label>
+						<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						<ogc:Literal> CAUSEWAY</ogc:Literal>
+					</se:Label>
+					<se:Font>
+						<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+						<se:SvgParameter name="font-size">6</se:SvgParameter>
+						<se:SvgParameter name="font-style">italic</se:SvgParameter>
+						<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+					</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+					<se:Fill>
+						<se:SvgParameter name="fill">#000000</se:SvgParameter>
+					</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
