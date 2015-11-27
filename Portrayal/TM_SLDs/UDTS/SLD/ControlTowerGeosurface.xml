@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- ControlTowerGeosurface -->
+			<se:FeatureTypeName>tds:ControlTowerGeosurface</se:FeatureTypeName>
+
+				<!--Control Tower / all (surface)-->
+				<se:Rule>
+				<se:Name>AR_Black_ControlTower</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>350</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<se:Name>Black_SolidAreaFill</se:Name>
+						<se:Fill>
+								<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:PolygonSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<!--[ZI005_FNA] "Control tower"-->
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> Control tower</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:AnchorPoint>
+									<se:AnchorPointX>0</se:AnchorPointX>
+									<se:AnchorPointY>0</se:AnchorPointY>
+								</se:AnchorPoint>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Control Tower / not usable / standard (surface)-->
+				<se:Rule>
+				<se:Name>AR_Black_ControlTower</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>350</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<!--Black-12_ScreenFill-->
+						<se:Fill>
+							<se:SvgParameter name="fill">#E0E0E0</se:SvgParameter>
+						</se:Fill>
+					</se:PolygonSymbolizer>
+					<se:PolygonSymbolizer>
+						<!--Black_0.1mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<!--[ZI005_FNA] "Control tower"-->
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> Control tower</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:AnchorPoint>
+									<se:AnchorPointX>0</se:AnchorPointX>
+									<se:AnchorPointY>0</se:AnchorPointY>
+								</se:AnchorPoint>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Control Tower / obstruction / standard (surface)-->
+				<se:Rule>
+				<se:Name>ControlTower_VO</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>350</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:PolygonSymbolizer>
+					<se:TextSymbolizer>
+						<!--"Control tower"-->
+						<!--feature name-->
+						<se:Label>
+							<ogc:Literal>Control tower</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>30</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:highestElevation</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>20</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>(</ogc:Literal>
+							<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+							<ogc:Literal>)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>10</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Control Tower / non-obstruction / small area (surface)-->
+				<se:Rule>
+				<se:Name>PT_Black_ControlTower</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>350</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Tower.svg"/>
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+				</se:Rule>
+
+				<!--Control Tower / non-obstruction / small area (surface)-->
+				<!--Control Tower / usable (surface) Label-->
+				<se:Rule>
+				<se:Name>PT_Black_ControlTower</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>350</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<!--[ZI005_FNA] "Control tower"-->
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> Control tower</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:AnchorPoint>
+									<se:AnchorPointX>0</se:AnchorPointX>
+									<se:AnchorPointY>0</se:AnchorPointY>
+								</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>10.0</se:DisplacementX>
+									<se:DisplacementY>0.0</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Control Tower / non-obstruction / small area (surface)-->
+				<!--Control Tower / construction (surface) Label-->
+				<se:Rule>
+				<se:Name>PT_Black_ControlTower</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>350</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<!--[ZI005_FNA] "Control tower (construction)"-->
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> Control tower (construction)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:AnchorPoint>
+									<se:AnchorPointX>0</se:AnchorPointX>
+									<se:AnchorPointY>0</se:AnchorPointY>
+								</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>10.0</se:DisplacementX>
+									<se:DisplacementY>0.0</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Control Tower / non-obstruction / small area (surface)-->
+				<!--Control Tower / not usable (surface) Label-->
+				<se:Rule>
+				<se:Name>PT_Black_ControlTower</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 3 [Unmaintained] or PCF = 4 [Damaged]
+						or PCF = 5 [Dismantled] or PCF = 6 [Destroyed])-->
+						<ogc:Or>
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>350</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+						</ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:Or>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<!--[ZI005_FNA] "Control tower (not usable)"-->
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> Control tower (not usable)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:AnchorPoint>
+									<se:AnchorPointX>0</se:AnchorPointX>
+									<se:AnchorPointY>0</se:AnchorPointY>
+								</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>10.0</se:DisplacementX>
+									<se:DisplacementY>0.0</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Control Tower / obstruction / small area (surface)-->
+				<se:Rule>
+				<se:Name>ControlTower_VO</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>100</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+					<se:Name>Blue072_Obstruction</se:Name>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Blue072_VO.svg"/>
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<!--feature name-->
+							<ogc:Literal>Control tower</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>						
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>30</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:highestElevation</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>							
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>20</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>(</ogc:Literal>
+							<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+							<ogc:Literal>)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>							
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>10</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
