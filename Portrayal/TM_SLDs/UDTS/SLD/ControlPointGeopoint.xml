@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- ControlPointGeopoint -->
+			<se:FeatureTypeName>tds:ControlPointGeopoint</se:FeatureTypeName>
+
+				<!-- PT_Black_ControlPoint_Horizontal symbol (name horiztonal benchmark label) -->
+				<se:Rule>
+				<se:Name>PT_Black_ControlPoint_Horizontal</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>tds:surveyControlPointType</ogc:PropertyName>
+							<ogc:Literal>horizontalPosAndBenchmark</ogc:Literal>
+						</ogc:PropertyIsEqualTo>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_ControlPoint_Horizontal.svg"/>
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+									<se:ChangeCase fallbackValue="" direction="toUpper">
+													<se:StringValue>
+														<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+													 </se:StringValue>
+									</se:ChangeCase>
+									<ogc:Literal> BM (</ogc:Literal>
+							<ogc:PropertyName>tds:baseElevation</ogc:PropertyName>
+							<ogc:Literal>)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">12</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>15</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!-- PT_Black_ControlPoint_Horizontal symbol (name horiztonal label) -->
+				<se:Rule>
+				<se:Name>PT_Black_ControlPoint_Horizontal</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>tds:surveyControlPointType</ogc:PropertyName>
+							<ogc:Literal>horizontalPosition</ogc:Literal>
+						</ogc:PropertyIsEqualTo>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_ControlPoint_Horizontal.svg"/>
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+									<se:ChangeCase fallbackValue="" direction="toUpper">
+													<se:StringValue>
+														<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+													 </se:StringValue>
+									</se:ChangeCase>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>15</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!-- PT_Black_ControlPoint_Vertical symbol (name vertical label) -->
+				<se:Rule>
+				<se:Name>PT_Black_ControlPoint_Vertical</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+								<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>tds:surveyControlPointType</ogc:PropertyName>
+							<ogc:Literal>verticalPosition</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_SpotElevation.svg"/>
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+									<se:ChangeCase fallbackValue="" direction="toUpper">
+													<se:StringValue>
+														<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+													 </se:StringValue>
+									</se:ChangeCase><ogc:Literal> BM (</ogc:Literal><ogc:PropertyName>tds:baseElevation</ogc:PropertyName><ogc:Literal>)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">12</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>15</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
