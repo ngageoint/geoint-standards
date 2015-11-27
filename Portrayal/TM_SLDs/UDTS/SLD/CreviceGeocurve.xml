@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- CreviceGeocurve -->
+			<se:FeatureTypeName>tds:CreviceGeocurve</se:FeatureTypeName>
+
+				<!-- LN_Brown1245_Crevice -->
+				<se:Rule>
+				<se:Name>LN_Brown1245_Crevice</se:Name>
+					<se:LineSymbolizer>
+						<se:Name>Brown1245_0.25mmSolidLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.25</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>Crevice</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">italic</se:SvgParameter>
+						</se:Font>
+							<se:LabelPlacement>
+								<se:LinePlacement>
+									<se:PerpendicularOffset>-4.5</se:PerpendicularOffset>
+									<se:IsRepeated>false</se:IsRepeated>
+									<se:InitialGap>
+										<ogc:Div>
+											<ogc:PropertyName>tds:length</ogc:PropertyName>
+											<ogc:Literal>2</ogc:Literal>
+										</ogc:Div>
+									</se:InitialGap>
+									<se:IsAligned>true</se:IsAligned>
+									<se:GeneralizeLine>true</se:GeneralizeLine>
+								</se:LinePlacement>
+							</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
