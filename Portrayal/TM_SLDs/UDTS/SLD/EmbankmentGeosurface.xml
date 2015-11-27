@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- EmbankmentGeosurface -->
+			<se:FeatureTypeName>tds:EmbankmentGeosurface</se:FeatureTypeName>
+
+				<!-- AR_Brown1245_Embankment_GreaterThanContourInterval -->
+				<se:Rule>
+				<se:Name>AR_Brown1245_Embankment_GreaterThanContourInterval</se:Name>
+					<se:PolygonSymbolizer>
+						<se:Name>Brown1245_0.15mmSolidLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+					<se:PolygonSymbolizer>
+						<se:Name>Brown1245_0.15mm-0.5mmLenTick</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 7.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>1.25</se:PerpendicularOffset>
+					</se:PolygonSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
