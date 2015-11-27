@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- EmbankmentGeocurve -->
+			<se:FeatureTypeName>tds:EmbankmentGeocurve</se:FeatureTypeName>
+
+				<!-- LN_Brown1245_Embankment_GreaterThanContourInterval -->
+				<se:Rule>
+				<se:Name>LN_Brown1245_Embankment_GreaterThanContourInterval</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>tds:embankmentType</ogc:PropertyName>
+							<ogc:Literal>fill</ogc:Literal>
+						</ogc:PropertyIsEqualTo>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<se:Name>Brown1245_0.15mmSolidLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<se:Name>Brown1245_0.15mm-0.5mmLenTick</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 7.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>1.25</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Brown1245_Embankment_DykeWithTransportation -->
+				<se:Rule>
+				<se:Name>LN_Brown1245_Embankment_DykeWithTransportation</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:embankmentType</ogc:PropertyName>
+								<ogc:Literal>mound</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:embankmentType</ogc:PropertyName>
+								<ogc:Literal>dyke</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:embankmentType</ogc:PropertyName>
+								<ogc:Literal>levee</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:embankmentType</ogc:PropertyName>
+								<ogc:Literal>divider</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:embankmentType</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:embankmentType</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>aqueduct</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>canal</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>pipeline</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>railway</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>road</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<se:Name>Brown1245_0.15mmSolidLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>7</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<se:Name>Brown1245_0.15mm-0.5mmLenTick</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 7.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>8.25</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<se:Name>Brown1245_0.15mmSolidLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>-7</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<se:Name>Brown1245_0.15mm-0.5mmLenTick</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 7.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>-8.25</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Brown1245_Embankment_DykeWithoutTransportation -->
+				<se:Rule>
+				<se:Name>LN_Brown1245_Embankment_DykeWithoutTransportation</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:embankmentType</ogc:PropertyName>
+								<ogc:Literal>mound</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:embankmentType</ogc:PropertyName>
+								<ogc:Literal>dyke</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:embankmentType</ogc:PropertyName>
+								<ogc:Literal>levee</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:embankmentType</ogc:PropertyName>
+								<ogc:Literal>divider</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:embankmentType</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:embankmentType</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>noTransportationSystem</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<se:Name>Brown1245_0.15mmSolidLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<se:Name>Brown1245_0.15mm-0.8mmLenTick</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">4</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 7.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
