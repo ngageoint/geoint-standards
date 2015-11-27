@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- CourtyardGeosurface -->
+			<se:FeatureTypeName>tds:CourtyardGeosurface</se:FeatureTypeName>
+
+				<!--Courtyard / all (surface)-->
+				<se:Rule>
+				<se:Name>AR_Courtyard</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+					<ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:PropertyName>tds:area</ogc:PropertyName>
+						<ogc:Literal>36</ogc:Literal>
+					</ogc:PropertyIsGreaterThanOrEqualTo>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<se:Name>Paper-White_Fill</se:Name>
+						<se:Fill>
+							<se:SvgParameter name="fill">#FFFFFF</se:SvgParameter>
+						</se:Fill>
+					</se:PolygonSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
