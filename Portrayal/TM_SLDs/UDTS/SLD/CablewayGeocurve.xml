@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- CablewayGeocurve -->
+			<se:FeatureTypeName>tds:CablewayGeocurve</se:FeatureTypeName>
+
+				<!--Cableway / non-obstruction (curve)-->
+				<!-- LN_Black_Cableway symbol-->
+				<se:Rule>
+				<se:Name>LN_Black_Cableway</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:PropertyIsLessThan>
+							<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+							<ogc:Literal>46</ogc:Literal>
+						</ogc:PropertyIsLessThan>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<se:Name>Black_0.2mm-2mmLenDash-0.5mmGapLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">10 2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+				<!--     TEXT     -->
+				<!--Cableway / recreational (curve)-->
+				<se:Rule>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(CAT = 2 [Chair-lift] or CAT = 3 [Ski Tow] or CAT = 5 [Aerial Tramway] or CAT = 6 [Gondola Lift] or CAT = 7
+						[T-bar Lift] or CAT = 8 [Industrial Ropeway] or CAT = 9 [Material Tramway])-->
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:cablewayType</ogc:PropertyName>
+								<ogc:Literal>aerialTramway</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:cablewayType</ogc:PropertyName>
+								<ogc:Literal>chairLift</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:cablewayType</ogc:PropertyName>
+								<ogc:Literal>gondolaLift</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:cablewayType</ogc:PropertyName>
+								<ogc:Literal>industrialRopeway</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:cablewayType</ogc:PropertyName>
+								<ogc:Literal>materialTramway</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:cablewayType</ogc:PropertyName>
+								<ogc:Literal>skiTow</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:cablewayType</ogc:PropertyName>
+								<ogc:Literal>teeBarLift</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[CAT]-->
+						<se:Label>
+							<ogc:PropertyName>tds:cablewayType</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+				<!--     TEXT     -->
+				<!--Cableway / other (curve)-->
+				<se:Rule>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(CAT = 999 [Other] or CAT = -999999 [No Information])-->
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:cablewayType</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:cablewayType</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--"Cableway"-->
+						<se:Label>
+							<ogc:Literal>Cableway</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+					<!--Cableway / obstruction / standard (curve)-->
+					<!-- LN_Blue072_Cableway_Obstruction symbol-->
+					<se:Rule>
+					<se:Name>LN_Blue072_Cableway_Obstruction</se:Name>
+						<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+							<ogc:And>
+								<ogc:PropertyIsGreaterThanOrEqualTo>
+									<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+									<ogc:Literal>46</ogc:Literal>
+								</ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyIsGreaterThanOrEqualTo>
+									<ogc:PropertyName>tds:length</ogc:PropertyName>
+									<ogc:Literal>31</ogc:Literal>
+								</ogc:PropertyIsGreaterThanOrEqualTo>
+							</ogc:And>
+						</ogc:Filter>
+						<se:LineSymbolizer>
+							<se:Name>Blue072_0.73mmSolidLine</se:Name>
+							<se:Stroke>
+								<se:SvgParameter name="stroke">#28166F</se:SvgParameter>
+								<se:SvgParameter name="stroke-width">3.65</se:SvgParameter>
+								<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+							</se:Stroke>
+						</se:LineSymbolizer>
+						<se:TextSymbolizer>
+							<se:Label>
+								<ogc:Literal>Cableway</ogc:Literal><!--feature name-->
+							</se:Label>
+							<se:Font>
+								<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+								<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+								<se:SvgParameter name="font-size">10</se:SvgParameter>
+								<se:SvgParameter name="font-style">normal</se:SvgParameter>
+								<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+							</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:AnchorPoint>
+									<se:AnchorPointX>0</se:AnchorPointX>
+									<se:AnchorPointY>0</se:AnchorPointY>
+								</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>15</se:DisplacementX>
+									<se:DisplacementY>30</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:highestElevation</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:AnchorPoint>
+									<se:AnchorPointX>0</se:AnchorPointX>
+									<se:AnchorPointY>0</se:AnchorPointY>
+								</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>15</se:DisplacementX>
+									<se:DisplacementY>20</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+						<ogc:Literal>(</ogc:Literal><ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName><ogc:Literal>)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:AnchorPoint>
+									<se:AnchorPointX>0</se:AnchorPointX>
+									<se:AnchorPointY>0</se:AnchorPointY>
+								</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>15</se:DisplacementX>
+									<se:DisplacementY>10</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cableway / obstruction / small (curve)-->
+				<!-- PT_Blue072_CablewayVO symbol-->
+				<se:Rule>
+				<se:Name>PT_Blue072_CablewayVO</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:length</ogc:PropertyName>
+								<ogc:Literal>31</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Blue072_VO.svg" />
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>Cableway</ogc:Literal><!--feature name-->
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:AnchorPoint>
+									<se:AnchorPointX>0</se:AnchorPointX>
+									<se:AnchorPointY>0</se:AnchorPointY>
+								</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>15</se:DisplacementX>
+									<se:DisplacementY>30</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:highestElevation</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:AnchorPoint>
+									<se:AnchorPointX>0</se:AnchorPointX>
+									<se:AnchorPointY>0</se:AnchorPointY>
+								</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>15</se:DisplacementX>
+									<se:DisplacementY>20</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+						<ogc:Literal>(</ogc:Literal><ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName><ogc:Literal>)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:AnchorPoint>
+									<se:AnchorPointX>0</se:AnchorPointX>
+									<se:AnchorPointY>0</se:AnchorPointY>
+								</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>15</se:DisplacementX>
+									<se:DisplacementY>10</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
