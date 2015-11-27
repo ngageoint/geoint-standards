@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- ForestGeocurve -->
+			<se:FeatureTypeName>tds:ForestGeocurve</se:FeatureTypeName>
+
+				<se:Rule>
+				<se:Name>LN_Green362_RowOfTrees</se:Name>
+					<se:LineSymbolizer>
+						<!--Green362_RowOfTrees-->
+						<se:Stroke>
+							<se:GraphicStroke>
+								<se:Graphic>
+									<se:Mark>
+										<se:WellKnownName>circle</se:WellKnownName>
+										<se:Fill>
+											<se:SvgParameter name="fill">#FFFFFF</se:SvgParameter>
+										</se:Fill>
+										<se:Stroke>
+											<se:SvgParameter name="stroke">#3DF53D</se:SvgParameter>
+											<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+										</se:Stroke>
+									</se:Mark>
+									<se:Size>5</se:Size>
+								</se:Graphic>
+							</se:GraphicStroke>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
