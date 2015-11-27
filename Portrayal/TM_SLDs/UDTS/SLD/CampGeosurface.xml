@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- CampGeosurface -->
+			<se:FeatureTypeName>tds:CampGeosurface</se:FeatureTypeName>
+
+				<!-- Camp / small area  (surface)  named-->
+				<se:Rule>
+				<se:Name>PT_Black_Camp</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsNotEqualTo>
+								<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+								<ogc:Literal>No Information</ogc:Literal>
+							</ogc:PropertyIsNotEqualTo>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+						</ogc:And>
+						</ogc:Filter>
+					<se:PointSymbolizer>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Camp.svg"/>
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>0.0</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+				<!-- Camp / small area  (surface) unnamed -->
+				<se:Rule>
+				<se:Name>PT_Black_Camp</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+								<ogc:Literal>No Information</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>migrantLabour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>forestryLogging</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>miningQuarrying</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>petroleumGasExtract</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>residence</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Camp.svg"/>
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>0.0</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Camp/ standard (surface) Symbol-->
+				<se:Rule>
+				<se:Name>AR_Black_Camp</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyName>tds:area</ogc:PropertyName>
+							<ogc:Literal>900</ogc:Literal>
+						</ogc:PropertyIsGreaterThanOrEqualTo>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<!--Black_0.1mm-1.0mmLenDash-0.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">5 2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+				</se:Rule>
+
+				<!--Camp/ standard (surface) named/ usable-->
+				<se:Rule>
+				<se:Name>AR_Black_Camp</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsNotEqualTo>
+								<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+								<ogc:Literal>No Information</ogc:Literal>
+							</ogc:PropertyIsNotEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Camp/ standard (surface) known/ usable-->
+				<se:Rule>
+				<se:Name>AR_Black_Camp</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>migrantLabour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>forestryLogging</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>miningQuarrying</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>petroleumGasExtract</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>residence</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+								<ogc:Literal>No Information</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Camp/ standard (surface) unknown /usable-->
+				<se:Rule>
+				<se:Name>AR_Black_Camp</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal>No Information</ogc:Literal>
+						</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>Camp</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Camp/ standard (surface) named/ construction -->
+				<se:Rule>
+				<se:Name>AR_Black_Camp</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsNotEqualTo>
+								<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+								<ogc:Literal>No Information</ogc:Literal>
+							</ogc:PropertyIsNotEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (construction)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Camp/ standard (surface) known / construction-->
+				<se:Rule>
+				<se:Name>AR_Black_Camp</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>migrantLabour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>forestryLogging</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>miningQuarrying</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>petroleumGasExtract</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>residence</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+								<ogc:Literal>No Information</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+						</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+							<ogc:Literal> (construction)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Camp/ standard (surface) unknown / construction-->
+				<se:Rule>
+				<se:Name>AR_Black_Camp</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+								<ogc:Literal>No Information</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>Camp (construction)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Camp/ standard (surface) named/ not usable-->
+				<se:Rule>
+				<se:Name>AR_Black_Camp</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:PropertyIsNotEqualTo>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal>No Information</ogc:Literal>
+						</ogc:PropertyIsNotEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (not usable)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Camp/ standard (surface) known/ not usable-->
+				<se:Rule>
+				<se:Name>AR_Black_Camp</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>migrantLabour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>forestryLogging</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>miningQuarrying</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>petroleumGasExtract</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+						<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>residence</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+								<ogc:Literal>No Information</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+						</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+							<ogc:Literal> (not usable)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Camp/ standard (surface) unknown/ not usable-->
+				<se:Rule>
+				<se:Name>AR_Black_Camp</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:featureFunction-1</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+								<ogc:Literal>No Information</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+						</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>Camp (not usable)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
