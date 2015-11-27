@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- FordGeocurve -->
+			<se:FeatureTypeName>tds:FordGeocurve</se:FeatureTypeName>
+				<se:Rule>
+				<se:Name>LN_Black_Ford</se:Name>
+				<se:LineSymbolizer>
+					<se:Name>Black_0.2mm-1.0mmLenDash-0.5mmGapLine</se:Name>
+					<se:Stroke>
+						<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+						<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+						<se:SvgParameter name="stroke-dasharray">5 2.5</se:SvgParameter>
+						<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+					</se:Stroke>
+				</se:LineSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
