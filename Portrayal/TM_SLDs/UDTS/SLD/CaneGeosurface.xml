@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- CaneGeosurface -->
+			<se:FeatureTypeName>tds:CaneGeosurface</se:FeatureTypeName>
+
+				<!--Cane / all (surface)-->
+				<se:Rule>
+					<se:Name>AR_Green362_Cane</se:Name>
+					<se:PolygonSymbolizer>
+						<se:Name>Green362_CaneFill</se:Name>
+						<se:Fill>
+							<se:GraphicFill>
+								<se:Graphic>
+									<se:ExternalGraphic>
+										<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/Green_AP86_Fill.svg"/>
+										<se:Format>image/svg+xml</se:Format>
+									</se:ExternalGraphic>
+								</se:Graphic>
+							</se:GraphicFill>
+						</se:Fill>
+					</se:PolygonSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
