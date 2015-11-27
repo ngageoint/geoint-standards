@@ -1,0 +1,1861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- CemeteryGeosurface -->
+			<se:FeatureTypeName>tds:CemeteryGeosurface</se:FeatureTypeName>
+
+				<!--Cemetery / standard / unknown or other (surface)-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(ARA >= 900) and (ZI037_REL = 9 [Hinduism] or ZI037_REL = 999 [Other]
+						or ZI037_REL = -999999 [No Information])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>hinduism</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<!--Green362-12_ScreenFill-->
+						<se:Fill>
+							<se:SvgParameter name="fill">#E8F3E6</se:SvgParameter>
+						</se:Fill>
+						<!--Black_0.1mm-1.0mmLenDash-0.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">5 2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+					<se:PointSymbolizer>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Cemetery_Unknown.svg" />
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / unknown or other (surface)-->
+				<!--Cemetery / unknown, other / usable (surface) LABEL-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 2 [Intact] or PCF = -999999 [No Information])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>hinduism</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA]-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / unknown or other (surface)-->
+				<!--Cemetery / unknown, other / construction (surface)-->
+				<se:Rule>
+					<se:Name>AR_Green362_Cemetery</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 1 [Construction])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:Or>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+									<ogc:Literal>hinduism</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+									<ogc:Literal>other</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+									<ogc:Literal>noInformation</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+							</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "(construction)"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (construction)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / unknown or other (surface)-->
+				<!--Cemetery / unknown, other / not usable (surface)-->
+				<se:Rule>
+					<se:Name>AR_Green362_Cemetery</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 3 [Unmaintained] or PCF = 4 [Damaged] or PCF = 5 [Dismantled]
+						or PCF = 6 [Destroyed])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:Or>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+									<ogc:Literal>unmaintained</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+									<ogc:Literal>damaged</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+									<ogc:Literal>dismantled</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+									<ogc:Literal>destroyed</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+							</ogc:Or>
+							<ogc:Or>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+									<ogc:Literal>hinduism</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+									<ogc:Literal>other</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+									<ogc:Literal>noInformation</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+							</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "(not usable)"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (not usable)</ogc:Literal>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<!--(Black, Condensed, 6 pt, Lower case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / small area / unknown or other (surface)-->
+				<se:Rule>
+				<se:Name>PT_Black_Cemetery_Unknown</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(ARA < 900) and (ZI037_REL = 9 [Hinduism] or ZI037_REL = 999 [Other]
+						or ZI037_REL = -999999 [No Information])-->
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>hinduism</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<!--Black_Cemetery_Unknown P00126-->
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Cemetery_Unknown.svg" />
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<!--Cemetery / unknown, other / named (surface) LABEL-->
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA]-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / buddhism (surface)-->
+				<se:Rule>
+					<se:Name>AR_Green362_Cemetery_Buddhism</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>buddhism</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<!--Green362-12_ScreenFill-->
+						<se:Fill>
+							<se:SvgParameter name="fill">#E8F3E6</se:SvgParameter>
+						</se:Fill>
+						<!--Black_0.1mm-1.0mmLenDash-0.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">5 2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+					<se:PointSymbolizer>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Cemetery_Buddhism.svg" />
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / buddhism (surface)-->
+				<!--Cemetery / buddhism / usable (surface) LABEL-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Buddhism</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 2 [Intact] or PCF = -999999 [No Information])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>buddhism</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA]-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / buddhism (surface)-->
+				<!--Cemetery / buddhism / construction (surface) LABEL-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Buddhism</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 1 [Construction])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>buddhism</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "(construction)"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (construction)</ogc:Literal>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / buddhism (surface)-->
+				<!--Cemetery / buddhism / not usable (surface) LABEL-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Buddhism</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 3 [Unmaintained] or PCF = 4 [Damaged]
+						or PCF = 5 [Dismantled] or PCF = 6 [Destroyed])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>buddhism</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "(not usable)"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (not usable)</ogc:Literal>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / small area / buddhism (surface)-->
+				<!--Cemetery / buddhism / named (surface) LABEL-->
+				<se:Rule>
+				<se:Name>PT_Black_Cemetery_Buddhism</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(ARA < 900) and (ZI037_REL = 1 [Buddhism])-->
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>buddhism</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<!--Black_Cemetery_Buddhism-->
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Cemetery_Buddhism.svg" />
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA]-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / christian (surface)-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Christian</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>romanCatholic</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>christian</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>orthodox</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>protestant</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>nestorian</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>chaldean</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<!--Green362-12_ScreenFill-->
+						<se:Fill>
+							<se:SvgParameter name="fill">#E8F3E6</se:SvgParameter>
+						</se:Fill>
+						<!--Black_0.1mm-1.0mmLenDash-0.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">5 2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+					<se:PointSymbolizer>
+						<!--Black_Cross (P00013)-->
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Cemetery_Christian.svg" />
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / christian (surface)-->
+				<!--Cemetery / christian / usable (surface) LABEL-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Christian</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 2 [Intact] or PCF = -999999 [No Information])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>romanCatholic</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>christian</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>orthodox</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>protestant</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>nestorian</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>chaldean</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA]-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / christian (surface)-->
+				<!--Cemetery / christian / construction (surface) LABEL-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Christian</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 1 [Construction])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>romanCatholic</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>christian</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>orthodox</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>protestant</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>nestorian</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>chaldean</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "(construction)"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (construction)</ogc:Literal>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<!--(Black, Condensed, 6 pt, Lower case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / christian (surface)-->
+				<!--Cemetery / christian / not usable (surface) LABEL-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Christian</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 3 [Unmaintained] or PCF = 4 [Damaged]
+						or PCF = 5 [Dismantled] or PCF = 6 [Destroyed])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>romanCatholic</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>christian</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>orthodox</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>protestant</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>nestorian</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>chaldean</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "(not usable)"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (not usable)</ogc:Literal>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<!--(Black, Condensed, 6 pt, Lower case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / small area / christian (surface)-->
+				<se:Rule>
+				<se:Name>PT_Black_Cemetery_Christian</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(ARA < 900) and (ZI037_REL = 3 [Roman Catholic] or ZI037_REL = 4 [Christian]
+						or ZI037_REL = 6 [Orthodox] or ZI037_REL = 7 [Protestant]
+						or ZI037_REL = 12 [Nestorian] or ZI037_REL = 13 [Chaldean])-->
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>romanCatholic</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>christian</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>orthodox</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>protestant</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>nestorian</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>chaldean</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<!--Black_Cross-->
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Cemetery_Christian.svg" />
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<!--Cemetery / christian / named (surface)-->
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA]-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / islam (surface)-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Islam</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(ARA >= 900) and (ZI037_REL = 2 [Islam] or ZI037_REL = 10 [Shia]
+						or ZI037_REL = 11 [Sunni])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>islam</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>shia</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>sunni</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+							<!--Green362-12_ScreenFill-->
+							<se:Fill>
+								<se:SvgParameter name="fill">#E8F3E6</se:SvgParameter>
+							</se:Fill>
+							<!--Black_0.1mm-1.0mmLenDash-0.5mmGapLine-->
+							<se:Stroke>
+								<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+								<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+								<se:SvgParameter name="stroke-dasharray">5 2.5</se:SvgParameter>
+							</se:Stroke>
+					</se:PolygonSymbolizer>
+					<se:PointSymbolizer>
+							<!--Black_Crescent-->
+							<se:Graphic>
+								<se:ExternalGraphic>
+									<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Cemetery_Islam.svg" />
+									<se:Format>image/svg+xml</se:Format>
+								</se:ExternalGraphic>
+								<se:Size>10</se:Size>
+							</se:Graphic>
+					</se:PointSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / islam (surface)-->
+				<!--Cemetery / islam / usable (surface)-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Islam</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 2 [Intact] or PCF = -999999 [No Information])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>islam</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>shia</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>sunni</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA]-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / islam (surface)-->
+				<!--Cemetery / islam / construction (surface)-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Islam</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 1 [Construction])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>islam</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>shia</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>sunni</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "(construction)"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (construction)</ogc:Literal>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<!--(Black, Condensed, 6 pt, Lower case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / islam (surface)-->
+				<!--Cemetery / islam / not usable (surface)-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Islam</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 3 [Unmaintained] or PCF = 4 [Damaged] or PCF = 5 [Dismantled] or PCF = 6 [Destroyed])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>islam</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>shia</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>sunni</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "(not usable)"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName><ogc:Literal> (not usable)</ogc:Literal>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<!--(Black, Condensed, 6 pt, Lower case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / small area / islam (surface)-->
+				<se:Rule>
+					<se:Name>PT_Black_Cemetery_Islam</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+								<ogc:PropertyIsLessThan>
+									<ogc:PropertyName>tds:area</ogc:PropertyName>
+									<ogc:Literal>900</ogc:Literal>
+								</ogc:PropertyIsLessThan>
+							<ogc:Or>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+									<ogc:Literal>islam</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+									<ogc:Literal>shia</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+									<ogc:Literal>sunni</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+							</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<se:Name>Black_Crescent</se:Name>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Cemetery_Islam.svg" />
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<!--Cemetery / islam / named (surface)-->
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / judaism (surface)-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Judaism</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>judaism</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<!--Green362-12_ScreenFill-->
+						<se:Fill>
+							<se:SvgParameter name="fill">#E8F3E6</se:SvgParameter>
+						</se:Fill>
+						<!--Black_0.1mm-1.0mmLenDash-0.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">5 2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+					<se:PointSymbolizer>
+						<!--Black_Judaism-->
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Judaism.svg.svg" />
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / judaism (surface)-->
+				<!--Cemetery / judaism / usable (surface)-->
+				<se:Rule>
+					<se:Name>AR_Green362_Cemetery_Judaism</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 2 [Intact] or PCF = -999999 [No Information])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>judaism</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / judaism (surface)-->
+				<!--Cemetery / judaism / construction (surface) LABEL-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Judaism</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>judaism</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName><ogc:Literal> (construction)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / judaism (surface)-->
+				<!--Cemetery / judaism / not usable (surface) LABEL-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Judaism</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>judaism</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (not usable)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / small area / judaism (surface)-->
+				<se:Rule>
+				<se:Name>PT_Black_Judaism.svg</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>judaism</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<se:Name>Black_Judaism</se:Name>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Judaism.svg.svg" />
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<se:TextSymbolizer>
+						<!--Cemetery / judaism / named (surface)-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / shinto (surface)-->
+				<se:Rule>
+					<se:Name>AR_Green362_Cemetery_Shinto</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>shinto</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<se:Name>Green362-12_ScreenFill</se:Name>
+						<se:Fill>
+							<se:SvgParameter name="fill">#E8F3E6</se:SvgParameter>
+						</se:Fill>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">5 2.5</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+					<se:PointSymbolizer>
+						<se:Name>Black_Cemetery_Shinto</se:Name>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Shinto.svg.svg" />
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / shinto (surface)-->
+				<!-- AR_Green362_Cemetery_Shinto symbol (usable label) -->
+				<se:Rule>
+					<se:Name>AR_Green362_Cemetery_Shinto</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+								<ogc:PropertyIsGreaterThanOrEqualTo>
+									<ogc:PropertyName>tds:area</ogc:PropertyName>
+									<ogc:Literal>900</ogc:Literal>
+								</ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+									<ogc:Literal>shinto</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+							<ogc:Or>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+									<ogc:Literal>intact</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+									<ogc:Literal>noInformation</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+							</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<!---->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					</se:Rule>
+
+				<!--Cemetery / standard / shinto (surface)-->
+				<!--Cemetery / shinto / usable (surface)-->
+				<se:Rule>
+					<se:Name>AR_Green362_Cemetery_Shinto</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+								<ogc:PropertyIsGreaterThanOrEqualTo>
+									<ogc:PropertyName>tds:area</ogc:PropertyName>
+									<ogc:Literal>900</ogc:Literal>
+								</ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+									<ogc:Literal>shinto</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+									<ogc:Literal>construction</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (construction)</ogc:Literal>
+						</se:Label>
+						<!---->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / standard / shinto (surface)-->
+				<!--Cemetery / shinto / not usable (surface)-->
+				<se:Rule>
+				<se:Name>AR_Green362_Cemetery_Shinto</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 3 [Unmaintained] or PCF = 4 [Damaged] or PCF = 5 [Dismantled]
+						or PCF = 6 [Destroyed])-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>shinto</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "(not usable)"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (not usable)</ogc:Literal>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<!--(Black, Condensed, 6 pt, Lower case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Cemetery / small area / shinto (surface)-->
+				<se:Rule>
+				<se:Name>PT_Black_Shinto.svg</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:religiousInfo.religiousDesignation</ogc:PropertyName>
+								<ogc:Literal>shinto</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<se:Name>Black_Cemetery_Shinto</se:Name>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Shinto.svg.svg" />
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<se:TextSymbolizer>
+						<!--Cemetery / shinto / named (surface)-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+						</se:Label>
+						<!---->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
