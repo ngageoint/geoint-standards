@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- ApronGeosurface -->
+			<se:FeatureTypeName>tds:ApronGeosurface</se:FeatureTypeName>
+				<se:Rule>
+				<se:Name>AR_Blue072_Apron</se:Name>
+					<se:PolygonSymbolizer>
+						<se:Fill>
+							<!--Blue072-12_ScreenFill-->
+							<se:SvgParameter name="fill">#E5E3ED</se:SvgParameter>
+						</se:Fill>
+						<se:Stroke>
+							<!--Blue072_0.1mmSolidLine-->
+							<se:SvgParameter name="stroke">#28166F</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
