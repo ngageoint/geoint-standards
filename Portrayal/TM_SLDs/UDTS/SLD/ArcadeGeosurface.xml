@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- ArcadeGeosurface -->
+			<se:FeatureTypeName>tds:ArcadeGeosurface</se:FeatureTypeName>
+
+				<!-- AR_Black_Arcade symbol-->
+				<se:Rule>
+				<se:Name>AR_Black_Arcade</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:Or>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:And>
+							<ogc:PropertyIsLessThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsLessThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:navigationLandmark</ogc:PropertyName>
+								<ogc:Literal>true</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+						</ogc:Or>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<se:Name>Black-21_ScreenFill</se:Name>
+						<se:Fill>
+							<se:SvgParameter name="fill">#C9C9C9</se:SvgParameter>
+						</se:Fill>
+					</se:PolygonSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> Arcade</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-4</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
