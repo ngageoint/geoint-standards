@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- CausewayStructureGeosurface -->
+			<se:FeatureTypeName>tds:CausewayStructureGeosurface</se:FeatureTypeName>
+
+				<!--Causeway Structure / dry (surface)-->
+				<!-- AR_Cyan_CausewayStructure_Dry symbol-->
+				<se:Rule>
+				<se:Name>AR_Cyan_CausewayStructure_Dry</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:waterLevelEffect</ogc:PropertyName>
+								<ogc:Literal>alwaysDry</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:waterLevelEffect</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:waterLevelEffect</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<!--Cyan_0.2mmSolidLine (with paperwhite fill of area)-->
+						<se:Fill>
+							<se:SvgParameter name="fill">#FFFFFF</se:SvgParameter>
+						</se:Fill>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+						<!--Causeway Structure / dry (surface) LABEL-->
+						<se:TextSymbolizer>
+							<!--[ZI005_FNA] "CAUSEWAY"-->
+							<se:Label>
+								<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+								<ogc:Literal> CAUSEWAY</ogc:Literal>
+							</se:Label>
+							<se:Font>
+								<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+								<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+								<se:SvgParameter name="font-size">6</se:SvgParameter>
+								<se:SvgParameter name="font-style">italic</se:SvgParameter>
+								<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+							</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-4</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+							<se:Fill>
+								<se:SvgParameter name="fill">#000000</se:SvgParameter>
+							</se:Fill>
+						</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Causeway Structure / not dry (surface)-->
+				<!-- AR_BlackCyan_CausewayStructure_NotDry symbol-->
+				<se:Rule>
+					<se:Name>AR_BlackCyan_CausewayStructure_NotDry</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>tds:waterLevelEffect</ogc:PropertyName>
+							<ogc:Literal>coversAndUncovers</ogc:Literal>
+						</ogc:PropertyIsEqualTo>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<se:Name>AR_BlackCyan_CausewayStructure_NotDry</se:Name>
+						<se:Fill>
+							<se:SvgParameter name="fill">#C9D5DD</se:SvgParameter>
+						</se:Fill>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">5 2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+					<!--Causeway Structure / not dry (surface) LABEL-->
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "CAUSEWAY"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> CAUSEWAY</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">italic</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-4</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
