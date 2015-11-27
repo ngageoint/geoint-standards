@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- CropLandGeosurface -->
+			<se:FeatureTypeName>tds:CropLandGeosurface</se:FeatureTypeName>
+
+				<!--Crop Land / all (surface)-->
+				<se:Rule>
+				<se:Name>AR_Brown1245_Cropland</se:Name>
+					<se:PolygonSymbolizer>
+						<se:Name>Cropland</se:Name>
+						<se:Fill>
+							<se:GraphicFill>
+								<se:Graphic>
+									<se:ExternalGraphic>
+										<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/Green_AP93_Fill.svg"/>
+										<se:Format>image/svg+xml</se:Format>
+									</se:ExternalGraphic>
+								</se:Graphic>
+							</se:GraphicFill>
+							<se:SvgParameter name="fill">#FCF7EB</se:SvgParameter>
+						</se:Fill>
+					</se:PolygonSymbolizer>
+				</se:Rule>
+
+				<!--Crop Land / all (surface)-->
+				<!--Crop Land / terraced (surface) LABEL-->
+				<se:Rule>
+					<se:Name>AR_Brown1245_Cropland</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(ZI013_FFP = 3 [Terraced])-->
+						<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>tds:cropInfo.farmingPattern-1</ogc:PropertyName>
+							<ogc:Literal>terraced</ogc:Literal>
+						</ogc:PropertyIsEqualTo>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--"Terraces"-->
+						<se:Label>
+							<ogc:Literal>Terraces</ogc:Literal>
+						</se:Label>
+						<!--(Black, Condensed, 6 pt, Mixed case)-->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
