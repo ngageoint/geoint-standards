@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- FountainGeosurface -->
+			<se:FeatureTypeName>tds:FountainGeosurface</se:FeatureTypeName>
+
+				<!--Fountain / all (surface)-->
+				<se:Rule>
+				<se:Name>AR_Cyan_Fountain</se:Name>
+					<se:PolygonSymbolizer>
+						<!--Cyan-31_ScreenFill-->
+						<se:Fill>
+							<se:SvgParameter name="fill">#B0FFFF</se:SvgParameter>
+						</se:Fill>
+						<!--Black_0.1mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+					<!--Fountain / all (surface) LABEL-->
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> Fountain</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
