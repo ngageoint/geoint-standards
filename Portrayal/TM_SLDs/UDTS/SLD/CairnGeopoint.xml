@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- CairnGeopoint -->
+			<se:FeatureTypeName>tds:CairnGeopoint</se:FeatureTypeName>
+
+				<!-- PT_Black_Cairn symbol -->
+				<se:Rule>
+				<se:Name>PT_Black_Cairn</se:Name>
+					<se:PointSymbolizer>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Cairn.svg" />
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
