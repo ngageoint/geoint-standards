@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- FishLadderGeocurve -->
+			<se:FeatureTypeName>tds:FishLadderGeocurve</se:FeatureTypeName>
+
+				<!-- LN_FishLadder symbol (label) -->
+				<se:Rule>
+				<se:Name>LN_FishLadder</se:Name>
+					<se:LineSymbolizer>
+						<se:Name>Black_0.75mmSolidLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">3.75</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<se:Name>Cyan-31_0.5mmSolidLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#B0FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.25</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<se:Name>Black_0.15mm-1.5mmLenTick</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">3.75</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">0.75 32.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-dashoffset">16</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>Fish ladder</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
