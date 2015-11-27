@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- ConveyorGeocurve -->
+			<se:FeatureTypeName>tds:ConveyorGeocurve</se:FeatureTypeName>
+
+				<!-- LN_Black_Conveyor symbol -->
+				<se:Rule>
+				<!--LN_Black_Conveyor-->
+					<se:LineSymbolizer>
+						<!--Black_0.2mm-2mmLenDash-0.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">10 2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>Conveyor</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+			</se:FeatureTypeStyle>
