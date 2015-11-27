@@ -1,0 +1,1458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- BridgeGeosurface -->
+			<se:FeatureTypeName>tds:BridgeGeosurface</se:FeatureTypeName>
+
+				<!--Bridge / fixed / non-pedestrian (surface)-->
+				<!-- LN_Black_Bridge symbol-->
+				<se:Rule>
+				<se:Name>LN_Black_Bridge</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeOpeningType</ogc:PropertyName>
+								<ogc:Literal>fixed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeOpeningType</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeOpeningType</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>aqueduct</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>canal</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>pipeline</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>railway</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>road</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>taxiway</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>runway</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:length</ogc:PropertyName>
+								<ogc:Literal>18</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<se:Name>PaperWhite_ScreenFill</se:Name>
+						<se:Fill>
+							<se:SvgParameter name="fill">#FFFFFF</se:SvgParameter>
+						</se:Fill>
+					</se:PolygonSymbolizer>
+					<se:PolygonSymbolizer>
+						<se:Name>Black_0.3mmSolidLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+				</se:Rule>
+					<!--     TEXT     -->
+					<!--Bridge / usable (surface)-->
+					<se:Rule>
+						<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 2 [Intact] or PCF = -999999 [No Information]) and (BSC = 1 [Open Spandrel Arch] or BSC = 2
+						[Cantilever] or BSC = 5 [Floating] or BSC = 6 [Girder] or BSC = 7 [Tower Suspension] or BSC = 8 [Truss] or
+						BSC = 9 [Suspension] or BSC = 12 [Transporter] or BSC = 15 [Slab] or BSC =16 [Stringer Beam] or BSC =19
+						[Bowstring-bridge] or BSC = 22 [Covered] or BSC = 26 [Closed Spandrel Arch] or BSC = 27 [Cable Stayed] or
+						BSC = 30 [Submersible] or BSC = 31 [Arch] or BSC = 32 [Trestle]) and (VCM = 2 [Aluminum] or VCM = 3
+						[Brick] or VCM = 4 [Concrete] or VCM = 7 [Iron] or VCM = 8 [Masonry] or VCM = 9 [Metal] or VCM = 12
+						[Prestressed Concrete] or VCM = 13 [Reinforced Concrete] or VCM = 15 [Steel] or VCM = 16 [Stone] or VCM =
+						17 [Treated Timber] or VCM = 18 [Wood])-->
+						<ogc:And>
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>arch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>bowstringBridge</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>cableStayed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>cantilever</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>closedSpandrelArch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>covered</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>floating</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>girder</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>openSpandrelArch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>slab</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>stringerBeam</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>submersible</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>suspension</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>towerSuspension</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>transporter</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>trestle</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>truss</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>aluminum</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>brick</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>concrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>iron</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>masonry</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>metal</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>prestressedConcrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>reinforcedConcrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>steel</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>stone</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "H" [HCA] "m"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> H </ogc:Literal>
+							<ogc:PropertyName>tds:horizontalClearance</ogc:PropertyName>
+							<ogc:Literal> m</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-10</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<!--"("[BSC]","[VCM]")" "V" [OHC] "m"-->
+						<se:Label>
+							<ogc:Literal>(</ogc:Literal>
+							<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+							<ogc:Literal>, </ogc:Literal>
+							<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+							<ogc:Literal>) V </ogc:Literal>
+							<ogc:PropertyName>tds:overheadClearance</ogc:PropertyName>
+							<ogc:Literal> m</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+				<!--     TEXT     -->
+				<!--Bridge / construction (surface)-->
+				<se:Rule>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 1 [Construction]) and (BSC = 1 [Open Spandrel Arch] or BSC = 2 [Cantilever] or BSC = 5 [Floating] or
+						BSC = 6 [Girder] or BSC = 7 [Tower Suspension] or BSC = 8 [Truss] or BSC = 9 [Suspension] or BSC = 12
+						[Transporter] or BSC = 15 [Slab] or BSC =16 [Stringer Beam] or BSC =19 [Bowstring-bridge] or BSC = 22
+						[Covered] or BSC = 26 [Closed Spandrel Arch] or BSC = 27 [Cable Stayed] or BSC = 30 [Submersible] or BSC
+						= 31 [Arch] or BSC = 32 [Trestle]) and (VCM = 2 [Aluminum] or VCM = 3 [Brick] or VCM = 4 [Concrete] or VCM
+						= 7 [Iron] or VCM = 8 [Masonry] or VCM = 9 [Metal] or VCM = 12 [Prestressed Concrete] or VCM = 13
+						[Reinforced Concrete] or VCM = 15 [Steel] or VCM = 16 [Stone] or VCM = 17 [Treated Timber] or VCM = 18
+						[Wood])-->
+						<ogc:And>
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>arch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>bowstringBridge</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>cableStayed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>cantilever</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>closedSpandrelArch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>covered</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>floating</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>girder</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>openSpandrelArch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>slab</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>stringerBeam</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>submersible</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>suspension</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>towerSuspension</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>transporter</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>trestle</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>truss</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>aluminum</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>brick</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>concrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>iron</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>masonry</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>metal</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>prestressedConcrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>reinforcedConcrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>steel</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>stone</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+								<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--ZI005_FNA] "("[BSC]","[VCM]")" "H" [HCA] "m"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (</ogc:Literal>
+							<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+							<ogc:Literal>, </ogc:Literal>
+							<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+							<ogc:Literal>) H </ogc:Literal>
+							<ogc:PropertyName>tds:horizontalClearance</ogc:PropertyName>
+							<ogc:Literal> m</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<!--"(construction)" "V" [OHC] "m"-->
+						<se:Label>
+							<ogc:Literal>(construction) V </ogc:Literal>
+							<ogc:PropertyName>tds:overheadClearance</ogc:PropertyName>
+							<ogc:Literal> m</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+				<!--     TEXT     -->
+				<!--Bridge / not usable (surface)-->
+				<se:Rule>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 3 [Unmaintained] or PCF = 4 [Damaged] or PCF = 5 [Dismantled] or PCF = 6 [Destroyed]) and (BSC =
+						1 [Open Spandrel Arch] or BSC = 2 [Cantilever] or BSC = 5 [Floating] or BSC = 6 [Girder] or BSC = 7 [Tower
+						Suspension] or BSC = 8 [Truss] or BSC = 9 [Suspension] or BSC = 12 [Transporter] or BSC = 15 [Slab] or BSC
+						=16 [Stringer Beam] or BSC =19 [Bowstring-bridge] or BSC = 22 [Covered] or BSC = 26 [Closed Spandrel Arch]
+						or BSC = 27 [Cable Stayed] or BSC = 30 [Submersible] or BSC = 31 [Arch] or BSC = 32 [Trestle]) and (VCM =
+						2 [Aluminum] or VCM = 3 [Brick] or VCM = 4 [Concrete] or VCM = 7 [Iron] or VCM = 8 [Masonry] or VCM = 9
+						[Metal] or VCM = 12 [Prestressed Concrete] or VCM = 13 [Reinforced Concrete] or VCM = 15 [Steel] or VCM =
+						16 [Stone] or VCM = 17 [Treated Timber] or VCM = 18 [Wood])-->
+						<ogc:And>
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>arch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>bowstringBridge</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>cableStayed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>cantilever</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>closedSpandrelArch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>covered</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>floating</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>girder</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>openSpandrelArch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>slab</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>stringerBeam</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>submersible</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>suspension</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>towerSuspension</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>transporter</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>trestle</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>truss</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>aluminum</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>brick</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>concrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>iron</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>masonry</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>metal</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>prestressedConcrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>reinforcedConcrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>steel</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>stone</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "("[BSC]","[VCM]")" "H" [HCA] "m"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (</ogc:Literal>
+							<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+							<ogc:Literal>, </ogc:Literal>
+							<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+							<ogc:Literal>) H </ogc:Literal>
+							<ogc:PropertyName>tds:horizontalClearance</ogc:PropertyName>
+							<ogc:Literal>) m</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-10</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<!--"(not usable)" "V" [OHC] "m"-->
+						<se:Label>
+							<ogc:Literal>(not usable) V </ogc:Literal>
+							<ogc:PropertyName>tds:overheadClearance</ogc:PropertyName>
+							<ogc:Literal> m</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Bridge / non-fixed / non-pedestrian (surface)-->
+				<!-- LN_Black_Bridge_DrawLift symbol-->
+				<se:Rule>
+				<se:Name>LN_Black_Bridge_DrawLift</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeOpeningType</ogc:PropertyName>
+								<ogc:Literal>bascule</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeOpeningType</ogc:PropertyName>
+								<ogc:Literal>swingBridge</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeOpeningType</ogc:PropertyName>
+								<ogc:Literal>liftBridge</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeOpeningType</ogc:PropertyName>
+								<ogc:Literal>retractable</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeOpeningType</ogc:PropertyName>
+								<ogc:Literal>drawbridge</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeOpeningType</ogc:PropertyName>
+								<ogc:Literal>opening</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>aqueduct</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>canal</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>pipeline</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>railway</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>road</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>taxiway</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>runway</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:transportationSystemType-1</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:length</ogc:PropertyName>
+								<ogc:Literal>18</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<!--PaperWhite_ScreenFill-->
+						<se:Fill>
+							<se:SvgParameter name="fill">#FFFFFF</se:SvgParameter>
+						</se:Fill>
+						<!--Black_0.3mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+						</se:PolygonSymbolizer>
+						<!--Black_0.2mm Circle-->
+						<se:PointSymbolizer>
+								<se:Graphic>
+									<se:Mark>
+									<se:WellKnownName>circle</se:WellKnownName>
+										<se:Fill>
+											<se:SvgParameter name="fill">#000000</se:SvgParameter>
+										</se:Fill>
+									</se:Mark>
+									<se:Size>2</se:Size>
+								</se:Graphic>
+						</se:PointSymbolizer>
+						<!--PaperWhite 0.1mm circle-->
+						<se:PointSymbolizer>
+								<se:Graphic>
+									<se:Mark>
+									<se:WellKnownName>circle</se:WellKnownName>
+										<se:Fill>
+											<se:SvgParameter name="fill">#999999</se:SvgParameter>
+										</se:Fill>
+									</se:Mark>
+									<se:Size>1</se:Size>
+								</se:Graphic>
+						</se:PointSymbolizer>
+				</se:Rule>
+				<!--     TEXT     -->
+				<!--Bridge / usable (surface)-->
+				<se:Rule>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 2 [Intact] or PCF = -999999 [No Information]) and (BSC = 1 [Open Spandrel Arch] or BSC = 2
+						[Cantilever] or BSC = 5 [Floating] or BSC = 6 [Girder] or BSC = 7 [Tower Suspension] or BSC = 8 [Truss] or
+						BSC = 9 [Suspension] or BSC = 12 [Transporter] or BSC = 15 [Slab] or BSC =16 [Stringer Beam] or BSC =19
+						[Bowstring-bridge] or BSC = 22 [Covered] or BSC = 26 [Closed Spandrel Arch] or BSC = 27 [Cable Stayed] or
+						BSC = 30 [Submersible] or BSC = 31 [Arch] or BSC = 32 [Trestle]) and (VCM = 2 [Aluminum] or VCM = 3
+						[Brick] or VCM = 4 [Concrete] or VCM = 7 [Iron] or VCM = 8 [Masonry] or VCM = 9 [Metal] or VCM = 12
+						[Prestressed Concrete] or VCM = 13 [Reinforced Concrete] or VCM = 15 [Steel] or VCM = 16 [Stone] or VCM =
+						17 [Treated Timber] or VCM = 18 [Wood])-->
+						<ogc:And>
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>arch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>bowstringBridge</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>cableStayed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>cantilever</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>closedSpandrelArch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>covered</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>floating</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>girder</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>openSpandrelArch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>slab</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>stringerBeam</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>submersible</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>suspension</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>towerSuspension</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>transporter</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>trestle</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>truss</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>aluminum</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>brick</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>concrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>iron</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>masonry</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>metal</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>prestressedConcrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>reinforcedConcrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>steel</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>stone</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "H" [HCA] "m"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> H </ogc:Literal>
+							<ogc:PropertyName>tds:horizontalClearance</ogc:PropertyName>
+							<ogc:Literal> m</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-10</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<!--"("[BSC]","[VCM]")" "V" [OHC] "m"-->
+						<se:Label>
+							<ogc:Literal>(</ogc:Literal>
+							<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+							<ogc:Literal>, </ogc:Literal>
+							<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+							<ogc:Literal>) V </ogc:Literal>
+							<ogc:PropertyName>tds:overheadClearance</ogc:PropertyName>
+							<ogc:Literal> m</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+				<!--     TEXT     -->
+				<!--Bridge / construction (surface)-->
+				<se:Rule>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 1 [Construction]) and (BSC = 1 [Open Spandrel Arch] or BSC = 2 [Cantilever] or BSC = 5 [Floating] or
+						BSC = 6 [Girder] or BSC = 7 [Tower Suspension] or BSC = 8 [Truss] or BSC = 9 [Suspension] or BSC = 12
+						[Transporter] or BSC = 15 [Slab] or BSC =16 [Stringer Beam] or BSC =19 [Bowstring-bridge] or BSC = 22
+						[Covered] or BSC = 26 [Closed Spandrel Arch] or BSC = 27 [Cable Stayed] or BSC = 30 [Submersible] or BSC
+						= 31 [Arch] or BSC = 32 [Trestle]) and (VCM = 2 [Aluminum] or VCM = 3 [Brick] or VCM = 4 [Concrete] or VCM
+						= 7 [Iron] or VCM = 8 [Masonry] or VCM = 9 [Metal] or VCM = 12 [Prestressed Concrete] or VCM = 13
+						[Reinforced Concrete] or VCM = 15 [Steel] or VCM = 16 [Stone] or VCM = 17 [Treated Timber] or VCM = 18
+						[Wood])-->
+						<ogc:And>
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>arch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>bowstringBridge</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>cableStayed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>cantilever</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>closedSpandrelArch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>covered</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>floating</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>girder</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>openSpandrelArch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>slab</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>stringerBeam</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>submersible</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>suspension</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>towerSuspension</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>transporter</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>trestle</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>truss</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>aluminum</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>brick</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>concrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>iron</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>masonry</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>metal</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>prestressedConcrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>reinforcedConcrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>steel</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>stone</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+								<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--ZI005_FNA] "("[BSC]","[VCM]")" "H" [HCA] "m"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (</ogc:Literal>
+							<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+							<ogc:Literal>, </ogc:Literal>
+							<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+							<ogc:Literal>) H </ogc:Literal>
+							<ogc:PropertyName>tds:horizontalClearance</ogc:PropertyName>
+							<ogc:Literal> m</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-10</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<!--"(construction)" "V" [OHC] "m"-->
+						<se:Label>
+							<ogc:Literal>(construction) V </ogc:Literal>
+							<ogc:PropertyName>tds:overheadClearance</ogc:PropertyName>
+							<ogc:Literal> m</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+				<!--     TEXT     -->
+				<!--Bridge / not usable (surface)-->
+				<se:Rule>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(PCF = 3 [Unmaintained] or PCF = 4 [Damaged] or PCF = 5 [Dismantled] or PCF = 6 [Destroyed]) and (BSC =
+						1 [Open Spandrel Arch] or BSC = 2 [Cantilever] or BSC = 5 [Floating] or BSC = 6 [Girder] or BSC = 7 [Tower
+						Suspension] or BSC = 8 [Truss] or BSC = 9 [Suspension] or BSC = 12 [Transporter] or BSC = 15 [Slab] or BSC
+						=16 [Stringer Beam] or BSC =19 [Bowstring-bridge] or BSC = 22 [Covered] or BSC = 26 [Closed Spandrel Arch]
+						or BSC = 27 [Cable Stayed] or BSC = 30 [Submersible] or BSC = 31 [Arch] or BSC = 32 [Trestle]) and (VCM =
+						2 [Aluminum] or VCM = 3 [Brick] or VCM = 4 [Concrete] or VCM = 7 [Iron] or VCM = 8 [Masonry] or VCM = 9
+						[Metal] or VCM = 12 [Prestressed Concrete] or VCM = 13 [Reinforced Concrete] or VCM = 15 [Steel] or VCM =
+						16 [Stone] or VCM = 17 [Treated Timber] or VCM = 18 [Wood])-->
+						<ogc:And>
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>arch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>bowstringBridge</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>cableStayed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>cantilever</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>closedSpandrelArch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>covered</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>floating</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>girder</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>openSpandrelArch</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>slab</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>stringerBeam</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>submersible</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>suspension</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>towerSuspension</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>transporter</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>trestle</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+								<ogc:Literal>truss</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>aluminum</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>brick</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>concrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>iron</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>masonry</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>metal</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>prestressedConcrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>reinforcedConcrete</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>steel</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+								<ogc:Literal>stone</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<!--[ZI005_FNA] "("[BSC]","[VCM]")" "H" [HCA] "m"-->
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> (</ogc:Literal>
+							<ogc:PropertyName>tds:bridgeStructureType-1</ogc:PropertyName>
+							<ogc:Literal>, </ogc:Literal>
+							<ogc:PropertyName>tds:verticalConstMaterial-1</ogc:PropertyName>
+							<ogc:Literal>) H </ogc:Literal>
+							<ogc:PropertyName>tds:horizontalClearance</ogc:PropertyName>
+							<ogc:Literal>) m</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-10</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<!--"(not usable)" "V" [OHC] "m"-->
+						<se:Label>
+							<ogc:Literal>(not usable) V </ogc:Literal>
+							<ogc:PropertyName>tds:overheadClearance</ogc:PropertyName>
+							<ogc:Literal> m</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
