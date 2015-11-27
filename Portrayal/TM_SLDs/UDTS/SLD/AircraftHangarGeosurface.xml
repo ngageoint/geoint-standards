@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- AircraftHangarGeosurface -->
+			<se:FeatureTypeName>tds:AircraftHangarGeosurface</se:FeatureTypeName>
+
+				<!--Aircraft Hangar / usable / standard (surface)-->
+				<se:Rule>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>100</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<!--Black Solid Area Fill-->
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:PolygonSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>Hangar</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5.0</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Aircraft Hangar / not usable / standard (surface)-->
+				<se:Rule>
+				<se:Name>AR_Black_AircraftHangar_NotUsable</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>100</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						</ogc:And>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<!--Black-12_ScreenFill-->
+						<se:Fill>
+								<se:SvgParameter name="fill">#E0E0E0</se:SvgParameter>
+						</se:Fill>
+						<se:Stroke>
+							<!--Black_0.1mmSolidLine-->
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+				</se:Rule>
+
+				<!--Aircraft Hangar / obstruction / standard (surface)-->
+				<se:Rule>
+				<se:Name>AR_Blue072_AircraftHangar_VO</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(ARA >= 100) and (HGT >= 46)-->
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>100</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<!--Solid Blue072 Fill-->
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:PolygonSymbolizer>
+					<se:TextSymbolizer>
+						<!--"Aircraft hangar"-->
+						<se:Label>
+							<!--feature name-->
+							<ogc:Literal>Aircraft hangar</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>30</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:highestElevation</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>30</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>(</ogc:Literal>
+							<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+							<ogc:Literal>)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>20</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Aircraft Hangar / usable / small area (surface)-->
+				<se:Rule>
+				<se:Name>PT_Black_AircraftHangar</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>100</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_Building_GenericLandmark.svg"/>
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>Hangar</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+								<se:AnchorPoint>
+									<se:AnchorPointX>0</se:AnchorPointX>
+									<se:AnchorPointY>0</se:AnchorPointY>
+								</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>10.0</se:DisplacementX>
+									<se:DisplacementY>0.0</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Aircraft Hangar / not usable / small area (surface)-->
+				<se:Rule>
+				<se:Name>PT_Black_AircraftHangar_NotUsable</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>100</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Black_BlastFurnace_NotUsable.svg"/>
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+				</se:Rule>
+
+				<!--Aircraft Hangar / obstruction / small area (surface)-->
+				<se:Rule>
+				<se:Name>PT_Blue072_AircraftHangar_VO</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<!--(ARA >= 100) and (HGT >= 46)-->
+						<ogc:And>
+							<ogc:PropertyIsLessThan>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>100</ogc:Literal>
+							</ogc:PropertyIsLessThan>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+								<ogc:Literal>46</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PointSymbolizer>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/PT_Blue072_VO.svg"/>
+								<se:Format>image/svg+xml</se:Format>
+							</se:ExternalGraphic>
+							<se:Size>10</se:Size>
+						</se:Graphic>
+					</se:PointSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<!--"Aircraft hangar"-->
+							<ogc:Literal>Aircraft hangar</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>30</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:highestElevation</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>30</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>(</ogc:Literal>
+							<ogc:PropertyName>tds:heightAboveSurfaceLevel</ogc:PropertyName>
+							<ogc:Literal>)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">6</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+								<se:Displacement>
+									<se:DisplacementX>20</se:DisplacementX>
+									<se:DisplacementY>20</se:DisplacementY>
+								</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#28166F</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
