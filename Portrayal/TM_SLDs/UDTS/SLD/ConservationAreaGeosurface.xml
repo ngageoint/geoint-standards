@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- ConservationAreaGeosurface -->
+			<se:FeatureTypeName>tds:ConservationAreaGeosurface</se:FeatureTypeName>
+
+				<!--Conservation Area / all (surface)-->
+				<!--Conservation Area / known (surface) LABEL-->
+				<se:Rule>
+				<se:Name>AR_Black_ConservationArea</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+								<ogc:Literal>strictNatureReserve</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+								<ogc:Literal>wildernessArea</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+								<ogc:Literal>nationalPark</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+								<ogc:Literal>naturalMonument</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+								<ogc:Literal>habitatSpeciesManagement</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+								<ogc:Literal>habitatManagement</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+								<ogc:Literal>speciesManagement</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+								<ogc:Literal>breedingGround</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+								<ogc:Literal>protectedLandSeascape</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+								<ogc:Literal>managedResourceProtected</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+								<ogc:Literal>managedForestProtected</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Black_0.2mm-6.1mmLenDash-2.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">30.5 12.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<!--Black_0.25mmFilledDot-->
+						<se:Stroke>
+							<se:GraphicStroke>
+								<se:Graphic>
+									<se:Mark>
+										<se:WellKnownName>circle</se:WellKnownName>
+										<se:Fill>
+											<se:SvgParameter name="fill">#000000</se:SvgParameter>
+										</se:Fill>
+									</se:Mark>
+									<se:Size>1.25</se:Size>
+								</se:Graphic>
+								<se:InitialGap>36.125</se:InitialGap>
+								<se:Gap>42.375</se:Gap>
+							</se:GraphicStroke>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> </ogc:Literal>
+							<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+						</se:Label>
+						<!---->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Conservation Area / all (surface)-->
+				<!-- Conservation Area / unknown (surface) LABEL-->
+				<se:Rule>
+					<se:Name>AR_Black_ConservationArea</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+							<ogc:Or>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+									<ogc:Literal>other</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:conservationAreaManageCat</ogc:PropertyName>
+									<ogc:Literal>noInformation</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+							</ogc:Or>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Black_0.2mm-6.1mmLenDash-2.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">30.5 12.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<!--Black_0.25mmFilledDot-->
+						<se:Stroke>
+							<se:GraphicStroke>
+								<se:Graphic>
+									<se:Mark>
+										<se:WellKnownName>circle</se:WellKnownName>
+										<se:Fill>
+											<se:SvgParameter name="fill">#000000</se:SvgParameter>
+										</se:Fill>
+									</se:Mark>
+									<se:Size>1.25</se:Size>
+								</se:Graphic>
+								<se:InitialGap>36.125</se:InitialGap>
+								<se:Gap>42.375</se:Gap>
+							</se:GraphicStroke>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> Conservation area</ogc:Literal>
+						</se:Label>
+						<!---->
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:PointPlacement>
+							<se:AnchorPoint>
+								<se:AnchorPointX>0.0</se:AnchorPointX>
+								<se:AnchorPointY>0.0</se:AnchorPointY>
+							</se:AnchorPoint>
+							<se:Displacement>
+								<se:DisplacementX>20</se:DisplacementX>
+								<se:DisplacementY>0</se:DisplacementY>
+							</se:Displacement>
+							</se:PointPlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
