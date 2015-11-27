@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- AsphaltLakeGeosurface -->
+			<se:FeatureTypeName>tds:AsphaltLakeGeosurface</se:FeatureTypeName>
+
+				<!-- AR_Black_AsphaltLake symbol -->
+				<se:Rule>
+				<se:Name>AR_Black_AsphaltLake</se:Name>
+					<se:PolygonSymbolizer>
+						<se:Name>AR_Black_AsphaltLake</se:Name>
+						<se:Fill>
+							<se:GraphicFill>
+								<se:Graphic>
+									<se:ExternalGraphic>
+										<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/Black_AP95_Fill.svg"/>
+										<se:Format>image/png</se:Format>
+										</se:ExternalGraphic>
+								</se:Graphic>
+							</se:GraphicFill>
+						</se:Fill>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+						</se:Stroke>
+					</se:PolygonSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label><ogc:Literal>Asphalt</ogc:Literal></se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+						</se:Font>
+							<se:Halo>
+								<se:Radius>2.5</se:Radius>
+								<se:Fill>
+									<se:SvgParameter name="fill">#FFFFFF</se:SvgParameter>
+								</se:Fill>
+							</se:Halo>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
