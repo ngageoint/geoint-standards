@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- ElevationContourGeocurve -->
+			<se:FeatureTypeName>tds:ElevationContourGeocurve</se:FeatureTypeName>
+
+				<!-- LN_Brown1245_Contour_LandIndexAccurate symbol -->
+				<se:Rule>
+				<se:Name>LN_Brown1245_Contour_LandIndexAccurate</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>land</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>indexContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>indexCarryingContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.2mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Brown1245_Contour_LandIndexApproximate symbol -->
+				<se:Rule>
+					<se:Name>LN_Brown1245_Contour_LandIndexApproximate</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>land</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>approxIndexContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.2mm-5.0mmLenDash-0.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">25.0 2.5</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Brown1245_Contour_LandIntermediateAccurate symbol -->
+				<se:Rule>
+					<se:Name>LN_Brown1245_Contour_LandIntermediateAccurate</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>land</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>intermediateContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>intermedCarryingContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.1mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Brown1245_Contour_LandIntermediateApproximate symbol -->
+				<se:Rule>
+					<se:Name>LN_Brown1245_Contour_LandIntermediateApproximate</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>land</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>approxIntermediateContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.1mm-5.0mmLenDash-0.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">25 2.5</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Brown1245_Contour_LandHalfAuxiliary symbol -->
+				<se:Rule>
+				<se:Name>LN_Brown1245_Contour_LandHalfAuxiliary</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>land</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>halfAuxiliaryContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>auxiliaryCarryingContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.1mm-3.0mmLenDashLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">15 2.5</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Brown1245_Contour_Land_QuarterAuxiliary symbol -->
+				<se:Rule>
+				<se:Name>LN_Brown1245_Contour_Land_QuarterAuxiliary</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>land</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>quarterAuxiliaryContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.1mm-3.0mmLenDashLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">7.5 2.5</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Brown1245_Contour_Land_MoundIndex symbol -->
+				<se:Rule>
+				<se:Name>LN_Brown1245_Contour_Land_MoundIndex</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>land</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>moundIndexContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.2mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.1mm-0.5mmLenTick-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 10.0</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>1.25</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Brown1245_Contour_Land_MoundIntermediate symbol -->
+				<se:Rule>
+				<se:Name>LN_Brown1245_Contour_Land_MoundIntermediate</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>land</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>moundIntermediateContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.1mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.1mm-0.5mmLenTick-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 10.0</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>1.25</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Brown1245_Contour_Land_DepressionIndex symbol -->
+				<se:Rule>
+				<se:Name>LN_Brown1245_Contour_Land_DepressionIndex</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>land</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>depressionIndexContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.2mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.1mm-0.5mmLenTick-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1.0 10.0</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>-1.25</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Brown1245_Contour_Land_DepressionIntermediate symbol -->
+				<se:Rule>
+				<se:Name>LN_Brown1245_Contour_Land_DepressionIntermediate</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>land</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>depressionIntermedContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.1mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.1mm-0.5mmLenTick-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 10.0</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>-1.25</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Brown1245_Contour_Land_DepressionAuxiliary symbol -->
+				<se:Rule>
+				<se:Name>LN_Brown1245_Contour_Land_DepressionAuxiliary</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>land</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>depressionAuxiliaryContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.1mm-3.0mmLenDashLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">15 2.5</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.1mm-0.5mmLenTick-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 17.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dashoffset">7.5</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>-1.25</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Brown1245_Contour_LandFormLine symbol -->
+				<se:Rule>
+				<se:Name>LN_Brown1245_Contour_LandFormLine</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>land</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>formLine</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Brown1245_0.1mm-3.0mmLenDashLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#BC9045</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">15 2.5</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Cyan_Contour_SnowIceIndexAccurate symbol -->
+				<se:Rule>
+				<se:Name>LN_Cyan_Contour_SnowIceIndexAccurate</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>snowIceField</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>indexContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>indexCarryingContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Cyan_0.2mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Cyan_Contour_SnowIceIndexApproximate symbol -->
+				<se:Rule>
+				<se:Name>LN_Cyan_Contour_SnowIceIndexApproximate</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>snowIceField</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+										<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+										<ogc:Literal>approxIndexContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Cyan_0.2mm-5mmLenDash-0.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">25 2.5</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Cyan_Contour_SnowIceIntermediateAccurate symbol -->
+				<se:Rule>
+				<se:Name>LN_Cyan_Contour_SnowIceIntermediateAccurate</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>snowIceField</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>intermediateContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>intermedCarryingContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Cyan_0.1mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Cyan_Contour_SnowIceIntermediateApproximate symbol -->
+				<se:Rule>
+				<se:Name>LN_Cyan_Contour_SnowIceIntermediateApproximate</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+						<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+						<ogc:Literal>snowIceField</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+							<ogc:Literal>approxIntermediateContour</ogc:Literal>
+						</ogc:PropertyIsEqualTo>
+					</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Cyan_0.1mm-5.0mmLenDash-0.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">25 2.5</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Cyan_Contour_SnowIceHalfAuxiliary symbol -->
+				<se:Rule>
+				<se:Name>LN_Cyan_Contour_SnowIceHalfAuxiliary</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>snowIceField</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>halfAuxiliaryContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>auxiliaryCarryingContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Cyan_0.1mm-3.0mmLenDashLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">15 2.5</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Cyan_Contour_SnowIce_QuarterAuxiliary symbol -->
+				<se:Rule>
+				<se:Name>LN_Cyan_Contour_SnowIce_QuarterAuxiliary</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>snowIceField</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>quarterAuxiliaryContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Cyan_0.1mm-1.5mmLenDash-0.5mmGapLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">7.5 2.5</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Cyan_Contour_SnowIce_MoundIndex symbol -->
+				<se:Rule>
+				<se:Name>LN_Cyan_Contour_SnowIce_MoundIndex</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>snowIceField</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>moundIndexContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Cyan_0.2mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<!--Cyan_0.1mm-0.5mmLenTick-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 10.0</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>1.25</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Cyan_Contour_SnowIce_MoundIntermediate symbol -->
+				<se:Rule>
+				<se:Name>LN_Cyan_Contour_SnowIce_MoundIntermediate</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>snowIceField</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>moundIntermediateContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Cyan_0.1mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<!--Cyan_0.1mm-0.5mmLenTick-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 10.0</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>1.25</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Cyan_Contour_SnowIce_DepressionIndex symbol -->
+				<se:Rule>
+				<se:Name>LN_Cyan_Contour_SnowIce_DepressionIndex</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>snowIceField</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>depressionIndexContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Cyan_0.2mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<!--Cyan_0.1mm-0.5mmLenTick-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 10.0</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>-1.25</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Cyan_Contour_SnowIce_DepressionIntermediate symbol -->
+				<se:Rule>
+				<se:Name>LN_Cyan_Contour_SnowIce_DepressionIntermediate</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>snowIceField</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>depressionIntermedContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Cyan_0.1mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<!--Cyan_0.1mm-0.5mmLenTick-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 10.0</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>-1.25</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Cyan_Contour_SnowIce_DepressionAuxiliary symbol -->
+				<se:Rule>
+				<se:Name>LN_Cyan_Contour_SnowIce_DepressionAuxiliary</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>snowIceField</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>depressionAuxiliaryContour</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Cyan_0.1mm-3.0mmLenDashLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">15 2.5</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:LineSymbolizer>
+						<!--Cyan_0.1mm-0.5mmLenTick-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">1 17.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-dashoffset">7.5</se:SvgParameter>
+						</se:Stroke>
+						<se:PerpendicularOffset>-1.25</se:PerpendicularOffset>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Cyan_Contour_SnowIceFormLine symbol -->
+				<se:Rule>
+				<se:Name>LN_Cyan_Contour_SnowIceFormLine</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>snowIceField</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>formLine</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<!--Cyan_0.1mm-3.0mmLenDashLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.0</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">15 2.5</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+
+				<!-- Land contour (ZVH label) -->
+				<se:Rule>
+				<se:Name>Land Contour labels (greater than 0)</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>land</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+							<ogc:PropertyIsNotEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>formLine</ogc:Literal>
+							</ogc:PropertyIsNotEqualTo>
+							<ogc:PropertyIsNotEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>transitionLine</ogc:Literal>
+							</ogc:PropertyIsNotEqualTo>
+							<ogc:PropertyIsNotEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>connectorLine</ogc:Literal>
+							</ogc:PropertyIsNotEqualTo>
+							<ogc:PropertyIsNotEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsNotEqualTo>
+							<ogc:PropertyIsNotEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsNotEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:highestElevation</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">11</se:SvgParameter>
+							<se:SvgParameter name="font-style">italic</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>0</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Halo>
+							<se:Radius>2.5</se:Radius>
+						<se:Fill>
+							<se:SvgParameter name="fill">#FFFFFF</se:SvgParameter>
+						</se:Fill>
+						</se:Halo>
+						<se:Fill>
+							<se:SvgParameter name="fill">#BC9045</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!-- Snow/Ice contour (ZVH label) -->
+				<se:Rule>
+				<se:Name>Land Contour labels (greater than 0)</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:elevationSurfaceCategory</ogc:PropertyName>
+								<ogc:Literal>snowIceField</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsNotEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>formLine</ogc:Literal>
+							</ogc:PropertyIsNotEqualTo>
+							<ogc:PropertyIsNotEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>transitionLine</ogc:Literal>
+							</ogc:PropertyIsNotEqualTo>
+							<ogc:PropertyIsNotEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>connectorLine</ogc:Literal>
+							</ogc:PropertyIsNotEqualTo>
+							<ogc:PropertyIsNotEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsNotEqualTo>
+							<ogc:PropertyIsNotEqualTo>
+								<ogc:PropertyName>tds:hypsographyPortrayalType</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsNotEqualTo>
+						</ogc:And>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:highestElevation</ogc:PropertyName>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">11</se:SvgParameter>
+							<se:SvgParameter name="font-style">italic</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>0</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+									<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Halo>
+							<se:Radius>2.5</se:Radius>
+						<se:Fill>
+							<se:SvgParameter name="fill">#FFFFFF</se:SvgParameter>
+						</se:Fill>
+						</se:Halo>
+						<se:Fill>
+							<se:SvgParameter name="fill">#00FFFF</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
