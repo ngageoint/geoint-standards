@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- BridgePierGeocurve -->
+			<se:FeatureTypeName>tds:BridgePierGeocurve</se:FeatureTypeName>
+
+				<se:Rule>
+				<se:Name>LN_Black_BridgePier</se:Name>
+					<se:LineSymbolizer>
+						<!--Black_0.2mmSolidLine-->
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+						<!--"Bridge pier"-->
+						<se:TextSymbolizer>
+							<se:Label>
+								<ogc:Literal>Bridge pier</ogc:Literal>
+							</se:Label>
+							<se:Font>
+								<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+								<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+								<se:SvgParameter name="font-size">6</se:SvgParameter>
+								<se:SvgParameter name="font-style">normal</se:SvgParameter>
+								<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+							</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+							<se:Fill>
+								<se:SvgParameter name="fill">#000000</se:SvgParameter>
+							</se:Fill>
+						</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
