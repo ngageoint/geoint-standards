@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- BuiltUpAreaGeosurface -->
+			<se:FeatureTypeName>tds:BuiltUpAreaGeosurface</se:FeatureTypeName>
+
+				<!--Built Up Area / dense (surface)-->
+				<se:Rule>
+				<se:Name>AR_BUA_Dense</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:builtUpAreaDensityCat</ogc:PropertyName>
+								<ogc:Literal>dense</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<se:Fill>
+							<se:SvgParameter name="fill">#EBD5C5</se:SvgParameter>
+						</se:Fill>
+					</se:PolygonSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<se:ChangeCase fallbackValue="" direction="toUpper">
+								<se:StringValue>
+									<ogc:PropertyName>tds:geoNameCollection.memberGeoName-1.fullName</ogc:PropertyName>
+									<ogc:Literal> (</ogc:Literal>
+									<ogc:PropertyName>tds:geoNameCollection.memberGeoName-2.fullName</ogc:PropertyName>
+									<ogc:Literal>)</ogc:Literal>
+								</se:StringValue>
+							</se:ChangeCase>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+							<se:SvgParameter name="font-size">12</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Built Up Area / sparse or moderate (surface)-->
+				<se:Rule>
+				<se:Name>AR_BUA_SparseModerate</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:builtUpAreaDensityCat</ogc:PropertyName>
+								<ogc:Literal>sparse</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:builtUpAreaDensityCat</ogc:PropertyName>
+								<ogc:Literal>moderate</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<se:Fill>
+							<se:SvgParameter name="fill">#F2E9C4</se:SvgParameter>
+						</se:Fill>
+					</se:PolygonSymbolizer>
+					<se:TextSymbolizer>
+					<se:Label>
+						<se:ChangeCase fallbackValue="" direction="toUpper">
+							<se:StringValue>
+								<ogc:PropertyName>tds:geoNameCollection.memberGeoName-1.fullName</ogc:PropertyName>
+								<ogc:Literal> (</ogc:Literal>
+								<ogc:PropertyName>tds:geoNameCollection.memberGeoName-2.fullName</ogc:PropertyName>
+								<ogc:Literal>)</ogc:Literal>
+							</se:StringValue>
+						</se:ChangeCase>
+					</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+							<se:SvgParameter name="font-size">12</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Built Up Area / destroyed (surface)-->
+				<se:Rule>
+				<se:Name>AR_BUA_Destroyed</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+							<ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:PropertyName>tds:area</ogc:PropertyName>
+								<ogc:Literal>900</ogc:Literal>
+							</ogc:PropertyIsGreaterThanOrEqualTo>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>construction</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:PolygonSymbolizer>
+						<!--Brown1245-54_LP6Fill-->
+						<se:Fill>
+						<se:GraphicFill>
+							<se:Graphic>
+									<se:ExternalGraphic>
+										<se:OnlineResource xlink:type="simple" xlink:href="http://ows8-cci.carmenta.com/symbols/Brown1245_LP6.svg"/>
+										<se:Format>image/svg+xml</se:Format>
+									</se:ExternalGraphic>
+									<se:Size>20</se:Size>
+								</se:Graphic>
+							</se:GraphicFill>
+						</se:Fill>
+					</se:PolygonSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<se:ChangeCase fallbackValue="" direction="toUpper">
+								<se:StringValue>
+									<ogc:PropertyName>tds:geoNameCollection.memberGeoName-1.fullName</ogc:PropertyName>
+									<ogc:Literal> (</ogc:Literal>
+									<ogc:PropertyName>tds:geoNameCollection.memberGeoName-2.fullName</ogc:PropertyName>
+									<ogc:Literal>)</ogc:Literal>
+								</se:StringValue>
+							</se:ChangeCase>
+						</se:Label>
+						<se:Font>
+							<!---->
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+							<se:SvgParameter name="font-size">12</se:SvgParameter>
+						</se:Font>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
