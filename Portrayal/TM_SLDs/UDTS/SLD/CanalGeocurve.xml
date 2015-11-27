@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- CanalGeocurve -->
+			<se:FeatureTypeName>tds:CanalGeocurve</se:FeatureTypeName>
+
+				<!--Canal / perennial / usable (curve)-->
+				<se:Rule>
+				<se:Name>LN_Cyan_Canal_Perennial</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:And>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:waterResourceInfo.hydrologicPersistence</ogc:PropertyName>
+								<ogc:Literal>perennial</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:waterResourceInfo.hydrologicPersistence</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>intact</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+						</ogc:And>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<se:Name>Cyan_0.4mmSolidLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<!--Canal / all (curve)-->
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> CANAL</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">7</se:SvgParameter>
+							<se:SvgParameter name="font-style">italic</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#00AEEF</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!--Canal / intermittent, dry / not usable (curve)-->
+				<se:Rule>
+					<se:Name>AR_Cyan_Canal_IntermittentDry</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:Or>
+						<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>tds:waterResourceInfo.hydrologicPersistence</ogc:PropertyName>
+							<ogc:Literal>intermittent</ogc:Literal>
+						</ogc:PropertyIsEqualTo>
+						<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>tds:waterResourceInfo.hydrologicPersistence</ogc:PropertyName>
+							<ogc:Literal>dry</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+									<ogc:Literal>construction</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+									<ogc:Literal>unmaintained</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+									<ogc:Literal>damaged</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+									<ogc:Literal>dismantled</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+								<ogc:PropertyIsEqualTo>
+									<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+									<ogc:Literal>destroyed</ogc:Literal>
+								</ogc:PropertyIsEqualTo>
+							</ogc:Or>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<se:Name>Cyan_0.4mm-2mmLenDash-0.5mmGapLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#00FFFF</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">2</se:SvgParameter>
+							<se:SvgParameter name="stroke-dasharray">10 2.5</se:SvgParameter>
+							<se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+				</se:Rule>
+				<!--Canal / construction (curve)-->
+				<se:Rule>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+							<ogc:Literal>construction</ogc:Literal>
+						</ogc:PropertyIsEqualTo>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal> Canal (construction)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">7</se:SvgParameter>
+							<se:SvgParameter name="font-style">italic</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#00AEEF</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+				<!--Canal / not usable (curve)-->
+				<se:Rule>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>unmaintained</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>damaged</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>dismantled</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:physicalCondition</ogc:PropertyName>
+								<ogc:Literal>destroyed</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+					</ogc:Filter>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:PropertyName>tds:geoNameCollection.memberGeoName.fullName</ogc:PropertyName>
+							<ogc:Literal>Canal (not usable)</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">7</se:SvgParameter>
+							<se:SvgParameter name="font-style">italic</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+						<se:LabelPlacement>
+							<se:LinePlacement>
+								<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+								<se:IsRepeated>false</se:IsRepeated>
+								<se:InitialGap>
+									<ogc:Div>
+										<ogc:PropertyName>tds:length</ogc:PropertyName>
+										<ogc:Literal>2</ogc:Literal>
+									</ogc:Div>
+								</se:InitialGap>
+								<se:IsAligned>true</se:IsAligned>
+								<se:GeneralizeLine>true</se:GeneralizeLine>
+							</se:LinePlacement>
+						</se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#00AEEF</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
