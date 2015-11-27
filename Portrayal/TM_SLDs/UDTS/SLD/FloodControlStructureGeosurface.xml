@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<se:FeatureTypeStyle xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+
+<!-- FloodControlStructureGeosurface -->
+			<se:FeatureTypeName>tds:FloodControlStructureGeosurface</se:FeatureTypeName>
+
+				<!-- Symbol in document is a line through the center of the area.  It is not currently known how (or if it is possible) to accomplish this in OGC SLD/SE.  This symbol is currently a line around the perimeter of the collected surface (area) feature-->
+				<!-- LN_Black_FloodControlStructure symbol (Gate label) -->
+				<se:Rule>
+				<se:Name>LN_Black_FloodControlStructure</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:floodControlStructureType</ogc:PropertyName>
+								<ogc:Literal>dykeGate</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:floodControlStructureType</ogc:PropertyName>
+								<ogc:Literal>emergencyGate</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:floodControlStructureType</ogc:PropertyName>
+								<ogc:Literal>floodGate</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<se:Name>Black_0.35mmSolidLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.75</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+					<se:TextSymbolizer>
+						<se:Label>
+							<ogc:Literal>Gate</ogc:Literal>
+						</se:Label>
+						<se:Font>
+							<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+							<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+							<se:SvgParameter name="font-size">10</se:SvgParameter>
+							<se:SvgParameter name="font-style">normal</se:SvgParameter>
+							<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+						</se:Font>
+					   <se:LabelPlacement>
+							<se:LinePlacement>
+								  <se:PerpendicularOffset>-4</se:PerpendicularOffset>
+							</se:LinePlacement>
+					   </se:LabelPlacement>
+						<se:Fill>
+							<se:SvgParameter name="fill">#000000</se:SvgParameter>
+						</se:Fill>
+					</se:TextSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Black_FloodControlStructure symbol (Barrage label) -->
+				<se:Rule>
+				<se:Name>LN_Black_FloodControlStructure</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:floodControlStructureType</ogc:PropertyName>
+								<ogc:Literal>fixedBarrage</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:floodControlStructureType</ogc:PropertyName>
+								<ogc:Literal>movableBarrage</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<se:Name>Black_0.35mmSolidLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.75</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+						<se:TextSymbolizer>
+							<se:Label>
+								<ogc:Literal>Barrage</ogc:Literal>
+							</se:Label>
+							<se:Font>
+								<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+								<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+								<se:SvgParameter name="font-size">10</se:SvgParameter>
+								<se:SvgParameter name="font-style">normal</se:SvgParameter>
+								<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+							</se:Font>
+					   <se:LabelPlacement>
+							<se:LinePlacement>
+								  <se:PerpendicularOffset>-4</se:PerpendicularOffset>
+							</se:LinePlacement>
+					   </se:LabelPlacement>
+							<se:Fill>
+								<se:SvgParameter name="fill">#000000</se:SvgParameter>
+							</se:Fill>
+						</se:TextSymbolizer>
+				</se:Rule>
+
+				<!-- LN_Black_FloodControlStructure symbol (Other/No Information label) -->
+				<se:Rule>
+				<se:Name>LN_Black_FloodControlStructure</se:Name>
+					<ogc:Filter xmlns:tds="http://metadata.dod.mil/mdr/ns/GSIP/4.0/tds/4.0">
+						<ogc:Or>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:floodControlStructureType</ogc:PropertyName>
+								<ogc:Literal>other</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+							<ogc:PropertyIsEqualTo>
+								<ogc:PropertyName>tds:floodControlStructureType</ogc:PropertyName>
+								<ogc:Literal>noInformation</ogc:Literal>
+							</ogc:PropertyIsEqualTo>
+						</ogc:Or>
+					</ogc:Filter>
+					<se:LineSymbolizer>
+						<se:Name>Black_0.35mmSolidLine</se:Name>
+						<se:Stroke>
+							<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+							<se:SvgParameter name="stroke-width">1.75</se:SvgParameter>
+						</se:Stroke>
+					</se:LineSymbolizer>
+						<se:TextSymbolizer>
+							<se:Label>
+								<ogc:Literal>Flood control structure</ogc:Literal>
+							</se:Label>
+							<se:Font>
+								<se:SvgParameter name="font-family">Arial Unicode MS</se:SvgParameter>
+								<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+								<se:SvgParameter name="font-size">10</se:SvgParameter>
+								<se:SvgParameter name="font-style">normal</se:SvgParameter>
+								<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+							</se:Font>
+					   <se:LabelPlacement>
+							<se:LinePlacement>
+								  <se:PerpendicularOffset>-4</se:PerpendicularOffset>
+							</se:LinePlacement>
+					   </se:LabelPlacement>
+							<se:Fill>
+								<se:SvgParameter name="fill">#000000</se:SvgParameter>
+							</se:Fill>
+						</se:TextSymbolizer>
+				</se:Rule>
+			</se:FeatureTypeStyle>
