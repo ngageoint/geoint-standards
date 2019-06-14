@@ -22,7 +22,7 @@ The GWG consists of nine chartered focus groups made up of subject matter expert
   * World Geodetic System and Geomatics (WGSG) 
 
 
-###Pull Requests
+## Pull Requests
 Please make a pull request and we'll discuss the changes.  All pull request content received will be distributed as public domain within the United States and [CC0 1.0 Universal public domain](https://creativecommons.org/publicdomain/zero/1.0/legalcode) outside the US.   
 
 
